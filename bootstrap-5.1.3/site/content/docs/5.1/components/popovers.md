@@ -10,8 +10,8 @@ toc: true
 
 Things to know when using the popover plugin:
 
-- Popovers rely on the 3rd party library [Popper](https://popper.js.org/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper in order for popovers to work!
-- Popovers require the [tooltip plugin]({{< docsref "/components/tooltips" >}}) as a dependency.
+- Popovers rely on the 3rd party library [Popper](https://popper.js.org/) for positioning. You must include [popper.min.js]({ {< param "cdn.popper" >} }) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper in order for popovers to work!
+- Popovers require the [tooltip plugin]({ {< docsref "/components/tooltips" >} }) as a dependency.
 - Popovers are opt-in for performance reasons, so **you must initialize them yourself**.
 - Zero-length `title` and `content` values will never show a popover.
 - Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).
@@ -21,13 +21,13 @@ Things to know when using the popover plugin:
 - Popovers must be hidden before their corresponding elements have been removed from the DOM.
 - Popovers can be triggered thanks to an element inside a shadow DOM.
 
-{{< callout info >}}
-{{< partial "callout-info-sanitizer.md" >}}
-{{< /callout >}}
+{ {< callout info >} }
+{ {< partial "callout-info-sanitizer.md" >} }
+{ {< /callout >} }
 
-{{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
-{{< /callout >}}
+{ {< callout info >} }
+{ {< partial "callout-info-prefersreducedmotion.md" >} }
+{ {< /callout >} }
 
 Keep reading to see how popovers work with some examples.
 
@@ -54,15 +54,15 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 
 ## Example
 
-{{< example >}}
+{ {< example >} }
 <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-{{< /example >}}
+{ {< /example >} }
 
 ### Four directions
 
 Four options are available: top, right, bottom, and left aligned. Directions are mirrored when using Bootstrap in RTL.
 
-{{< example >}}
+{ {< example >} }
 <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
   Popover on top
 </button>
@@ -75,21 +75,21 @@ Four options are available: top, right, bottom, and left aligned. Directions are
 <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
   Popover on left
 </button>
-{{< /example >}}
+{ {< /example >} }
 
 ### Dismiss on next click
 
 Use the `focus` trigger to dismiss popovers on the user's next click of a different element than the toggle element.
 
-{{< callout danger >}}
+{ {< callout danger >} }
 #### Specific markup required for dismiss-on-next-click
 
 For proper cross-browser and cross-platform behavior, you must use the `<a>` tag, _not_ the `<button>` tag, and you also must include a [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
-{{< /callout >}}
+{ {< /callout >} }
 
-{{< example >}}
+{ {< example >} }
 <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
-{{< /example >}}
+{ {< /example >} }
 
 ```js
 var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
@@ -103,17 +103,17 @@ Elements with the `disabled` attribute aren't interactive, meaning users cannot 
 
 For disabled popover triggers, you may also prefer `data-bs-trigger="hover focus"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element.
 
-{{< example >}}
+{ {< example >} }
 <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
   <button class="btn btn-primary" type="button" disabled>Disabled button</button>
 </span>
-{{< /example >}}
+{ {< /example >} }
 
 ## Sass
 
 ### Variables
 
-{{< scss-docs name="popover-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="popover-variables" file="scss/_variables.scss" >} }
 
 ## Usage
 
@@ -124,7 +124,7 @@ var exampleEl = document.getElementById('example')
 var popover = new bootstrap.Popover(exampleEl, options)
 ```
 
-{{< callout warning >}}
+{ {< callout warning >} }
 ### Making popovers work for keyboard and assistive technology users
 
 To allow keyboard users to activate your popovers, you should only add them to HTML elements that are traditionally keyboard-focusable and interactive (such as links or form controls). Although arbitrary HTML elements (such as `<span>`s) can be made focusable by adding the `tabindex="0"` attribute, this will add potentially annoying and confusing tab stops on non-interactive elements for keyboard users, and most assistive technologies currently do not announce the popover's content in this situation. Additionally, do not rely solely on `hover` as the trigger for your popovers, as this will make them impossible to trigger for keyboard users.
@@ -132,15 +132,15 @@ To allow keyboard users to activate your popovers, you should only add them to H
 While you can insert rich, structured HTML in popovers with the `html` option, we strongly recommend that you avoid adding an excessive amount of content. The way popovers currently work is that, once displayed, their content is tied to the trigger element with the `aria-describedby` attribute. As a result, the entirety of the popover's content will be announced to assistive technology users as one long, uninterrupted stream.
 
 Additionally, while it is possible to also include interactive controls (such as form elements or links) in your popover (by adding these elements to the `allowList` of allowed attributes and tags), be aware that currently the popover does not manage keyboard focus order. When a keyboard user opens a popover, focus remains on the triggering element, and as the popover usually does not immediately follow the trigger in the document's structure, there is no guarantee that moving forward/pressing <kbd>TAB</kbd> will move a keyboard user into the popover itself. In short, simply adding interactive controls to a popover is likely to make these controls unreachable/unusable for keyboard users and users of assistive technologies, or at the very least make for an illogical overall focus order. In these cases, consider using a modal dialog instead.
-{{< /callout >}}
+{ {< /callout >} }
 
 ### Options
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`. Make sure to change the case type of the option name from camelCase to kebab-case when passing the options via data attributes. For example, instead of using `data-bs-customClass="beautifier"`, use `data-bs-custom-class="beautifier"`.
 
-{{< callout warning >}}
+{ {< callout warning >} }
 Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` options cannot be supplied using data attributes.
-{{< /callout >}}
+{ {< /callout >} }
 
 <table class="table">
   <thead>
@@ -204,7 +204,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to enable dynamic HTML content to have popovers added. See <a href="{{< param repo >}}/issues/4215">this</a> and <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a>.</td>
+      <td>If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to enable dynamic HTML content to have popovers added. See <a href="{ {< param repo >} }/issues/4215">this</a> and <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a>.</td>
     </tr>
     <tr>
       <td><code>template</code></td>
@@ -259,12 +259,12 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
       <td><code>sanitize</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Enable or disable the sanitization. If activated <code>'template'</code>, <code>'content'</code> and <code>'title'</code> options will be sanitized. See the <a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">sanitizer section in our JavaScript documentation</a>.</td>
+      <td>Enable or disable the sanitization. If activated <code>'template'</code>, <code>'content'</code> and <code>'title'</code> options will be sanitized. See the <a href="{ {< docsref "/getting-started/javascript#sanitizer" >} }">sanitizer section in our JavaScript documentation</a>.</td>
     </tr>
     <tr>
       <td><code>allowList</code></td>
       <td>object</td>
-      <td><a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">Default value</a></td>
+      <td><a href="{ {< docsref "/getting-started/javascript#sanitizer" >} }">Default value</a></td>
       <td>Object which contains allowed attributes and tags</td>
     </tr>
     <tr>
@@ -295,11 +295,11 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
   </tbody>
 </table>
 
-{{< callout info >}}
+{ {< callout info >} }
 #### Data attributes for individual popovers
 
 Options for individual popovers can alternatively be specified through the use of data attributes, as explained above.
-{{< /callout >}}
+{ {< /callout >} }
 
 #### Using function with `popperConfig`
 
@@ -315,9 +315,9 @@ var popover = new bootstrap.Popover(element, {
 
 ### Methods
 
-{{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
-{{< /callout >}}
+{ {< callout danger >} }
+{ {< partial "callout-danger-async-methods.md" >} }
+{ {< /callout >} }
 
 
 #### show

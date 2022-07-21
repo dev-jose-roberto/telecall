@@ -37,7 +37,7 @@ Where *position* is one of:
 
 (You can add more position values by adding entries to the `$position-values` Sass map variable.)
 
-{{< example class="bd-example-position-utils" >}}
+{ {< example class="bd-example-position-utils" >} }
 <div class="position-relative">
   <div class="position-absolute top-0 start-0"></div>
   <div class="position-absolute top-0 end-0"></div>
@@ -46,7 +46,7 @@ Where *position* is one of:
   <div class="position-absolute bottom-0 start-0"></div>
   <div class="position-absolute bottom-0 end-0"></div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Center elements
 
@@ -54,7 +54,7 @@ In addition, you can also center the elements with the transform utility class `
 
 This class applies the transformations `translateX(-50%)` and `translateY(-50%)` to the element which, in combination with the edge positioning utilities, allows you to absolute center an element.
 
-{{< example class="bd-example-position-utils" >}}
+{ {< example class="bd-example-position-utils" >} }
 <div class="position-relative">
   <div class="position-absolute top-0 start-0 translate-middle"></div>
   <div class="position-absolute top-0 start-50 translate-middle"></div>
@@ -66,11 +66,11 @@ This class applies the transformations `translateX(-50%)` and `translateY(-50%)`
   <div class="position-absolute top-100 start-50 translate-middle"></div>
   <div class="position-absolute top-100 start-100 translate-middle"></div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can be positioned only in horizontal or vertical direction.
 
-{{< example class="bd-example-position-utils" >}}
+{ {< example class="bd-example-position-utils" >} }
 <div class="position-relative">
   <div class="position-absolute top-0 start-0"></div>
   <div class="position-absolute top-0 start-50 translate-middle-x"></div>
@@ -82,13 +82,13 @@ By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can b
   <div class="position-absolute bottom-0 start-50 translate-middle-x"></div>
   <div class="position-absolute bottom-0 end-0"></div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Examples
 
 Here are some real life examples of these classes:
 
-{{< example class="bd-example-position-examples d-flex justify-content-around" >}}
+{ {< example class="bd-example-position-examples d-flex justify-content-around" >} }
 <button type="button" class="btn btn-primary position-relative">
   Mails <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">unread messages</span></span>
 </button>
@@ -100,11 +100,11 @@ Here are some real life examples of these classes:
 <button type="button" class="btn btn-primary position-relative">
   Alerts <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span>
 </button>
-{{< /example >}}
+{ {< /example >} }
 
 You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the `$position-values` variable.
 
-{{< example class="bd-example-position-examples" >}}
+{ {< example class="bd-example-position-examples" >} }
 <div class="position-relative m-4">
   <div class="progress" style="height: 1px;">
     <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -113,7 +113,7 @@ You can use these classes with existing components to create new ones. Remember 
   <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">2</button>
   <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">3</button>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Sass
 
@@ -121,10 +121,10 @@ You can use these classes with existing components to create new ones. Remember 
 
 Default position utility values are declared in a Sass map, then used to generate our utilities.
 
-{{< scss-docs name="position-map" file="scss/_variables.scss" >}}
+{ {< scss-docs name="position-map" file="scss/_variables.scss" >} }
 
 ### Utilities API
 
-Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({ {< docsref "/utilities/api#using-the-api" >} })
 
-{{< scss-docs name="utils-position" file="scss/_utilities.scss" >}}
+{ {< scss-docs name="utils-position" file="scss/_utilities.scss" >} }

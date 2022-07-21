@@ -8,9 +8,9 @@ toc: true
 
 ## Global settings
 
-Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
+Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({ {< docsref "/utilities/text" >} }).
 
-- Use a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
+- Use a [native font stack]({ {< docsref "/content/reboot#native-font-stack" >} }) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we use the browser's default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
 - Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
 - Set the global link color via `$link-color`.
@@ -32,37 +32,37 @@ All HTML headings, `<h1>` through `<h6>`, are available.
   <tbody>
     <tr>
       <td>
-        {{< markdown >}}`<h1></h1>`{{< /markdown >}}
+        { {< markdown >} }`<h1></h1>`{ {< /markdown >} }
       </td>
       <td><span class="h1">h1. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
-        {{< markdown >}}`<h2></h2>`{{< /markdown >}}
+        { {< markdown >} }`<h2></h2>`{ {< /markdown >} }
       </td>
       <td><span class="h2">h2. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
-        {{< markdown >}}`<h3></h3>`{{< /markdown >}}
+        { {< markdown >} }`<h3></h3>`{ {< /markdown >} }
       </td>
       <td><span class="h3">h3. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
-        {{< markdown >}}`<h4></h4>`{{< /markdown >}}
+        { {< markdown >} }`<h4></h4>`{ {< /markdown >} }
       </td>
       <td><span class="h4">h4. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
-        {{< markdown >}}`<h5></h5>`{{< /markdown >}}
+        { {< markdown >} }`<h5></h5>`{ {< /markdown >} }
       </td>
       <td><span class="h5">h5. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
-        {{< markdown >}}`<h6></h6>`{{< /markdown >}}
+        { {< markdown >} }`<h6></h6>`{ {< /markdown >} }
       </td>
       <td><span class="h6">h6. Bootstrap heading</span></td>
     </tr>
@@ -80,25 +80,25 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 
 `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
-{{< example >}}
+{ {< example >} }
 <p class="h1">h1. Bootstrap heading</p>
 <p class="h2">h2. Bootstrap heading</p>
 <p class="h3">h3. Bootstrap heading</p>
 <p class="h4">h4. Bootstrap heading</p>
 <p class="h5">h5. Bootstrap heading</p>
 <p class="h6">h6. Bootstrap heading</p>
-{{< /example >}}
+{ {< /example >} }
 
 ### Customizing headings
 
 Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
 
-{{< example >}}
+{ {< example >} }
 <h3>
   Fancy display heading
   <small class="text-muted">With faded secondary text</small>
 </h3>
-{{< /example >}}
+{ {< /example >} }
 
 ## Display headings
 
@@ -124,23 +124,23 @@ Traditional heading elements are designed to work best in the meat of your page 
 
 Display headings are configured via the `$display-font-sizes` Sass map and two variables, `$display-font-weight` and `$display-line-height`.
 
-{{< scss-docs name="display-headings" file="scss/_variables.scss" >}}
+{ {< scss-docs name="display-headings" file="scss/_variables.scss" >} }
 
 ## Lead
 
 Make a paragraph stand out by adding `.lead`.
 
-{{< example >}}
+{ {< example >} }
 <p class="lead">
   This is a lead paragraph. It stands out from regular paragraphs.
 </p>
-{{< /example >}}
+{ {< /example >} }
 
 ## Inline text elements
 
 Styling for common inline HTML5 elements.
 
-{{< example >}}
+{ {< example >} }
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 <p><del>This line of text is meant to be treated as deleted text.</del></p>
 <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
@@ -149,7 +149,7 @@ Styling for common inline HTML5 elements.
 <p><small>This line of text is meant to be treated as fine print.</small></p>
 <p><strong>This line rendered as bold text.</strong></p>
 <p><em>This line rendered as italicized text.</em></p>
-{{< /example >}}
+{ {< /example >} }
 
 Beware that those tags should be used for semantic purpose:
 
@@ -169,7 +169,7 @@ While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant
 
 ## Text utilities
 
-Change text alignment, transform, style, weight, line-height, decoration and color with our [text utilities]({{< docsref "/utilities/text" >}}) and [color utilities]({{< docsref "/utilities/colors" >}}).
+Change text alignment, transform, style, weight, line-height, decoration and color with our [text utilities]({ {< docsref "/utilities/text" >} }) and [color utilities]({ {< docsref "/utilities/colors" >} }).
 
 ## Abbreviations
 
@@ -177,26 +177,26 @@ Stylized implementation of HTML's `<abbr>` element for abbreviations and acronym
 
 Add `.initialism` to an abbreviation for a slightly smaller font-size.
 
-{{< example >}}
+{ {< example >} }
 <p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
-{{< /example >}}
+{ {< /example >} }
 
 ## Blockquotes
 
 For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.
 
-{{< example >}}
+{ {< example >} }
 <blockquote class="blockquote">
   <p>A well-known quote, contained in a blockquote element.</p>
 </blockquote>
-{{< /example >}}
+{ {< /example >} }
 
 ### Naming a source
 
 The HTML spec requires that blockquote attribution be placed outside the `<blockquote>`. When providing attribution, wrap your `<blockquote>` in a `<figure>` and use a `<figcaption>` or a block level element (e.g., `<p>`) with the `.blockquote-footer` class. Be sure to wrap the name of the source work in `<cite>` as well.
 
-{{< example >}}
+{ {< example >} }
 <figure>
   <blockquote class="blockquote">
     <p>A well-known quote, contained in a blockquote element.</p>
@@ -205,13 +205,13 @@ The HTML spec requires that blockquote attribution be placed outside the `<block
     Someone famous in <cite title="Source Title">Source Title</cite>
   </figcaption>
 </figure>
-{{< /example >}}
+{ {< /example >} }
 
 ### Alignment
 
 Use text utilities as needed to change the alignment of your blockquote.
 
-{{< example >}}
+{ {< example >} }
 <figure class="text-center">
   <blockquote class="blockquote">
     <p>A well-known quote, contained in a blockquote element.</p>
@@ -220,9 +220,9 @@ Use text utilities as needed to change the alignment of your blockquote.
     Someone famous in <cite title="Source Title">Source Title</cite>
   </figcaption>
 </figure>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example >}}
+{ {< example >} }
 <figure class="text-end">
   <blockquote class="blockquote">
     <p>A well-known quote, contained in a blockquote element.</p>
@@ -231,7 +231,7 @@ Use text utilities as needed to change the alignment of your blockquote.
     Someone famous in <cite title="Source Title">Source Title</cite>
   </figcaption>
 </figure>
-{{< /example >}}
+{ {< /example >} }
 
 ## Lists
 
@@ -239,7 +239,7 @@ Use text utilities as needed to change the alignment of your blockquote.
 
 Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
 
-{{< example >}}
+{ {< example >} }
 <ul class="list-unstyled">
   <li>This is a list.</li>
   <li>It appears completely unstyled.</li>
@@ -254,25 +254,25 @@ Remove the default `list-style` and left margin on list items (immediate childre
   </li>
   <li>This may still come in handy in some situations.</li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 ### Inline
 
 Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
 
-{{< example >}}
+{ {< example >} }
 <ul class="list-inline">
   <li class="list-inline-item">This is a list item.</li>
   <li class="list-inline-item">And another one.</li>
   <li class="list-inline-item">But they're displayed inline.</li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 ### Description list alignment
 
 Align terms and descriptions horizontally by using our grid system's predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
 
-{{< example >}}
+{ {< example >} }
 <dl class="row">
   <dt class="col-sm-3">Description lists</dt>
   <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
@@ -297,11 +297,11 @@ Align terms and descriptions horizontally by using our grid system's predefined 
     </dl>
   </dd>
 </dl>
-{{< /example >}}
+{ {< /example >} }
 
 ## Responsive font sizes
 
-In Bootstrap 5, we've enabled responsive font sizes by default, allowing text to scale more naturally across device and viewport sizes. Have a look at the [RFS page]({{< docsref "/getting-started/rfs" >}}) to find out how this works.
+In Bootstrap 5, we've enabled responsive font sizes by default, allowing text to scale more naturally across device and viewport sizes. Have a look at the [RFS page]({ {< docsref "/getting-started/rfs" >} }) to find out how this works.
 
 ## Sass
 
@@ -309,12 +309,12 @@ In Bootstrap 5, we've enabled responsive font sizes by default, allowing text to
 
 Headings have some dedicated variables for sizing and spacing.
 
-{{< scss-docs name="headings-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="headings-variables" file="scss/_variables.scss" >} }
 
-Miscellaneous typography elements covered here and in [Reboot]({{< docsref "/content/reboot" >}}) also have dedicated variables.
+Miscellaneous typography elements covered here and in [Reboot]({ {< docsref "/content/reboot" >} }) also have dedicated variables.
 
-{{< scss-docs name="type-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="type-variables" file="scss/_variables.scss" >} }
 
 ### Mixins
 
-There are no dedicated mixins for typography, but Bootstrap does use [Responsive Font Sizing (RFS)]({{< docsref "/getting-started/rfs" >}}).
+There are no dedicated mixins for typography, but Bootstrap does use [Responsive Font Sizing (RFS)]({ {< docsref "/getting-started/rfs" >} }).

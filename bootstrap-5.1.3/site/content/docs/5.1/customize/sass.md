@@ -110,9 +110,9 @@ $body-color: #111;
 
 Repeat as necessary for any variable in Bootstrap, including the global options below.
 
-{{< callout info >}}
-{{< partial "callout-info-npm-starter.md" >}}
-{{< /callout >}}
+{ {< callout info >} }
+{ {< partial "callout-info-npm-starter.md" >} }
+{ {< /callout >} }
 
 ## Maps and loops
 
@@ -181,7 +181,7 @@ For example, we use the `primary`, `success`, and `danger` keys from `$theme-col
 
 ### Colors
 
-Next to the [Sass maps]({{< docsref "/customize/color#color-sass-maps" >}}) we have, theme colors can also be used as standalone variables, like `$primary`.
+Next to the [Sass maps]({ {< docsref "/customize/color#color-sass-maps" >} }) we have, theme colors can also be used as standalone variables, like `$primary`.
 
 ```scss
 .custom-element {
@@ -192,7 +192,7 @@ Next to the [Sass maps]({{< docsref "/customize/color#color-sass-maps" >}}) we h
 
 You can lighten or darken colors with Bootstrap's `tint-color()` and `shade-color()` functions. These functions will mix colors with black or white, unlike Sass' native `lighten()` and `darken()` functions which will change the lightness by a fixed amount, which often doesn't lead to the desired effect.
 
-{{< scss-docs name="color-functions" file="scss/_functions.scss" >}}
+{ {< scss-docs name="color-functions" file="scss/_functions.scss" >} }
 
 In practice, you'd call the function and pass in the color and weight parameters.
 
@@ -288,7 +288,7 @@ Our `scss/mixins/` directory has a ton of mixins that power parts of Bootstrap a
 
 A shorthand mixin for the `prefers-color-scheme` media query is available with support for `light`, `dark`, and custom color schemes.
 
-{{< scss-docs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" >}}
+{ {< scss-docs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" >} }
 
 ```scss
 .custom-element {

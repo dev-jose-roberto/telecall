@@ -12,7 +12,7 @@ Install [Parcel Bundler](https://en.parceljs.org/getting_started.html).
 
 ## Install Bootstrap
 
-[Install bootstrap]({{< docsref "/getting-started/download#npm" >}}) as a Node.js module using npm.
+[Install bootstrap]({ {< docsref "/getting-started/download#npm" >} }) as a Node.js module using npm.
 
 Bootstrap depends on [Popper](https://popper.js.org/), which is specified in the `peerDependencies` property. This means that you will have to make sure to add both of them to your `package.json` using `npm install @popperjs/core`.
 
@@ -34,7 +34,7 @@ project-name/
 
 ## Importing JavaScript
 
-Import [Bootstrap's JavaScript]({{< docsref "/getting-started/javascript" >}}) in your app's entry point (usually `src/index.js`). You can import all our plugins in one file or separately if you require only a subset of them.
+Import [Bootstrap's JavaScript]({ {< docsref "/getting-started/javascript" >} }) in your app's entry point (usually `src/index.js`). You can import all our plugins in one file or separately if you require only a subset of them.
 
 ```js
 // Import all plugins
@@ -51,7 +51,7 @@ import Alert as Alert from '../node_modules/bootstrap/js/dist/alert';
 
 To utilize the full potential of Bootstrap and customize it to your needs, use the source files as a part of your project's bundling process.
 
-Create your own `scss/custom.scss` to [import Bootstrap's Sass files]({{< docsref "/customize/sass#importing" >}}) and then override the [built-in custom variables]({{< docsref "/customize/sass#variable-defaults" >}}).
+Create your own `scss/custom.scss` to [import Bootstrap's Sass files]({ {< docsref "/customize/sass#importing" >} }) and then override the [built-in custom variables]({ {< docsref "/customize/sass#variable-defaults" >} }).
 
 ## Build app
 

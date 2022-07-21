@@ -17,7 +17,7 @@ Our checks use custom Bootstrap icons to indicate checked or indeterminate state
 
 ## Checks
 
-{{< example >}}
+{ {< example >} }
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
   <label class="form-check-label" for="flexCheckDefault">
@@ -30,26 +30,26 @@ Our checks use custom Bootstrap icons to indicate checked or indeterminate state
     Checked checkbox
   </label>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Indeterminate
 
 Checkboxes can utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
 
-{{< example class="bd-example-indeterminate">}}
+{ {< example class="bd-example-indeterminate">} }
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
   <label class="form-check-label" for="flexCheckIndeterminate">
     Indeterminate checkbox
   </label>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Disabled
 
 Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
 
-{{< example >}}
+{ {< example >} }
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
   <label class="form-check-label" for="flexCheckDisabled">
@@ -62,11 +62,11 @@ Add the `disabled` attribute and the associated `<label>`s are automatically sty
     Disabled checked checkbox
   </label>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Radios
 
-{{< example >}}
+{ {< example >} }
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
   <label class="form-check-label" for="flexRadioDefault1">
@@ -79,13 +79,13 @@ Add the `disabled` attribute and the associated `<label>`s are automatically sty
     Default checked radio
   </label>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Disabled
 
 Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
 
-{{< example >}}
+{ {< example >} }
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
   <label class="form-check-label" for="flexRadioDisabled">
@@ -98,13 +98,13 @@ Add the `disabled` attribute and the associated `<label>`s are automatically sty
     Disabled checked radio
   </label>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Switches
 
 A switch has the markup of a custom checkbox but uses the `.form-switch` class to render a toggle switch. Consider using `role="switch"` to more accurately convey the nature of the control to assistive technologies that support this role. In older assistive technologies, it will simply be announced as a regular checkbox as a fallback. Switches also support the `disabled` attribute.
 
-{{< example >}}
+{ {< example >} }
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
   <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
@@ -121,13 +121,13 @@ A switch has the markup of a custom checkbox but uses the `.form-switch` class t
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
   <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Default (stacked)
 
 By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
 
-{{< example >}}
+{ {< example >} }
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
@@ -140,9 +140,9 @@ By default, any number of checkboxes and radios that are immediate sibling will 
     Disabled checkbox
   </label>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example >}}
+{ {< example >} }
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   <label class="form-check-label" for="exampleRadios1">
@@ -161,13 +161,13 @@ By default, any number of checkboxes and radios that are immediate sibling will 
     Disabled radio
   </label>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Inline
 
 Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
 
-{{< example >}}
+{ {< example >} }
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
   <label class="form-check-label" for="inlineCheckbox1">1</label>
@@ -180,9 +180,9 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
   <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
   <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example >}}
+{ {< example >} }
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
   <label class="form-check-label" for="inlineRadio1">1</label>
@@ -195,13 +195,13 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
   <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Without labels
 
-Omit the wrapping `.form-check` for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-label`). See the [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}}) section for details.
+Omit the wrapping `.form-check` for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-label`). See the [forms overview accessibility]({ {< docsref "/forms/overview#accessibility" >} }) section for details.
 
-{{< example >}}
+{ {< example >} }
 <div>
   <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
 </div>
@@ -209,36 +209,36 @@ Omit the wrapping `.form-check` for checkboxes and radios that have no label tex
 <div>
   <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Toggle buttons
 
-Create button-like checkboxes and radio buttons by using `.btn` styles rather than `.form-check-label` on the `<label>` elements. These toggle buttons can further be grouped in a [button group]({{< docsref "/components/button-group" >}}) if needed.
+Create button-like checkboxes and radio buttons by using `.btn` styles rather than `.form-check-label` on the `<label>` elements. These toggle buttons can further be grouped in a [button group]({ {< docsref "/components/button-group" >} }) if needed.
 
 ### Checkbox toggle buttons
 
-{{< example >}}
+{ {< example >} }
 <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
 <label class="btn btn-primary" for="btn-check">Single toggle</label>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example >}}
+{ {< example >} }
 <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
 <label class="btn btn-primary" for="btn-check-2">Checked</label>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example >}}
+{ {< example >} }
 <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
 <label class="btn btn-primary" for="btn-check-3">Disabled</label>
-{{< /example >}}
+{ {< /example >} }
 
-{{< callout info >}}
-Visually, these checkbox toggle buttons are identical to the [button plugin toggle buttons]({{< docsref "/components/buttons#button-plugin" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
-{{< /callout >}}
+{ {< callout info >} }
+Visually, these checkbox toggle buttons are identical to the [button plugin toggle buttons]({ {< docsref "/components/buttons#button-plugin" >} }). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
+{ {< /callout >} }
 
 ### Radio toggle buttons
 
-{{< example >}}
+{ {< example >} }
 <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
 <label class="btn btn-secondary" for="option1">Checked</label>
 
@@ -250,13 +250,13 @@ Visually, these checkbox toggle buttons are identical to the [button plugin togg
 
 <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
 <label class="btn btn-secondary" for="option4">Radio</label>
-{{< /example >}}
+{ {< /example >} }
 
 ### Outlined styles
 
 Different variants of `.btn`, such at the various outlined styles, are supported.
 
-{{< example >}}
+{ {< example >} }
 <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
 <label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
 
@@ -268,10 +268,10 @@ Different variants of `.btn`, such at the various outlined styles, are supported
 
 <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
 <label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
-{{< /example >}}
+{ {< /example >} }
 
 ## Sass
 
 ### Variables
 
-{{< scss-docs name="form-check-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="form-check-variables" file="scss/_variables.scss" >} }

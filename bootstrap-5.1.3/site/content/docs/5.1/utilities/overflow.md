@@ -35,6 +35,6 @@ Using Sass variables, you may customize the overflow utilities by changing the `
 
 ### Utilities API
 
-Overflow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Overflow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({ {< docsref "/utilities/api#using-the-api" >} })
 
-{{< scss-docs name="utils-overflow" file="scss/_utilities.scss" >}}
+{ {< scss-docs name="utils-overflow" file="scss/_utilities.scss" >} }

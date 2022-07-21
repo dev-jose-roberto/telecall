@@ -18,7 +18,7 @@ Bootstrap comes with three different containers:
 
 The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
 
-See them in action and compare them in our [Grid example]({{< docsref "/examples/grid#containers" >}}).
+See them in action and compare them in our [Grid example]({ {< docsref "/examples/grid#containers" >} }).
 
 <table class="table">
   <thead>
@@ -153,7 +153,7 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 
 As shown above, Bootstrap generates a series of predefined container classes to help you build the layouts you desire. You may customize these predefined container classes by modifying the Sass map (found in `_variables.scss`) that powers them:
 
-{{< scss-docs name="container-max-widths" file="scss/_variables.scss" >}}
+{ {< scss-docs name="container-max-widths" file="scss/_variables.scss" >} }
 
 In addition to customizing the Sass, you can also create your own containers with our Sass mixin.
 
@@ -173,4 +173,4 @@ In addition to customizing the Sass, you can also create your own containers wit
 }
 ```
 
-For more information and examples on how to modify our Sass maps and variables, please refer to [the Sass section of the Grid documentation]({{< docsref "/layout/grid#sass" >}}).
+For more information and examples on how to modify our Sass maps and variables, please refer to [the Sass section of the Grid documentation]({ {< docsref "/layout/grid#sass" >} }).

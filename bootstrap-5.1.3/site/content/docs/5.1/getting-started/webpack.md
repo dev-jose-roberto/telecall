@@ -8,11 +8,11 @@ toc: true
 
 ## Installing Bootstrap
 
-[Install bootstrap]({{< docsref "/getting-started/download#npm" >}}) as a Node.js module using npm.
+[Install bootstrap]({ {< docsref "/getting-started/download#npm" >} }) as a Node.js module using npm.
 
 ## Importing JavaScript
 
-Import [Bootstrap's JavaScript]({{< docsref "/getting-started/javascript" >}}) by adding this line to your app's entry point (usually `index.js` or `app.js`):
+Import [Bootstrap's JavaScript]({ {< docsref "/getting-started/javascript" >} }) by adding this line to your app's entry point (usually `index.js` or `app.js`):
 
 ```js
 import 'bootstrap';
@@ -39,7 +39,7 @@ This means that you will have to make sure to add it to your `package.json` usin
 
 To enjoy the full potential of Bootstrap and customize it to your needs, use the source files as a part of your project's bundling process.
 
-First, create your own `_custom.scss` and use it to override the [built-in custom variables]({{< docsref "/customize/sass" >}}). Then, use your main Sass file to import your custom variables, followed by Bootstrap:
+First, create your own `_custom.scss` and use it to override the [built-in custom variables]({ {< docsref "/customize/sass" >} }). Then, use your main Sass file to import your custom variables, followed by Bootstrap:
 
 ```scss
 @import "custom";

@@ -12,25 +12,25 @@ Use the ratio helper to manage the aspect ratios of external content like `<ifra
 
 Aspect ratios are declared in a Sass map and included in each class via CSS variable, which also allows [custom aspect ratios](#custom-ratios).
 
-{{< callout info >}}
-**Pro-Tip!** You don't need `frameborder="0"` on your `<iframe>`s as we override that for you in [Reboot]({{< docsref "/content/reboot" >}}).
-{{< /callout >}}
+{ {< callout info >} }
+**Pro-Tip!** You don't need `frameborder="0"` on your `<iframe>`s as we override that for you in [Reboot]({ {< docsref "/content/reboot" >} }).
+{ {< /callout >} }
 
 ## Example
 
 Wrap any embed, like an `<iframe>`, in a parent element with `.ratio` and an aspect ratio class. The immediate child element is automatically sized thanks to our universal selector `.ratio > *`.
 
-{{< example >}}
+{ {< example >} }
 <div class="ratio ratio-16x9">
   <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Aspect ratios
 
 Aspect ratios can be customized with modifier classes. By default the following ratio classes are provided:
 
-{{< example class="bd-example-ratios" >}}
+{ {< example class="bd-example-ratios" >} }
 <div class="ratio ratio-1x1">
   <div>1x1</div>
 </div>
@@ -43,7 +43,7 @@ Aspect ratios can be customized with modifier classes. By default the following 
 <div class="ratio ratio-21x9">
   <div>21x9</div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Custom ratios
 
@@ -51,11 +51,11 @@ Each `.ratio-*` class includes a CSS custom property (or CSS variable) in the se
 
 For example, to create a 2x1 aspect ratio, set `--bs-aspect-ratio: 50%` on the `.ratio`.
 
-{{< example class="bd-example-ratios" >}}
+{ {< example class="bd-example-ratios" >} }
 <div class="ratio" style="--bs-aspect-ratio: 50%;">
   <div>2x1</div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 This CSS variable makes it easy to modify the aspect ratio across breakpoints. The following is 4x3 to start, but changes to a custom 2x1 at the medium breakpoint.
 
@@ -67,15 +67,15 @@ This CSS variable makes it easy to modify the aspect ratio across breakpoints. T
 }
 ```
 
-{{< example class="bd-example-ratios bd-example-ratios-breakpoint" >}}
+{ {< example class="bd-example-ratios bd-example-ratios-breakpoint" >} }
 <div class="ratio ratio-4x3">
   <div>4x3, then 2x1</div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 
 ## Sass map
 
 Within `_variables.scss`, you can change the aspect ratios you want to use. Here's our default `$ratio-aspect-ratios` map. Modify the map as you like and recompile your Sass to put them to use.
 
-{{< scss-docs name="aspect-ratios" file="scss/_variables.scss" >}}
+{ {< scss-docs name="aspect-ratios" file="scss/_variables.scss" >} }

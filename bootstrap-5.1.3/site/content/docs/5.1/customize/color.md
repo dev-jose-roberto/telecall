@@ -11,20 +11,20 @@ toc: true
 We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Bootstrap's `scss/_variables.scss` file.
 
 <div class="row">
-  {{< theme-colors.inline >}}
-  {{- range (index $.Site.Data "theme-colors") }}
+  { {< theme-colors.inline >} }
+  { {- range (index $.Site.Data "theme-colors") } }
     <div class="col-md-4">
-      <div class="p-3 mb-3 bg-{{ .name }} {{ if .contrast_color }}text-{{ .contrast_color }}{{ else }}text-white{{ end }}">{{ .name | title }}</div>
+      <div class="p-3 mb-3 bg-{ { .name } } { { if .contrast_color } }text-{ { .contrast_color } }{ { else } }text-white{ { end } }">{ { .name | title } }</div>
     </div>
-  {{ end -}}
-  {{< /theme-colors.inline >}}
+  { { end -} }
+  { {< /theme-colors.inline >} }
 </div>
 
 All these colors are available as a Sass map, `$theme-colors`.
 
-{{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
+{ {< scss-docs name="theme-colors-map" file="scss/_variables.scss" >} }
 
-Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
+Check out [our Sass maps and loops docs]({ {< docsref "/customize/sass#maps-and-loops" >} }) for how to modify these colors.
 
 ## All colors
 
@@ -33,31 +33,31 @@ All Bootstrap colors are available as Sass variables and a Sass map in `scss/_va
 Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
 
 <div class="row font-monospace">
-  {{< theme-colors.inline >}}
-  {{- range $color := $.Site.Data.colors }}
-    {{- if (and (not (eq $color.name "white")) (not (eq $color.name "gray")) (not (eq $color.name "gray-dark"))) }}
+  { {< theme-colors.inline >} }
+  { {- range $color := $.Site.Data.colors } }
+    { {- if (and (not (eq $color.name "white")) (not (eq $color.name "gray")) (not (eq $color.name "gray-dark"))) } }
     <div class="col-md-4 mb-3">
-      <div class="p-3 mb-2 position-relative swatch-{{ $color.name }}">
-        <strong class="d-block">${{ $color.name }}</strong>
-        {{ $color.hex }}
+      <div class="p-3 mb-2 position-relative swatch-{ { $color.name } }">
+        <strong class="d-block">${ { $color.name } }</strong>
+        { { $color.hex } }
       </div>
-      {{ range (seq 100 100 900) }}
-      <div class="p-3 bd-{{ $color.name }}-{{ . }}">${{ $color.name }}-{{ . }}</div>
-      {{ end }}
+      { { range (seq 100 100 900) } }
+      <div class="p-3 bd-{ { $color.name } }-{ { . } }">${ { $color.name } }-{ { . } }</div>
+      { { end } }
     </div>
-    {{ end -}}
-  {{ end -}}
+    { { end -} }
+  { { end -} }
 
   <div class="col-md-4 mb-3">
     <div class="p-3 mb-2 position-relative swatch-gray-500">
       <strong class="d-block">$gray-500</strong>
       #adb5bd
     </div>
-  {{- range $.Site.Data.grays }}
-    <div class="p-3 bd-gray-{{ .name }}">$gray-{{ .name }}</div>
-  {{ end -}}
+  { {- range $.Site.Data.grays } }
+    <div class="p-3 bd-gray-{ { .name } }">$gray-{ { .name } }</div>
+  { { end -} }
   </div>
-  {{< /theme-colors.inline >}}
+  { {< /theme-colors.inline >} }
 
   <div class="col-md-4 mb-3">
     <div class="p-3 mb-2 bd-black text-white">
@@ -89,7 +89,7 @@ Bootstrap's source Sass files include three maps to help you quickly and easily 
 
 Within `scss/_variables.scss`, you'll find Bootstrap's color variables and Sass map. Here's an example of the `$colors` Sass map:
 
-{{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
+{ {< scss-docs name="colors-map" file="scss/_variables.scss" >} }
 
 Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
 
@@ -105,13 +105,13 @@ Here's how you can use these in your Sass:
 }
 ```
 
-[Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color` using the `500` color values.
+[Color]({ {< docsref "/utilities/colors" >} }) and [background]({ {< docsref "/utilities/background" >} }) utility classes are also available for setting `color` and `background-color` using the `500` color values.
 
 ## Generating utilities
 
 <small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.0</small>
 
-Bootstrap doesn't include `color` and `background-color` utilities for every color variable, but you can generate these yourself with our [utility API]({{< docsref "/utilities/api" >}}) and our extended Sass maps added in v5.1.0.
+Bootstrap doesn't include `color` and `background-color` utilities for every color variable, but you can generate these yourself with our [utility API]({ {< docsref "/utilities/api" >} }) and our extended Sass maps added in v5.1.0.
 
 1. To start, make sure you've imported our functions, variables, mixins, and utilities.
 2. Use our `map-merge-multiple()` function to quickly merge multiple Sass maps together in a new map.

@@ -12,14 +12,14 @@ toc: true
 
 ## Quick start
 
-Looking to quickly add Bootstrap to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? [Head to the downloads page]({{< docsref "/getting-started/download" >}}).
+Looking to quickly add Bootstrap to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? [Head to the downloads page]({ {< docsref "/getting-started/download" >} }).
 
 ### CSS
 
 Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
 
 ```html
-<link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
+<link href="{ {< param "cdn.css" >} }" rel="stylesheet" integrity="{ {< param "cdn.css_hash" >} }" crossorigin="anonymous">
 ```
 
 ### JS
@@ -28,10 +28,10 @@ Many of our components require the use of JavaScript to function. Specifically, 
 
 #### Bundle
 
-Include every Bootstrap JavaScript plugin and dependency with one of our two bundles. Both `bootstrap.bundle.js` and `bootstrap.bundle.min.js` include [Popper](https://popper.js.org/) for our tooltips and popovers. For more information about what's included in Bootstrap, please see our [contents]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}) section.
+Include every Bootstrap JavaScript plugin and dependency with one of our two bundles. Both `bootstrap.bundle.js` and `bootstrap.bundle.min.js` include [Popper](https://popper.js.org/) for our tooltips and popovers. For more information about what's included in Bootstrap, please see our [contents]({ {< docsref "/getting-started/contents#precompiled-bootstrap" >} }) section.
 
 ```html
-<script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
+<script src="{ {< param "cdn.js_bundle" >} }" integrity="{ {< param "cdn.js_bundle_hash" >} }" crossorigin="anonymous"></script>
 ```
 
 #### Separate
@@ -39,13 +39,13 @@ Include every Bootstrap JavaScript plugin and dependency with one of our two bun
 If you decide to go with the separate scripts solution, Popper must come first (if you're using tooltips or popovers), and then our JavaScript plugins.
 
 ```html
-<script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
-<script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
+<script src="{ {< param "cdn.popper" >} }" integrity="{ {< param "cdn.popper_hash" >} }" crossorigin="anonymous"></script>
+<script src="{ {< param "cdn.js" >} }" integrity="{ {< param "cdn.js_hash" >} }" crossorigin="anonymous"></script>
 ```
 
 #### Modules
 
-If you use `<script type="module">`, please refer to our [using Bootstrap as a module]({{< docsref "/getting-started/javascript#using-bootstrap-as-a-module" >}}) section.
+If you use `<script type="module">`, please refer to our [using Bootstrap as a module]({ {< docsref "/getting-started/javascript#using-bootstrap-as-a-module" >} }) section.
 
 #### Components
 
@@ -53,7 +53,7 @@ Curious which components explicitly require our JavaScript and Popper? Click the
 
 <details>
 <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
-{{< markdown >}}
+{ {< markdown >} }
 - Alerts for dismissing
 - Buttons for toggling states and checkbox/radio functionality
 - Carousel for all slide behaviors, controls, and indicators
@@ -65,7 +65,7 @@ Curious which components explicitly require our JavaScript and Popper? Click the
 - Toasts for displaying and dismissing
 - Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/))
 - Scrollspy for scroll behavior and navigation updates
-{{< /markdown >}}
+{ {< /markdown >} }
 </details>
 
 ## Starter template
@@ -81,7 +81,7 @@ Be sure to have your pages set up with the latest design and development standar
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
+    <link href="{ {< param "cdn.css" >} }" rel="stylesheet" integrity="{ {< param "cdn.css_hash" >} }" crossorigin="anonymous">
 
     <title>Hello, world!</title>
   </head>
@@ -91,18 +91,18 @@ Be sure to have your pages set up with the latest design and development standar
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
+    <script src="{ {< param "cdn.js_bundle" >} }" integrity="{ {< param "cdn.js_bundle_hash" >} }" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
-    <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
-    <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
+    <script src="{ {< param "cdn.popper" >} }" integrity="{ {< param "cdn.popper_hash" >} }" crossorigin="anonymous"></script>
+    <script src="{ {< param "cdn.js" >} }" integrity="{ {< param "cdn.js_hash" >} }" crossorigin="anonymous"></script>
     -->
   </body>
 </html>
 ```
 
-For next steps, visit the [Layout docs]({{< docsref "/layout/grid" >}}) or [our official examples]({{< docsref "/examples" >}}) to start laying out your site's content and components.
+For next steps, visit the [Layout docs]({ {< docsref "/layout/grid" >} }) or [our official examples]({ {< docsref "/examples" >} }) to start laying out your site's content and components.
 
 ## Important globals
 
@@ -147,16 +147,16 @@ Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box
 
 ### Reboot
 
-For improved cross-browser rendering, we use [Reboot]({{< docsref "/content/reboot" >}}) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
+For improved cross-browser rendering, we use [Reboot]({ {< docsref "/content/reboot" >} }) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
 
 ## Community
 
 Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
 
-- Read and subscribe to [The Official Bootstrap Blog]({{< param blog >}}).
-- Join [the official Slack room]({{< param slack >}}).
+- Read and subscribe to [The Official Bootstrap Blog]({ {< param blog >} }).
+- Join [the official Slack room]({ {< param slack >} }).
 - Chat with fellow Bootstrappers in IRC. On the `irc.libera.chat` server, in the `#bootstrap` channel.
 - Implementation help may be found at Stack Overflow (tagged [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
 - Developers should use the keyword `bootstrap` on packages that modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/search?q=keywords:bootstrap) or similar delivery mechanisms for maximum discoverability.
 
-You can also follow [@getbootstrap on Twitter](https://twitter.com/{{< param twitter >}}) for the latest gossip and awesome music videos.
+You can also follow [@getbootstrap on Twitter](https://twitter.com/{ {< param twitter >} }) for the latest gossip and awesome music videos.

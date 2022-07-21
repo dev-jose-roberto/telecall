@@ -64,15 +64,15 @@ This `font-family` is applied to the `<body>` and automatically inherited global
 
 ## CSS variables
 
-As Bootstrap 5 continues to mature, more and more styles will be built with [CSS variables]({{< docsref "/customize/css-variables" >}}) as a means to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
+As Bootstrap 5 continues to mature, more and more styles will be built with [CSS variables]({ {< docsref "/customize/css-variables" >} }) as a means to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
 
 For example, consider these `:root` CSS variables for common `<body>` styles:
 
-{{< scss-docs name="root-body-variables" file="scss/_root.scss" >}}
+{ {< scss-docs name="root-body-variables" file="scss/_root.scss" >} }
 
 In practice, those variables are then applied in Reboot like so:
 
-{{< scss-docs name="reboot-body-rules" file="scss/_reboot.scss" >}}
+{ {< scss-docs name="reboot-body-rules" file="scss/_reboot.scss" >} }
 
 Which allows you to make real-time customizations however you like:
 
@@ -96,37 +96,37 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
   <tbody>
     <tr>
       <td>
-        {{< markdown >}}`<h1></h1>`{{< /markdown >}}
+        { {< markdown >} }`<h1></h1>`{ {< /markdown >} }
       </td>
       <td><span class="h1">h1. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
-        {{< markdown >}}`<h2></h2>`{{< /markdown >}}
+        { {< markdown >} }`<h2></h2>`{ {< /markdown >} }
       </td>
       <td><span class="h2">h2. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
-        {{< markdown >}}`<h3></h3>`{{< /markdown >}}
+        { {< markdown >} }`<h3></h3>`{ {< /markdown >} }
       </td>
       <td><span class="h3">h3. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
-        {{< markdown >}}`<h4></h4>`{{< /markdown >}}
+        { {< markdown >} }`<h4></h4>`{ {< /markdown >} }
       </td>
       <td><span class="h4">h4. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
-        {{< markdown >}}`<h5></h5>`{{< /markdown >}}
+        { {< markdown >} }`<h5></h5>`{ {< /markdown >} }
       </td>
       <td><span class="h5">h5. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
-        {{< markdown >}}`<h6></h6>`{{< /markdown >}}
+        { {< markdown >} }`<h6></h6>`{ {< /markdown >} }
       </td>
       <td><span class="h6">h6. Bootstrap heading</span></td>
     </tr>
@@ -138,7 +138,7 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
 All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
 
 <div class="bd-example">
-{{< markdown >}}
+{ {< markdown >} }
 * All lists have their top margin removed
 * And their bottom margin normalized
 * Nested lists have no bottom margin
@@ -150,7 +150,7 @@ All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `
 2. With a few list items
 3. It has the same overall look
 4. As the previous unordered list
-{{< /markdown >}}
+{ {< /markdown >} }
 </div>
 
 For simpler styling, clear hierarchy, and better spacing, description lists have updated `margin`s. `<dd>`s reset `margin-left` to `0` and add `margin-bottom: .5rem`. `<dt>`s are **bolded**.
@@ -171,48 +171,48 @@ For simpler styling, clear hierarchy, and better spacing, description lists have
 
 Wrap inline snippets of code with `<code>`. Be sure to escape HTML angle brackets.
 
-{{< example >}}
+{ {< example >} }
 For example, <code>&lt;section&gt;</code> should be wrapped as inline.
-{{< /example >}}
+{ {< /example >} }
 
 ## Code blocks
 
 Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. The `<pre>` element is reset to remove its `margin-top` and use `rem` units for its `margin-bottom`.
 
-{{< example >}}
+{ {< example >} }
 <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
 &lt;p&gt;And another line of sample text here...&lt;/p&gt;
 </code></pre>
-{{< /example >}}
+{ {< /example >} }
 
 ## Variables
 
 For indicating variables use the `<var>` tag.
 
-{{< example >}}
+{ {< example >} }
 <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
-{{< /example >}}
+{ {< /example >} }
 
 ## User input
 
 Use the `<kbd>` to indicate input that is typically entered via keyboard.
 
-{{< example >}}
+{ {< example >} }
 To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
 To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
-{{< /example >}}
+{ {< /example >} }
 
 ## Sample output
 
 For indicating sample output from a program use the `<samp>` tag.
 
-{{< example >}}
+{ {< example >} }
 <samp>This text is meant to be treated as sample output from a computer program.</samp>
-{{< /example >}}
+{ {< /example >} }
 
 ## Tables
 
-Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]({{< docsref "/content/tables" >}}).
+Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]({ {< docsref "/content/tables" >} }).
 
 <div class="bd-example">
   <table>
@@ -385,17 +385,17 @@ These changes, and more, are demonstrated below.
   </fieldset>
 </form>
 
-{{< callout warning >}}
-{{< partial "callout-warning-input-support.md" >}}
-{{< /callout >}}
+{ {< callout warning >} }
+{ {< partial "callout-warning-input-support.md" >} }
+{ {< /callout >} }
 
 ### Pointers on buttons
 
 Reboot includes an enhancement for `role="button"` to change the default cursor to `pointer`. Add this attribute to elements to help indicate elements are interactive. This role isn't necessary for `<button>` elements, which get their own `cursor` change.
 
-{{< example >}}
+{ {< example >} }
 <span role="button" tabindex="0">Non-button element button</span>
-{{< /example >}}
+{ {< /example >} }
 
 ## Misc elements
 
@@ -460,10 +460,10 @@ HTML5 adds [a new global attribute named `[hidden]`](https://developer.mozilla.o
 <input type="text" hidden>
 ```
 
-{{< callout warning >}}
+{ {< callout warning >} }
 ##### jQuery incompatibility
 
 `[hidden]` is not compatible with jQuery's `$(...).hide()` and `$(...).show()` methods. Therefore, we don't currently especially endorse `[hidden]` over other techniques for managing the `display` of elements.
-{{< /callout >}}
+{ {< /callout >} }
 
-To merely toggle the visibility of an element, meaning its `display` is not modified and the element can still affect the flow of the document, use [the `.invisible` class]({{< docsref "/utilities/visibility" >}}) instead.
+To merely toggle the visibility of an element, meaning its `display` is not modified and the element can still affect the flow of the document, use [the `.invisible` class]({ {< docsref "/utilities/visibility" >} }) instead.

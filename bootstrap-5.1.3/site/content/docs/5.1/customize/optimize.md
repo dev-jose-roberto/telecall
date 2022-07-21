@@ -10,7 +10,7 @@ toc: true
 
 When using Sass in your asset pipeline, make sure you optimize Bootstrap by only `@import`ing the components you need. Your largest optimizations will likely come from the `Layout & Components` section of our `bootstrap.scss`.
 
-{{< scss-docs name="import-stack" file="scss/bootstrap.scss" >}}
+{ {< scss-docs name="import-stack" file="scss/bootstrap.scss" >} }
 
 
 If you're not using a component, comment it out or delete it entirely. For example, if you're not using the carousel, remove that import to save some file size in your compiled CSS. Keep in mind there are some dependencies across Sass imports that may make it more difficult to omit a file.
@@ -40,7 +40,7 @@ import 'bootstrap/js/dist/modal';
 
 This way, you're not including any JavaScript you don't intend to use for components like buttons, carousels, and tooltips. If you're importing dropdowns, tooltips or popovers, be sure to list the Popper dependency in your `package.json` file.
 
-{{< callout info >}}
+{ {< callout info >} }
 ### Default Exports
 
 Files in `bootstrap/js/dist` use the **default export**, so if you want to use one of them you have to do the following:
@@ -50,7 +50,7 @@ import Modal from 'bootstrap/js/dist/modal'
 
 const modal = new Modal(document.getElementById('myModal'))
 ```
-{{< /callout >}}
+{ {< /callout >} }
 
 ## Autoprefixer .browserslistrc
 

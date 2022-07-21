@@ -12,7 +12,7 @@ Change the value of the [`display` property](https://developer.mozilla.org/en-US
 
 ## Notation
 
-Display utility classes that apply to all [breakpoints]({{< docsref "/layout/breakpoints" >}}), from `xs` to `xxl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+Display utility classes that apply to all [breakpoints]({ {< docsref "/layout/breakpoints" >} }), from `xs` to `xxl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
 As such, the classes are named using the format:
 
@@ -38,15 +38,15 @@ The media queries affect screen widths with the given breakpoint *or larger*. Fo
 
 ## Examples
 
-{{< example >}}
+{ {< example >} }
 <div class="d-inline p-2 bg-primary text-white">d-inline</div>
 <div class="d-inline p-2 bg-dark text-white">d-inline</div>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example >}}
+{ {< example >} }
 <span class="d-block p-2 bg-primary text-white">d-block</span>
 <span class="d-block p-2 bg-dark text-white">d-block</span>
-{{< /example >}}
+{ {< /example >} }
 
 ## Hiding elements
 
@@ -123,10 +123,10 @@ To show an element only on a given interval of screen sizes you can combine one 
   </tbody>
 </table>
 
-{{< example >}}
+{ {< example >} }
 <div class="d-lg-none">hide on lg and wider screens</div>
 <div class="d-none d-lg-block">hide on screens smaller than lg</div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Display in print
 
@@ -145,16 +145,16 @@ Change the `display` value of elements when printing with our print display util
 
 The print and display classes can be combined.
 
-{{< example >}}
+{ {< example >} }
 <div class="d-print-none">Screen Only (Hide on print only)</div>
 <div class="d-none d-print-block">Print Only (Hide on screen only)</div>
 <div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Sass
 
 ### Utilities API
 
-Display utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Display utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({ {< docsref "/utilities/api#using-the-api" >} })
 
-{{< scss-docs name="utils-display" file="scss/_utilities.scss" >}}
+{ {< scss-docs name="utils-display" file="scss/_utilities.scss" >} }

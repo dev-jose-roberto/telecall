@@ -39,7 +39,7 @@ toc: true
 
 ## Sass
 
-- We've ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}}).
+- We've ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]({ {< docsref "/customize/sass#maps-and-loops" >} }).
 
 - <span class="badge bg-danger">Breaking</span> Renamed `color-yiq()` function and related variables to `color-contrast()` as it's no longer related to YIQ colorspace. [See #30168.](https://github.com/twbs/bootstrap/pull/30168/)
   - `$yiq-contrasted-threshold` is renamed to `$min-contrast-ratio`.
@@ -97,7 +97,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> Dropped several `.order-*` classes that often went unused. We now only provide `.order-1` to `.order-5` out of the box.
 
-- <span class="badge bg-danger">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [See #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]({{< docsref "/utilities/flex#media-object" >}}).
+- <span class="badge bg-danger">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [See #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]({ {< docsref "/utilities/flex#media-object" >} }).
 
 - <span class="badge bg-danger">Breaking</span> `bootstrap-grid.css` now only applies `box-sizing: border-box` to the column instead of resetting the global box-sizing. This way, our grid styles can be used in more places without interference.
 
@@ -107,7 +107,7 @@ toc: true
 
 ## Content, Reboot, etc
 
-- **[RFS]({{< docsref "/getting-started/rfs" >}}) is now enabled by default.** Headings using the `font-size()` mixin will automatically adjust their `font-size` to scale with the viewport. _This feature was previously opt-in with v4._
+- **[RFS]({ {< docsref "/getting-started/rfs" >} }) is now enabled by default.** Headings using the `font-size()` mixin will automatically adjust their `font-size` to scale with the viewport. _This feature was previously opt-in with v4._
 
 - <span class="badge bg-danger">Breaking</span> Overhauled our display typography to replace our `$display-*` variables and with a `$display-font-sizes` Sass map. Also removed the individual `$display-*-weight` variables for a single `$display-font-weight` and adjusted `font-size`s.
 
@@ -143,7 +143,7 @@ toc: true
 
 ## Forms
 
-- **Added new floating forms!** We've promoted the Floating labels example to fully supported form components. [See the new Floating labels page.]({{< docsref "/forms/floating-labels" >}})
+- **Added new floating forms!** We've promoted the Floating labels example to fully supported form components. [See the new Floating labels page.]({ {< docsref "/forms/floating-labels" >} })
 
 - <span class="badge bg-danger">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
   - `.custom-check` is now `.form-check`.
@@ -175,11 +175,11 @@ toc: true
 
 ### Accordion
 
-- Added [new accordion component]({{< docsref "/components/accordion" >}}).
+- Added [new accordion component]({ {< docsref "/components/accordion" >} }).
 
 ### Alerts
 
-- Alerts now have [examples with icons]({{< docsref "/components/alerts#icons" >}}).
+- Alerts now have [examples with icons]({ {< docsref "/components/alerts#icons" >} }).
 
 - Removed custom styles for `<hr>`s in each alert since they already use `currentColor`.
 
@@ -217,13 +217,13 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> Dropped `.card-columns` in favor of Masonry. [See #28922](https://github.com/twbs/bootstrap/pull/28922).
 
-- <span class="badge bg-danger">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]({{< docsref "/components/accordion" >}}).
+- <span class="badge bg-danger">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]({ {< docsref "/components/accordion" >} }).
 
 ### Carousel
 
-- Added new [`.carousel-dark` variant]({{< docsref "/components/carousel#dark-variant" >}}) for dark text, controls, and indicators (great for lighter backgrounds).
+- Added new [`.carousel-dark` variant]({ {< docsref "/components/carousel#dark-variant" >} }) for dark text, controls, and indicators (great for lighter backgrounds).
 
-- Replaced chevron icons for carousel controls with new SVGs from [Bootstrap Icons]({{< param "icons" >}}).
+- Replaced chevron icons for carousel controls with new SVGs from [Bootstrap Icons]({ {< param "icons" >} }).
 
 ### Close button
 
@@ -251,7 +251,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> Dropped `flip` option for dropdown plugin in favor of native Popper configuration. You can now disable the flipping behavior by passing an empty array for [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) option in [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier.
 
-- Dropdown menus can now be clickable with a new `autoClose` option to handle the [auto close behavior]({{< docsref "/components/dropdowns#auto-close-behavior" >}}). You can use this option to accept the click inside or outside the dropdown menu to make it interactive.
+- Dropdown menus can now be clickable with a new `autoClose` option to handle the [auto close behavior]({ {< docsref "/components/dropdowns#auto-close-behavior" >} }). You can use this option to accept the click inside or outside the dropdown menu to make it interactive.
 
 - Dropdowns now support `.dropdown-item`s wrapped in `<li>`s.
 
@@ -261,7 +261,7 @@ toc: true
 
 ### List group
 
-- Added new [`.list-group-numbered` modifier]({{< docsref "/components/list-group#numbered" >}}) to list groups.
+- Added new [`.list-group-numbered` modifier]({ {< docsref "/components/list-group#numbered" >} }) to list groups.
 
 ### Navs and tabs
 
@@ -273,7 +273,7 @@ toc: true
 
 ### Offcanvas
 
-- Added the new [offcanvas component]({{< docsref "/components/offcanvas" >}}).
+- Added the new [offcanvas component]({ {< docsref "/components/offcanvas" >} }).
 
 ### Pagination
 
@@ -295,7 +295,7 @@ toc: true
 
 ### Toasts
 
-- Toasts can now be [positioned]({{< docsref "/components/toasts#placement" >}}) in a `.toast-container` with the help of [positioning utilities]({{< docsref "/utilities/position" >}}).
+- Toasts can now be [positioned]({ {< docsref "/components/toasts#placement" >} }) in a `.toast-container` with the help of [positioning utilities]({ {< docsref "/utilities/position" >} }).
 
 - Changed default toast duration to 5 seconds.
 
@@ -324,11 +324,11 @@ toc: true
 
 - Added new `.bg-body` class for quickly setting the `<body>`'s background to additional elements.
 
-- Added new [position utilities]({{< docsref "/utilities/position#arrange-elements" >}}) for `top`, `right`, `bottom`, and `left`. Values include `0`, `50%`, and `100%` for each property.
+- Added new [position utilities]({ {< docsref "/utilities/position#arrange-elements" >} }) for `top`, `right`, `bottom`, and `left`. Values include `0`, `50%`, and `100%` for each property.
 
 - Added new `.translate-middle-x` & `.translate-middle-y` utilities to horizontally or vertically center absolute/fixed positioned elements.
 
-- Added new [`border-width` utilities]({{< docsref "/utilities/borders#border-width" >}}).
+- Added new [`border-width` utilities]({ {< docsref "/utilities/borders#border-width" >} }).
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
 
@@ -344,7 +344,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> Removed `.rounded-sm` and `rounded-lg`, and introduced a new scale of classes, `.rounded-0` to `.rounded-3`. [See #31687](https://github.com/twbs/bootstrap/pull/31687).
 
-- Added new `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]({{< docsref "/utilities/text#line-height" >}}).
+- Added new `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]({ {< docsref "/utilities/text#line-height" >} }).
 
 - Moved the `.d-none` utility in our CSS to give it more weight over other display utilities.
 
@@ -352,13 +352,13 @@ toc: true
 
 ## Helpers
 
-- <span class="badge bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]({{< docsref "/helpers/ratio" >}})** with new class names and improved behaviors, as well as a helpful CSS variable.
+- <span class="badge bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]({ {< docsref "/helpers/ratio" >} })** with new class names and improved behaviors, as well as a helpful CSS variable.
   - Classes have been renamed to change `by` to `x` in the aspect ratio. For example, `.ratio-16by9` is now `.ratio-16x9`.
   - We've dropped the `.embed-responsive-item` and element group selector in favor of a simpler `.ratio > *` selector. No more class is needed, and the ratio helper now works with any HTML element.
   - The `$embed-responsive-aspect-ratios` Sass map has been renamed to `$aspect-ratios` and its values have been simplified to include the class name and the percentage as the `key: value` pair.
-  - CSS variables are now generated and included for each value in the Sass map. Modify the `--bs-aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]({{< docsref "/helpers/ratio#custom-ratios" >}}).
+  - CSS variables are now generated and included for each value in the Sass map. Modify the `--bs-aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]({ {< docsref "/helpers/ratio#custom-ratios" >} }).
 
-- <span class="badge bg-danger">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]({{< docsref "/helpers/visually-hidden" >}}).**
+- <span class="badge bg-danger">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]({ {< docsref "/helpers/visually-hidden" >} }).**
   - Changed the Sass file from `scss/helpers/_screenreaders.scss` to `scss/helpers/_visually-hidden.scss`
   - Renamed `.sr-only` and `.sr-only-focusable` to `.visually-hidden` and `.visually-hidden-focusable`
   - Renamed `sr-only()` and `sr-only-focusable()` mixins to `visually-hidden()` and `visually-hidden-focusable()`.

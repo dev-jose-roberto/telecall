@@ -10,7 +10,7 @@ toc: true
 
 Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group.
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon1">@</span>
   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
@@ -43,18 +43,18 @@ Place one add-on or button on either side of an input. You may also place one on
   <span class="input-group-text">With textarea</span>
   <textarea class="form-control" aria-label="With textarea"></textarea>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Wrapping
 
 Input groups wrap by default via `flex-wrap: wrap` in order to accommodate custom form field validation within an input group. You may disable this with `.flex-nowrap`.
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping">@</span>
   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Sizing
 
@@ -62,7 +62,7 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 
 **Sizing on the individual input group elements isn't supported.**
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group input-group-sm mb-3">
   <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
@@ -77,13 +77,13 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
   <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Checkboxes and radios
 
 Place any checkbox or radio option within an input group's addon instead of text. We recommend adding `.mt-0` to the `.form-check-input` when there's no visible text next to the input.
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group mb-3">
   <div class="input-group-text">
     <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
@@ -97,25 +97,25 @@ Place any checkbox or radio option within an input group's addon instead of text
   </div>
   <input type="text" class="form-control" aria-label="Text input with radio button">
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Multiple inputs
 
 While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group">
   <span class="input-group-text">First and last name</span>
   <input type="text" aria-label="First name" class="form-control">
   <input type="text" aria-label="Last name" class="form-control">
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Multiple addons
 
 Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group mb-3">
   <span class="input-group-text">$</span>
   <span class="input-group-text">0.00</span>
@@ -127,11 +127,11 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
   <span class="input-group-text">$</span>
   <span class="input-group-text">0.00</span>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Button addons
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group mb-3">
   <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
   <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
@@ -153,11 +153,11 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
   <button class="btn btn-outline-secondary" type="button">Button</button>
   <button class="btn btn-outline-secondary" type="button">Button</button>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Buttons with dropdowns
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group mb-3">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
   <ul class="dropdown-menu">
@@ -201,11 +201,11 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
     <li><a class="dropdown-item" href="#">Separated link</a></li>
   </ul>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Segmented buttons
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group mb-3">
   <button type="button" class="btn btn-outline-secondary">Action</button>
   <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
@@ -235,7 +235,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
     <li><a class="dropdown-item" href="#">Separated link</a></li>
   </ul>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Custom forms
 
@@ -243,7 +243,7 @@ Input groups include support for custom selects and custom file inputs. Browser 
 
 ### Custom select
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group mb-3">
   <label class="input-group-text" for="inputGroupSelect01">Options</label>
   <select class="form-select" id="inputGroupSelect01">
@@ -283,11 +283,11 @@ Input groups include support for custom selects and custom file inputs. Browser 
   </select>
   <button class="btn btn-outline-secondary" type="button">Button</button>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Custom file input
 
-{{< example >}}
+{ {< example >} }
 <div class="input-group mb-3">
   <label class="input-group-text" for="inputGroupFile01">Upload</label>
   <input type="file" class="form-control" id="inputGroupFile01">
@@ -307,10 +307,10 @@ Input groups include support for custom selects and custom file inputs. Browser 
   <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
   <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Sass
 
 ### Variables
 
-{{< scss-docs name="input-group-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="input-group-variables" file="scss/_variables.scss" >} }

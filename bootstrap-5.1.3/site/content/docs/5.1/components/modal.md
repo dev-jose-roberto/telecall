@@ -14,7 +14,7 @@ Before getting started with Bootstrap's modal component, be sure to read the fol
 - Clicking on the modal "backdrop" will automatically close the modal.
 - Bootstrap only supports one modal window at a time. Nested modals aren't supported as we believe them to be poor user experiences.
 - Modals use `position: fixed`, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You'll likely run into issues when nesting a `.modal` within another fixed element.
-- Once again, due to `position: fixed`, there are some caveats with using modals on mobile devices. [See our browser support docs]({{< docsref "/getting-started/browsers-devices#modals-and-dropdowns-on-mobile" >}}) for details.
+- Once again, due to `position: fixed`, there are some caveats with using modals on mobile devices. [See our browser support docs]({ {< docsref "/getting-started/browsers-devices#modals-and-dropdowns-on-mobile" >} }) for details.
 - Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Bootstrap modals. To achieve the same effect, use some custom JavaScript:
 
 ```js
@@ -26,9 +26,9 @@ myModal.addEventListener('shown.bs.modal', function () {
 })
 ```
 
-{{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
-{{< /callout >}}
+{ {< callout info >} }
+{ {< partial "callout-info-prefersreducedmotion.md" >} }
+{ {< /callout >} }
 
 Keep reading for demos and usage guidelines.
 
@@ -314,7 +314,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 
 ### Tooltips and popovers
 
-[Tooltips]({{< docsref "/components/tooltips" >}}) and [popovers]({{< docsref "/components/popovers" >}}) can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.
+[Tooltips]({ {< docsref "/components/tooltips" >} }) and [popovers]({ {< docsref "/components/popovers" >} }) can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.
 
 <div class="modal fade" id="exampleModalPopovers" tabindex="-1" aria-labelledby="exampleModalPopoversLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -444,7 +444,7 @@ Have a bunch of buttons that all trigger the same modal with slightly different 
 
 Below is a live demo followed by example HTML and JavaScript. For more information, [read the modal events docs](#events) for details on `relatedTarget`.
 
-{{< example >}}
+{ {< example >} }
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
@@ -475,7 +475,7 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ```js
 var exampleModal = document.getElementById('exampleModal')
@@ -500,7 +500,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 Toggle between multiple modals with some clever placement of the `data-bs-target` and `data-bs-toggle` attributes. For example, you could toggle a password reset modal from within an already open sign in modal. **Please note multiple modals cannot be open at the same time**—this method simply toggles between two separate modals.
 
-{{< example >}}
+{ {< example >} }
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -534,7 +534,7 @@ Toggle between multiple modals with some clever placement of the `data-bs-target
   </div>
 </div>
 <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
-{{< /example >}}
+{ {< /example >} }
 
 ### Change animation
 
@@ -817,13 +817,13 @@ Another override is the option to pop up a modal that covers the user viewport, 
 
 ### Variables
 
-{{< scss-docs name="modal-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="modal-variables" file="scss/_variables.scss" >} }
 
 ### Loop
 
 [Responsive fullscreen modals](#fullscreen-modal) are generated via the `$breakpoints` map and a loop in `scss/_modal.scss`.
 
-{{< scss-docs name="modal-fullscreen-loop" file="scss/_modal.scss" >}}
+{ {< scss-docs name="modal-fullscreen-loop" file="scss/_modal.scss" >} }
 
 ## Usage
 
@@ -841,11 +841,11 @@ Activate a modal without writing JavaScript. Set `data-bs-toggle="modal"` on a c
 
 #### Dismiss
 
-{{% js-dismiss "modal" %}}
+{ {% js-dismiss "modal" %} }
 
-{{< callout warning >}}
+{ {< callout warning >} }
 While both ways to dismiss a modal are supported, keep in mind that dismissing from outside a modal does not match [the WAI-ARIA modal dialog design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal). Do this at your own risk.
-{{< /callout >}}
+{ {< /callout >} }
 
 ### Via JavaScript
 
@@ -892,9 +892,9 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 
 ### Methods
 
-{{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
-{{< /callout >}}
+{ {< callout danger >} }
+{ {< partial "callout-danger-async-methods.md" >} }
+{ {< /callout >} }
 
 #### Passing options
 

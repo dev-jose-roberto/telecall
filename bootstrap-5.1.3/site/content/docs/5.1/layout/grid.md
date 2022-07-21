@@ -10,11 +10,11 @@ toc: true
 
 Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
 
-{{< callout info >}}
+{ {< callout info >} }
 **New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
-{{< /callout >}}
+{ {< /callout >} }
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row">
     <div class="col">
@@ -28,7 +28,7 @@ Bootstrap's grid system uses a series of containers, rows, and columns to layout
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent `.container`.
 
@@ -36,15 +36,15 @@ The above example creates three equal-width columns across all devices and viewp
 
 Breaking it down, here's how the grid system comes together:
 
-- **Our grid supports [six responsive breakpoints]({{< docsref "/layout/breakpoints" >}}).**  Breakpoints are based on `min-width` media queries, meaning they affect that breakpoint and all those above it (e.g., `.col-sm-4` applies to `sm`, `md`, `lg`, `xl`, and `xxl`). This means you can control container and column sizing and behavior by each breakpoint.
+- **Our grid supports [six responsive breakpoints]({ {< docsref "/layout/breakpoints" >} }).**  Breakpoints are based on `min-width` media queries, meaning they affect that breakpoint and all those above it (e.g., `.col-sm-4` applies to `sm`, `md`, `lg`, `xl`, and `xxl`). This means you can control container and column sizing and behavior by each breakpoint.
 
 - **Containers center and horizontally pad your content.** Use `.container` for a responsive pixel width, `.container-fluid` for `width: 100%` across all viewports and devices, or a responsive container (e.g., `.container-md`) for a combination of fluid and pixel widths.
 
-- **Rows are wrappers for columns.** Each column has horizontal `padding` (called a gutter) for controlling the space between them. This `padding` is then counteracted on the rows with negative margins to ensure the content in your columns is visually aligned down the left side. Rows also support modifier classes to [uniformly apply column sizing](#row-columns) and [gutter classes]({{< docsref "/layout/gutters" >}}) to change the spacing of your content.
+- **Rows are wrappers for columns.** Each column has horizontal `padding` (called a gutter) for controlling the space between them. This `padding` is then counteracted on the rows with negative margins to ensure the content in your columns is visually aligned down the left side. Rows also support modifier classes to [uniformly apply column sizing](#row-columns) and [gutter classes]({ {< docsref "/layout/gutters" >} }) to change the spacing of your content.
 
 - **Columns are incredibly flexible.** There are 12 template columns available per row, allowing you to create different combinations of elements that span any number of columns. Column classes indicate the number of template columns to span (e.g., `col-4` spans four). `width`s are set in percentages so you always have the same relative sizing.
 
-- **Gutters are also responsive and customizable.** [Gutter classes are available]({{< docsref "/layout/gutters" >}}) across all breakpoints, with all the same sizes as our [margin and padding spacing]({{< docsref "/utilities/spacing" >}}). Change horizontal gutters with `.gx-*` classes, vertical gutters with `.gy-*`, or all gutters with `.g-*` classes. `.g-0` is also available to remove gutters.
+- **Gutters are also responsive and customizable.** [Gutter classes are available]({ {< docsref "/layout/gutters" >} }) across all breakpoints, with all the same sizes as our [margin and padding spacing]({ {< docsref "/utilities/spacing" >} }). Change horizontal gutters with `.gx-*` classes, vertical gutters with `.gy-*`, or all gutters with `.g-*` classes. `.g-0` is also available to remove gutters.
 
 - **Sass variables, maps, and mixins power the grid.** If you don't want to use the predefined grid classes in Bootstrap, you can use our [grid's source Sass](#sass) to create your own with more semantic markup. We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.
 
@@ -122,7 +122,7 @@ As noted above, each of these breakpoints have their own container, unique class
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Custom gutters</th>
-      <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
+      <td colspan="6"><a href="{ {< docsref "/layout/gutters" >} }">Yes</a></td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Nestable</th>
@@ -130,7 +130,7 @@ As noted above, each of these breakpoints have their own container, unique class
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Column ordering</th>
-      <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
+      <td colspan="6"><a href="{ {< docsref "/layout/columns#reordering" >} }">Yes</a></td>
     </tr>
   </tbody>
 </table>
@@ -143,7 +143,7 @@ Utilize breakpoint-specific column classes for easy column sizing without an exp
 
 For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xxl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row">
     <div class="col">
@@ -165,13 +165,13 @@ For example, here are two grid layouts that apply to every device and viewport, 
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Setting one column width
 
 Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row">
     <div class="col">
@@ -196,13 +196,13 @@ Auto-layout for flexbox grid columns also means you can set the width of one col
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Variable width content
 
 Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content.
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col col-lg-2">
@@ -227,7 +227,7 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Responsive classes
 
@@ -237,7 +237,7 @@ Bootstrap's grid includes six tiers of predefined classes for building complex r
 
 For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`.
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row">
     <div class="col">col</div>
@@ -250,13 +250,13 @@ For grids that are the same from the smallest of devices to the largest, use the
     <div class="col-4">col-4</div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Stacked to horizontal
 
 Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`).
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row">
     <div class="col-sm-8">col-sm-8</div>
@@ -268,13 +268,13 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
     <div class="col-sm">col-sm</div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Mix and match
 
 Don't want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <!-- Stack the columns on mobile by making one full-width and the other half-width -->
   <div class="row">
@@ -295,7 +295,7 @@ Don't want your columns to simply stack in some grid tiers? Use a combination of
     <div class="col-6">.col-6</div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Row columns
 
@@ -303,7 +303,7 @@ Use the responsive `.row-cols-*` classes to quickly set the number of columns th
 
 Use these row columns classes to quickly create basic grid layouts or to control your card layouts.
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row row-cols-2">
     <div class="col">Column</div>
@@ -312,9 +312,9 @@ Use these row columns classes to quickly create basic grid layouts or to control
     <div class="col">Column</div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row row-cols-3">
     <div class="col">Column</div>
@@ -323,9 +323,9 @@ Use these row columns classes to quickly create basic grid layouts or to control
     <div class="col">Column</div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row row-cols-auto">
     <div class="col">Column</div>
@@ -334,9 +334,9 @@ Use these row columns classes to quickly create basic grid layouts or to control
     <div class="col">Column</div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row row-cols-4">
     <div class="col">Column</div>
@@ -345,9 +345,9 @@ Use these row columns classes to quickly create basic grid layouts or to control
     <div class="col">Column</div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row row-cols-4">
     <div class="col">Column</div>
@@ -356,9 +356,9 @@ Use these row columns classes to quickly create basic grid layouts or to control
     <div class="col">Column</div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
     <div class="col">Column</div>
@@ -367,7 +367,7 @@ Use these row columns classes to quickly create basic grid layouts or to control
     <div class="col">Column</div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 You can also use the accompanying Sass mixin, `row-cols()`:
 
@@ -387,7 +387,7 @@ You can also use the accompanying Sass mixin, `row-cols()`:
 
 To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
 
-{{< example class="bd-example-row" >}}
+{ {< example class="bd-example-row" >} }
 <div class="container">
   <div class="row">
     <div class="col-sm-3">
@@ -405,7 +405,7 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Sass
 
@@ -420,9 +420,9 @@ $grid-columns:      12;
 $grid-gutter-width: 1.5rem;
 ```
 
-{{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
+{ {< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >} }
 
-{{< scss-docs name="container-max-widths" file="scss/_variables.scss" >}}
+{ {< scss-docs name="container-max-widths" file="scss/_variables.scss" >} }
 
 ### Mixins
 
@@ -482,14 +482,14 @@ You can modify the variables to your own custom values, or just use the mixins w
 }
 ```
 
-{{< example >}}
+{ {< example >} }
 <div class="example-container">
   <div class="example-row">
     <div class="example-content-main">Main content</div>
     <div class="example-content-secondary">Secondary content</div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Customizing the grid
 

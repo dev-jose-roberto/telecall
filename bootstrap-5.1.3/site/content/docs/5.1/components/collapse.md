@@ -10,9 +10,9 @@ toc: true
 
 The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the `height` from its current value to `0`. Given how CSS handles animations, you cannot use `padding` on a `.collapse` element. Instead, use the class as an independent wrapping element.
 
-{{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
-{{< /callout >}}
+{ {< callout info >} }
+{ {< partial "callout-info-prefersreducedmotion.md" >} }
+{ {< /callout >} }
 
 ## Example
 
@@ -24,7 +24,7 @@ Click the buttons below to show and hide another element via class changes:
 
 Generally, we recommend using a button with the `data-bs-target` attribute. While not recommended from a semantic point of view, you can also use a link with the `href` attribute (and a `role="button"`). In both cases, the `data-bs-toggle="collapse"` is required.
 
-{{< example >}}
+{ {< example >} }
 <p>
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Link with href
@@ -38,17 +38,17 @@ Generally, we recommend using a button with the `data-bs-target` attribute. Whil
     Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Horizontal
 
-The collapse plugin also supports horizontal collapsing. Add the `.collapse-horizontal` modifier class to transition the `width` instead of `height` and set a `width` on the immediate child element. Feel free to write your own custom Sass, use inline styles, or use our [width utilities]({{< docsref "/utilities/sizing" >}}).
+The collapse plugin also supports horizontal collapsing. Add the `.collapse-horizontal` modifier class to transition the `width` instead of `height` and set a `width` on the immediate child element. Feel free to write your own custom Sass, use inline styles, or use our [width utilities]({ {< docsref "/utilities/sizing" >} }).
 
-{{< callout info >}}
+{ {< callout info >} }
 Please note that while the example below has a `min-height` set to avoid excessive repaints in our docs, this is not explicitly required. **Only the `width` on the child element is required.**
-{{< /callout >}}
+{ {< /callout >} }
 
-{{< example >}}
+{ {< example >} }
 <p>
   <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
     Toggle width collapse
@@ -61,14 +61,14 @@ Please note that while the example below has a `min-height` set to avoid excessi
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Multiple targets
 
 A `<button>` or `<a>` can show and hide multiple elements by referencing them with a selector in its `href` or `data-bs-target` attribute.
 Multiple `<button>` or `<a>` can show and hide an element if they each reference it with their `href` or `data-bs-target` attribute
 
-{{< example >}}
+{ {< example >} }
 <p>
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
   <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
@@ -90,7 +90,7 @@ Multiple `<button>` or `<a>` can show and hide an element if they each reference
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Accessibility
 
@@ -104,13 +104,13 @@ Note that Bootstrap's current implementation does not cover the various *optiona
 
 ### Variables
 
-{{< scss-docs name="collapse-transition" file="scss/_variables.scss" >}}
+{ {< scss-docs name="collapse-transition" file="scss/_variables.scss" >} }
 
 ### Classes
 
 Collapse transition classes can be found in `scss/_transitions.scss` as these are shared across multiple components (collapse and accordion).
 
-{{< scss-docs name="collapse-classes" file="scss/_transitions.scss" >}}
+{ {< scss-docs name="collapse-classes" file="scss/_transitions.scss" >} }
 
 ## Usage
 
@@ -126,7 +126,7 @@ These classes can be found in `_transitions.scss`.
 
 Just add `data-bs-toggle="collapse"` and a `data-bs-target` to the element to automatically assign control of one or more collapsible elements. The `data-bs-target` attribute accepts a CSS selector to apply the collapse to. Be sure to add the class `collapse` to the collapsible element. If you'd like it to default open, add the additional class `show`.
 
-To add accordion-like group management to a collapsible area, add the data attribute `data-bs-parent="#selector"`. Refer to the [accordion page]({{< docsref "/components/accordion" >}}) for more information.
+To add accordion-like group management to a collapsible area, add the data attribute `data-bs-parent="#selector"`. Refer to the [accordion page]({ {< docsref "/components/accordion" >} }) for more information.
 
 ### Via JavaScript
 
@@ -170,9 +170,9 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 
 ### Methods
 
-{{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
-{{< /callout >}}
+{ {< callout danger >} }
+{ {< partial "callout-danger-async-methods.md" >} }
+{ {< /callout >} }
 
 Activates your content as a collapsible element. Accepts an optional options `object`.
 

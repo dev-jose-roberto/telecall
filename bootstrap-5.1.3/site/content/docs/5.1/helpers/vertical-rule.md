@@ -18,27 +18,27 @@ Customize them with additional styles as needed.
 
 ## Example
 
-{{< example >}}
+{ {< example >} }
 <div class="vr"></div>
-{{< /example >}}
+{ {< /example >} }
 
 Vertical rules scale their height in flex layouts:
 
-{{< example >}}
+{ {< example >} }
 <div class="d-flex" style="height: 200px;">
   <div class="vr"></div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## With stacks
 
-They can also be used in [stacks]({{< docsref "/helpers/stacks" >}}):
+They can also be used in [stacks]({ {< docsref "/helpers/stacks" >} }):
 
-{{< example >}}
+{ {< example >} }
 <div class="hstack gap-3">
   <div class="bg-light border">First item</div>
   <div class="bg-light border ms-auto">Second item</div>
   <div class="vr"></div>
   <div class="bg-light border">Third item</div>
 </div>
-{{< /example >}}
+{ {< /example >} }

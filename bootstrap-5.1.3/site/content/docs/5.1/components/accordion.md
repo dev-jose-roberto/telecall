@@ -11,17 +11,17 @@ toc: true
 
 ## How it works
 
-The accordion uses [collapse]({{< docsref "/components/collapse" >}}) internally to make it collapsible. To render an accordion that's expanded, add the `.open` class on the `.accordion`.
+The accordion uses [collapse]({ {< docsref "/components/collapse" >} }) internally to make it collapsible. To render an accordion that's expanded, add the `.open` class on the `.accordion`.
 
-{{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
-{{< /callout >}}
+{ {< callout info >} }
+{ {< partial "callout-info-prefersreducedmotion.md" >} }
+{ {< /callout >} }
 
 ## Example
 
 Click the accordions below to expand/collapse the accordion content.
 
-{{< example >}}
+{ {< example >} }
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
@@ -60,13 +60,13 @@ Click the accordions below to expand/collapse the accordion content.
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Flush
 
 Add `.accordion-flush` to remove the default `background-color`, some borders, and some rounded corners to render accordions edge-to-edge with their parent container.
 
-{{< example class="bg-light" >}}
+{ {< example class="bg-light" >} }
 <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
@@ -99,13 +99,13 @@ Add `.accordion-flush` to remove the default `background-color`, some borders, a
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Always open
 
 Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accordion items stay open when another item is opened.
 
-{{< example >}}
+{ {< example >} }
 <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -144,14 +144,14 @@ Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accord
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Accessibility
 
-Please read the [collapse accessibility section]({{< docsref "/components/collapse#accessibility" >}}) for more information.
+Please read the [collapse accessibility section]({ {< docsref "/components/collapse#accessibility" >} }) for more information.
 
 ## Sass
 
 ### Variables
 
-{{< scss-docs name="accordion-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="accordion-variables" file="scss/_variables.scss" >} }

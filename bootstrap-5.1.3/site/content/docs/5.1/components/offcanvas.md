@@ -17,9 +17,9 @@ Offcanvas is a sidebar component that can be toggled via JavaScript to appear fr
 
 **Heads up!** Given how CSS handles animations, you cannot use `margin` or `translate` on an `.offcanvas` element. Instead, use the class as an independent wrapping element.
 
-{{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
-{{< /callout >}}
+{ {< callout info >} }
+{ {< partial "callout-info-prefersreducedmotion.md" >} }
+{ {< /callout >} }
 
 ## Examples
 
@@ -27,7 +27,7 @@ Offcanvas is a sidebar component that can be toggled via JavaScript to appear fr
 
 Below is an offcanvas example that is shown by default (via `.show` on `.offcanvas`). Offcanvas includes support for a header with a close button and an optional body class for some initial `padding`. We suggest that you include offcanvas headers with dismiss actions whenever possible, or provide an explicit dismiss action.
 
-{{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
+{ {< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >} }
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
@@ -37,7 +37,7 @@ Below is an offcanvas example that is shown by default (via `.show` on `.offcanv
     Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ### Live demo
 
@@ -48,7 +48,7 @@ Use the buttons below to show and hide an offcanvas element via JavaScript that 
 
 You can use a link with the `href` attribute, or a button with the `data-bs-target` attribute. In both cases, the `data-bs-toggle="offcanvas"` is required.
 
-{{< example >}}
+{ {< example >} }
 <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
   Link with href
 </a>
@@ -77,7 +77,7 @@ You can use a link with the `href` attribute, or a button with the `data-bs-targ
     </div>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Placement
 
@@ -90,7 +90,7 @@ There's no default placement for offcanvas components, so you must add one of th
 
 Try the top, right, and bottom examples out below.
 
-{{< example >}}
+{ {< example >} }
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
 
 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
@@ -102,9 +102,9 @@ Try the top, right, and bottom examples out below.
     ...
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example >}}
+{ {< example >} }
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -116,9 +116,9 @@ Try the top, right, and bottom examples out below.
     ...
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
-{{< example >}}
+{ {< example >} }
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
 
 <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
@@ -130,13 +130,13 @@ Try the top, right, and bottom examples out below.
     ...
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Backdrop
 
 Scrolling the `<body>` element is disabled when an offcanvas and its backdrop are visible. Use the `data-bs-scroll` attribute to toggle `<body>` scrolling and `data-bs-backdrop` to toggle the backdrop.
 
-{{< example >}}
+{ {< example >} }
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Enable backdrop (default)</button>
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
@@ -168,7 +168,7 @@ Scrolling the `<body>` element is disabled when an offcanvas and its backdrop ar
     <p>Try scrolling the rest of the page to see this option in action.</p>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Accessibility
 
@@ -178,7 +178,7 @@ Since the offcanvas panel is conceptually a modal dialog, be sure to add `aria-l
 
 ### Variables
 
-{{< scss-docs name="offcanvas-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="offcanvas-variables" file="scss/_variables.scss" >} }
 
 ## Usage
 
@@ -200,11 +200,11 @@ Add `data-bs-toggle="offcanvas"` and a `data-bs-target` or `href` to the element
 
 #### Dismiss
 
-{{% js-dismiss "offcanvas" %}}
+{ {% js-dismiss "offcanvas" %} }
 
-{{< callout warning >}}
+{ {< callout warning >} }
 While both ways to dismiss an offcanvas are supported, keep in mind that dismissing from outside an offcanvas does not match [the WAI-ARIA modal dialog design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal). Do this at your own risk.
-{{< /callout >}}
+{ {< /callout >} }
 
 ### Via JavaScript
 
@@ -221,19 +221,19 @@ var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-backdrop=""`.
 
-{{< bs-table "table" >}}
+{ {< bs-table "table" >} }
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | `backdrop` | boolean | `true` | Apply a backdrop on body while offcanvas is open |
 | `keyboard` | boolean | `true` | Closes the offcanvas when escape key is pressed |
 | `scroll` | boolean | `false` | Allow body scrolling while offcanvas is open |
-{{< /bs-table >}}
+{ {< /bs-table >} }
 
 ### Methods
 
-{{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
-{{< /callout >}}
+{ {< callout danger >} }
+{ {< partial "callout-danger-async-methods.md" >} }
+{ {< /callout >} }
 
 Activates your content as an offcanvas element. Accepts an optional options `object`.
 
@@ -244,7 +244,7 @@ var myOffcanvas = document.getElementById('myOffcanvas')
 var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
 ```
 
-{{< bs-table "table" >}}
+{ {< bs-table "table" >} }
 | Method | Description |
 | --- | --- |
 | `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.bs.offcanvas` or `hidden.bs.offcanvas` event occurs). |
@@ -252,20 +252,20 @@ var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
 | `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs).|
 | `getInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element |
 | `getOrCreateInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialized |
-{{< /bs-table >}}
+{ {< /bs-table >} }
 
 ### Events
 
 Bootstrap's offcanvas class exposes a few events for hooking into offcanvas functionality.
 
-{{< bs-table "table" >}}
+{ {< bs-table "table" >} }
 | Event type | Description |
 | --- | --- |
 | `show.bs.offcanvas` | This event fires immediately when the `show` instance method is called. |
 | `shown.bs.offcanvas` | This event is fired when an offcanvas element has been made visible to the user (will wait for CSS transitions to complete). |
 | `hide.bs.offcanvas` | This event is fired immediately when the `hide` method has been called. |
 | `hidden.bs.offcanvas` | This event is fired when an offcanvas element has been hidden from the user (will wait for CSS transitions to complete). |
-{{< /bs-table >}}
+{ {< /bs-table >} }
 
 ```js
 var myOffcanvas = document.getElementById('myOffcanvas')

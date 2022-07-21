@@ -8,15 +8,15 @@ toc: true
 
 ## Get familiar
 
-We recommend getting familiar with Bootstrap first by reading through our [Getting Started Introduction page]({{< docsref "/getting-started/introduction" >}}). Once you've run through it, continue reading here for how to enable RTL.
+We recommend getting familiar with Bootstrap first by reading through our [Getting Started Introduction page]({ {< docsref "/getting-started/introduction" >} }). Once you've run through it, continue reading here for how to enable RTL.
 
 You may also want to read up on [the RTLCSS project](https://rtlcss.com/), as it powers our approach to RTL.
 
-{{< callout warning >}}
+{ {< callout warning >} }
 ### Experimental feature
 
-The RTL feature is still **experimental** and will probably evolve according to user feedback. Spotted something or have an improvement to suggest? [Open an issue]({{< param repo >}}/issues/new), we'd love to get your insights.
-{{< /callout >}}
+The RTL feature is still **experimental** and will probably evolve according to user feedback. Spotted something or have an improvement to suggest? [Open an issue]({ {< param repo >} }/issues/new), we'd love to get your insights.
+{ {< /callout >} }
 
 ## Required HTML
 
@@ -28,7 +28,7 @@ There are two strict requirements for enabling RTL in Bootstrap-powered pages.
 From there, you'll need to include an RTL version of our CSS. For example, here's the stylesheet for our compiled and minified CSS with RTL enabled:
 
 ```html
-<link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
+<link rel="stylesheet" href="{ {< param "cdn.css_rtl" >} }" integrity="{ {< param "cdn.css_rtl_hash" >} }" crossorigin="anonymous">
 ```
 
 ### Starter template
@@ -44,7 +44,7 @@ You can see the above requirements reflected in this modified RTL starter templa
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{ {< param "cdn.css_rtl" >} }" integrity="{ {< param "cdn.css_rtl_hash" >} }" crossorigin="anonymous">
 
     <title>مرحبا بالعالم!</title>
   </head>
@@ -54,12 +54,12 @@ You can see the above requirements reflected in this modified RTL starter templa
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
+    <script src="{ {< param "cdn.js_bundle" >} }" integrity="{ {< param "cdn.js_bundle_hash" >} }" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
-    <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
-    <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
+    <script src="{ {< param "cdn.popper" >} }" integrity="{ {< param "cdn.popper_hash" >} }" crossorigin="anonymous"></script>
+    <script src="{ {< param "cdn.js" >} }" integrity="{ {< param "cdn.js_hash" >} }" crossorigin="anonymous"></script>
     -->
   </body>
 </html>
@@ -67,7 +67,7 @@ You can see the above requirements reflected in this modified RTL starter templa
 
 ### RTL examples
 
-Get started with one of our several [RTL examples]({{< docsref "/examples/#rtl" >}}).
+Get started with one of our several [RTL examples]({ {< docsref "/examples/#rtl" >} }).
 
 ## Approach
 
@@ -83,7 +83,7 @@ Working with RTL, through our source Sass or compiled CSS, shouldn't be much dif
 
 ## Customize from source
 
-When it comes to [customization]({{< docsref "/customize/sass" >}}), the preferred way is to take advantage of variables, maps, and mixins. This approach works the same for RTL, even if it's post-processed from the compiled files, thanks to [how RTLCSS works](https://rtlcss.com/learn/getting-started/why-rtlcss/).
+When it comes to [customization]({ {< docsref "/customize/sass" >} }), the preferred way is to take advantage of variables, maps, and mixins. This approach works the same for RTL, even if it's post-processed from the compiled files, thanks to [how RTLCSS works](https://rtlcss.com/learn/getting-started/why-rtlcss/).
 
 ### Custom RTL values
 
@@ -162,19 +162,19 @@ Need both LTR and RTL on the same page? Thanks to [RTLCSS String Maps](https://r
 
 After running Sass then RTLCSS, each selector in your CSS files will be prepended by `.ltr`, and `.rtl` for RTL files. Now you're able to use both files on the same page, and simply use `.ltr` or `.rtl` on your components wrappers to use one or the other direction.
 
-{{< callout warning >}}
+{ {< callout warning >} }
 #### Edge cases and known limitations
 
 While this approach is understandable, please pay attention to the following:
 
 1. When switching `.ltr` and `.rtl`, make sure you add `dir` and `lang` attributes accordingly.
-2. Loading both files can be a real performance bottleneck: consider some [optimization]({{< docsref "/customize/optimize" >}}), and maybe try to [load one of those files asynchronously](https://www.filamentgroup.com/lab/load-css-simpler/).
+2. Loading both files can be a real performance bottleneck: consider some [optimization]({ {< docsref "/customize/optimize" >} }), and maybe try to [load one of those files asynchronously](https://www.filamentgroup.com/lab/load-css-simpler/).
 3. Nesting styles this way will prevent our `form-validation-state()` mixin from working as intended, thus require you tweak it a bit by yourself. [See #31223](https://github.com/twbs/bootstrap/issues/31223).
-{{< /callout >}}
+{ {< /callout >} }
 
 ## The breadcrumb case
 
-The [breadcrumb separator]({{< docsref "/components/breadcrumb" >}}/#changing-the-separator) is the only case requiring its own brand new variable— namely `$breadcrumb-divider-flipped` —defaulting to `$breadcrumb-divider`.
+The [breadcrumb separator]({ {< docsref "/components/breadcrumb" >} }/#changing-the-separator) is the only case requiring its own brand new variable— namely `$breadcrumb-divider-flipped` —defaulting to `$breadcrumb-divider`.
 
 ## Additional resources
 

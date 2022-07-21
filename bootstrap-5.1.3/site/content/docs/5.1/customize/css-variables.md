@@ -15,24 +15,24 @@ Bootstrap includes many [CSS custom properties (variables)](https://developer.mo
 Here are the variables we include (note that the `:root` is required) that can be accessed anywhere Bootstrap's CSS is loaded. They're located in our `_root.scss` file and included in our compiled dist files.
 
 ```css
-{{< root.inline >}}
-{{- $css := readFile "dist/css/bootstrap.css" -}}
-{{- $match := findRE ":root {([^}]*)}" $css 1 -}}
+{ {< root.inline >} }
+{ {- $css := readFile "dist/css/bootstrap.css" -} }
+{ {- $match := findRE ":root {([^}]*)}" $css 1 -} }
 
-{{- if (eq (len $match) 0) -}}
-{{- errorf "Got no matches for :root in %q!" $.Page.Path -}}
-{{- end -}}
+{ {- if (eq (len $match) 0) -} }
+{ {- errorf "Got no matches for :root in %q!" $.Page.Path -} }
+{ {- end -} }
 
-{{- index $match 0 -}}
+{ {- index $match 0 -} }
 
-{{< /root.inline >}}
+{ {< /root.inline >} }
 ```
 
 ## Component variables
 
 We're also beginning to make use of custom properties as local variables for various components. This way we can reduce our compiled CSS, ensure styles aren't inherited in places like nested tables, and allow some basic restyling and extending of Bootstrap components after Sass compilation.
 
-Have a look at our table documentation for some [insight into how we're using CSS variables]({{< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >}}).
+Have a look at our table documentation for some [insight into how we're using CSS variables]({ {< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >} }).
 
 We're also using CSS variables across our grids—primarily for gutters—with more component usage coming in the future.
 

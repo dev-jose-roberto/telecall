@@ -11,7 +11,7 @@ Bootstrap utilities are generated with our utility API and can be used to modify
 
 The `$utilities` map contains all our utilities and is later merged with your custom `$utilities` map, if present. The utility map contains a keyed list of utility groups which accept the following options:
 
-{{< bs-table "table text-start" >}}
+{ {< bs-table "table text-start" >} }
 | Option | Type | Default&nbsp;value | Description |
 | --- | --- | --- | --- |
 | [`property`](#property) | **Required** | – | Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins). |
@@ -21,10 +21,10 @@ The `$utilities` map contains all our utilities and is later merged with your cu
 | [`local-vars`](#local-css-variables) | Optional | null | Map of local CSS variables to generate in addition to the CSS rules. |
 | [`state`](#states) | Optional | null | List of pseudo-class variants (e.g., `:hover` or `:focus`) to generate. |
 | [`responsive`](#responsive) | Optional | `false` | Boolean indicating if responsive classes should be generated. |
-| `rfs` | Optional | `false` | Boolean to enable [fluid rescaling with RFS]({{< docsref "/getting-started/rfs" >}}). |
+| `rfs` | Optional | `false` | Boolean to enable [fluid rescaling with RFS]({ {< docsref "/getting-started/rfs" >} }). |
 | [`print`](#print) | Optional | `false` | Boolean indicating if print classes need to be generated. |
 | `rtl` | Optional | `true` | Boolean indicating if utility should be kept in RTL. |
-{{< /bs-table >}}
+{ {< /bs-table >} }
 
 ## API explained
 
@@ -80,13 +80,13 @@ Output:
 
 Use the `values` key to specify which values for the specified `property` should be used in the generated class names and rules. Can be a list or map (set in the utilities or in a Sass variable).
 
-As a list, like with [`text-decoration` utilities]({{< docsref "/utilities/text#text-decoration" >}}):
+As a list, like with [`text-decoration` utilities]({ {< docsref "/utilities/text#text-decoration" >} }):
 
 ```scss
 values: none underline line-through
 ```
 
-As a map, like with [`opacity` utilities]({{< docsref "/utilities/opacity" >}}):
+As a map, like with [`opacity` utilities]({ {< docsref "/utilities/opacity" >} }):
 
 ```scss
 values: (
@@ -98,7 +98,7 @@ values: (
 )
 ```
 
-As a Sass variable that sets the list or map, as in our [`position` utilities]({{< docsref "/utilities/position" >}}):
+As a Sass variable that sets the list or map, as in our [`position` utilities]({ {< docsref "/utilities/position" >} }):
 
 ```scss
 values: $position-values
@@ -228,7 +228,7 @@ Output:
 
 ### Responsive
 
-Add the `responsive` boolean to generate responsive utilities (e.g., `.opacity-md-25`) across [all breakpoints]({{< docsref "/layout/breakpoints" >}}).
+Add the `responsive` boolean to generate responsive utilities (e.g., `.opacity-md-25`) across [all breakpoints]({ {< docsref "/layout/breakpoints" >} }).
 
 ```scss
 $utilities: (

@@ -8,13 +8,13 @@ toc: true
 
 ## What is RFS?
 
-Bootstrap's side project [RFS](https://github.com/twbs/rfs/tree/{{< param "rfs_version" >}}) is a unit resizing engine which was initially developed to resize font sizes (hence its abbreviation for Responsive Font Sizes). Nowadays RFS is capable of rescaling most CSS properties with unit values like `margin`, `padding`, `border-radius`, or even `box-shadow`.
+Bootstrap's side project [RFS](https://github.com/twbs/rfs/tree/{ {< param "rfs_version" >} }) is a unit resizing engine which was initially developed to resize font sizes (hence its abbreviation for Responsive Font Sizes). Nowadays RFS is capable of rescaling most CSS properties with unit values like `margin`, `padding`, `border-radius`, or even `box-shadow`.
 
 The mechanism automatically calculates the appropriate values based on the dimensions of the browser viewport. It will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior.
 
 ## Using RFS
 
-The mixins are included in Bootstrap and are available once you include Bootstrap's `scss`. RFS can also be [installed standalone](https://github.com/twbs/rfs/tree/{{< param "rfs_version" >}}#installation) if needed.
+The mixins are included in Bootstrap and are available once you include Bootstrap's `scss`. RFS can also be [installed standalone](https://github.com/twbs/rfs/tree/{ {< param "rfs_version" >} }#installation) if needed.
 
 ### Using the mixins
 
@@ -61,7 +61,7 @@ When you don't want to use the includes, there are also two functions:
 - `rfs-value()` converts a value into a `rem` value if a `px` value is passed, in other cases it returns the same result.
 - `rfs-fluid-value()` returns the fluid version of a value if the property needs rescaling.
 
-In this example, we use one of Bootstrap's built-in [responsive breakpoint mixins]({{< docsref "/layout/breakpoints" >}}) to only apply styling below the `lg` breakpoint.
+In this example, we use one of Bootstrap's built-in [responsive breakpoint mixins]({ {< docsref "/layout/breakpoints" >} }) to only apply styling below the `lg` breakpoint.
 
 ```scss
 .selector {
@@ -83,4 +83,4 @@ In this example, we use one of Bootstrap's built-in [responsive breakpoint mixin
 
 ## Extended documentation
 
-RFS is a separate project under the Bootstrap organization. More about RFS and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs/tree/{{< param "rfs_version" >}}).
+RFS is a separate project under the Bootstrap organization. More about RFS and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs/tree/{ {< param "rfs_version" >} }).

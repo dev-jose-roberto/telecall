@@ -26,13 +26,13 @@ sections:
 
 ## Overview
 
-Bootstrap's form controls expand on [our Rebooted form styles]({{< docsref "/content/reboot#forms" >}}) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
+Bootstrap's form controls expand on [our Rebooted form styles]({ {< docsref "/content/reboot#forms" >} }) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
 
 Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for email address or `number` for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
 
 Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more.
 
-{{< example >}}
+{ {< example >} }
 <form>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -49,31 +49,31 @@ Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for 
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-{{< /example >}}
+{ {< /example >} }
 
 ## Form text
 
 Block-level or inline-level form text can be created using `.form-text`.
 
-{{< callout warning >}}
+{ {< callout warning >} }
 ##### Associating form text with form controls
 
 Form text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
-{{< /callout >}}
+{ {< /callout >} }
 
 Form text below inputs can be styled with `.form-text`. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
 
-{{< example >}}
+{ {< example >} }
 <label for="inputPassword5" class="form-label">Password</label>
 <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
 <div id="passwordHelpBlock" class="form-text">
   Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
-{{< example >}}
+{ {< example >} }
 <div class="row g-3 align-items-center">
   <div class="col-auto">
     <label for="inputPassword6" class="col-form-label">Password</label>
@@ -87,7 +87,7 @@ Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`
     </span>
   </div>
 </div>
-{{< /example >}}
+{ {< /example >} }
 
 ## Disabled forms
 
@@ -101,7 +101,7 @@ Add the `disabled` attribute to a `<fieldset>` to disable all the controls withi
 
 However, if your form also includes custom button-like elements such as `<a class="btn btn-*">...</a>`, these will only be given a style of `pointer-events: none`, meaning they are still focusable and operable using the keyboard. In this case, you must manually modify these controls by adding `tabindex="-1"` to prevent them from receiving focus and `aria-disabled="disabled"` to signal their state to assistive technologies.
 
-{{< example >}}
+{ {< example >} }
 <form>
   <fieldset disabled>
     <legend>Disabled fieldset example</legend>
@@ -126,7 +126,7 @@ However, if your form also includes custom button-like elements such as `<a clas
     <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
 </form>
-{{< /example >}}
+{ {< /example >} }
 
 ## Accessibility
 
@@ -149,6 +149,6 @@ Many form variables are set at a general level to be re-used and extended by ind
 
 ### Variables
 
-`$btn-input-*` variables are shared global variables between our [buttons]({{< docsref "/components/buttons" >}}) and our form components. You'll find these frequently reassigned as values to other component-specific variables.
+`$btn-input-*` variables are shared global variables between our [buttons]({ {< docsref "/components/buttons" >} }) and our form components. You'll find these frequently reassigned as values to other component-specific variables.
 
-{{< scss-docs name="input-btn-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="input-btn-variables" file="scss/_variables.scss" >} }

@@ -13,13 +13,13 @@ Navigation available in Bootstrap share general markup and styles, from the base
 
 The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
 
-{{< callout info >}}
+{ {< callout info >} }
 The base `.nav` component does not include any `.active` state. The following examples include the class, mainly to demonstrate that this particular class does not trigger any special styling.
 
 To convey the active state to assistive technologies, use the `aria-current` attribute — using the `page` value for current page, or `true` for the current item in a set.
-{{< /callout >}}
+{ {< /callout >} }
 
-{{< example >}}
+{ {< example >} }
 <ul class="nav">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -34,18 +34,18 @@ To convey the active state to assistive technologies, use the `aria-current` att
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 Classes are used throughout, so your markup can be super flexible. Use `<ul>`s like above, `<ol>` if the order of your items is important, or roll your own with a `<nav>` element. Because the `.nav` uses `display: flex`, the nav links behave the same as nav items would, but without the extra markup.
 
-{{< example >}}
+{ {< example >} }
 <nav class="nav">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link disabled">Disabled</a>
 </nav>
-{{< /example >}}
+{ {< /example >} }
 
 ## Available styles
 
@@ -53,11 +53,11 @@ Change the style of `.nav`s component with modifiers and utilities. Mix and matc
 
 ### Horizontal alignment
 
-Change the horizontal alignment of your nav with [flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}}). By default, navs are left-aligned, but you can easily change them to center or right aligned.
+Change the horizontal alignment of your nav with [flexbox utilities]({ {< docsref "/layout/grid#horizontal-alignment" >} }). By default, navs are left-aligned, but you can easily change them to center or right aligned.
 
 Centered with `.justify-content-center`:
 
-{{< example >}}
+{ {< example >} }
 <ul class="nav justify-content-center">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -72,11 +72,11 @@ Centered with `.justify-content-center`:
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 Right-aligned with `.justify-content-end`:
 
-{{< example >}}
+{ {< example >} }
 <ul class="nav justify-content-end">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -91,13 +91,13 @@ Right-aligned with `.justify-content-end`:
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 ### Vertical
 
 Stack your navigation by changing the flex item direction with the `.flex-column` utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`).
 
-{{< example >}}
+{ {< example >} }
 <ul class="nav flex-column">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -112,24 +112,24 @@ Stack your navigation by changing the flex item direction with the `.flex-column
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 As always, vertical navigation is possible without `<ul>`s, too.
 
-{{< example >}}
+{ {< example >} }
 <nav class="nav flex-column">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link disabled">Disabled</a>
 </nav>
-{{< /example >}}
+{ {< /example >} }
 
 ### Tabs
 
 Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabbed interface. Use them to create tabbable regions with our [tab JavaScript plugin](#javascript-behavior).
 
-{{< example >}}
+{ {< example >} }
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -144,13 +144,13 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 ### Pills
 
 Take that same HTML, but use `.nav-pills` instead:
 
-{{< example >}}
+{ {< example >} }
 <ul class="nav nav-pills">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -165,13 +165,13 @@ Take that same HTML, but use `.nav-pills` instead:
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 ### Fill and justify
 
 Force your `.nav`'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
 
-{{< example >}}
+{ {< example >} }
 <ul class="nav nav-pills nav-fill">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -186,22 +186,22 @@ Force your `.nav`'s contents to extend the full available width one of two modif
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 When using a `<nav>`-based navigation, you can safely omit `.nav-item` as only `.nav-link` is required for styling `<a>` elements.
 
-{{< example >}}
+{ {< example >} }
 <nav class="nav nav-pills nav-fill">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link disabled">Disabled</a>
 </nav>
-{{< /example >}}
+{ {< /example >} }
 
 For equal-width elements, use `.nav-justified`. All horizontal space will be occupied by nav links, but unlike the `.nav-fill` above, every nav item will be the same width.
 
-{{< example >}}
+{ {< example >} }
 <ul class="nav nav-pills nav-justified">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -216,11 +216,11 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 Similar to the `.nav-fill` example using a `<nav>`-based navigation.
 
-{{< example >}}
+{ {< example >} }
 <nav class="nav nav-pills nav-justified">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
@@ -228,19 +228,19 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation.
   <a class="nav-link disabled">Disabled</a>
 </nav>
 
-{{< /example >}}
+{ {< /example >} }
 ## Working with flex utilities
 
-If you need responsive nav variations, consider using a series of [flexbox utilities]({{< docsref "/utilities/flex" >}}). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
+If you need responsive nav variations, consider using a series of [flexbox utilities]({ {< docsref "/utilities/flex" >} }). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
 
-{{< example >}}
+{ {< example >} }
 <nav class="nav nav-pills flex-column flex-sm-row">
   <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
   <a class="flex-sm-fill text-sm-center nav-link disabled">Disabled</a>
 </nav>
-{{< /example >}}
+{ {< /example >} }
 
 ## Regarding accessibility
 
@@ -250,11 +250,11 @@ Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` 
 
 ## Using dropdowns
 
-Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}).
+Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({ {< docsref "/components/dropdowns#usage" >} }).
 
 ### Tabs with dropdowns
 
-{{< example >}}
+{ {< example >} }
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -276,11 +276,11 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 ### Pills with dropdowns
 
-{{< example >}}
+{ {< example >} }
 <ul class="nav nav-pills">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -302,13 +302,13 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
-{{< /example >}}
+{ {< /example >} }
 
 ## Sass
 
 ### Variables
 
-{{< scss-docs name="nav-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="nav-variables" file="scss/_variables.scss" >} }
 
 ## JavaScript behavior
 
@@ -561,9 +561,9 @@ To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must a
 
 ### Methods
 
-{{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
-{{< /callout >}}
+{ {< callout danger >} }
+{ {< partial "callout-danger-async-methods.md" >} }
+{ {< /callout >} }
 
 #### constructor
 

@@ -12,7 +12,7 @@ Due to the widespread use of `<table>` elements across third-party widgets like 
 
 Using the most basic table markup, here's how `.table`-based tables look in Bootstrap.
 
-{{< table class="table" simplified="false" >}}
+{ {< table class="table" simplified="false" >} }
 
 ## Variants
 
@@ -33,44 +33,44 @@ Use contextual classes to color tables, table rows or individual cells.
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-      {{< table.inline >}}
-      {{- range (index $.Site.Data "theme-colors") }}
-        <tr class="table-{{ .name }}">
-          <th scope="row">{{ .name | title }}</th>
+      { {< table.inline >} }
+      { {- range (index $.Site.Data "theme-colors") } }
+        <tr class="table-{ { .name } }">
+          <th scope="row">{ { .name | title } }</th>
           <td>Cell</td>
           <td>Cell</td>
         </tr>
-      {{- end -}}
-      {{< /table.inline >}}
+      { {- end -} }
+      { {< /table.inline >} }
     </tbody>
   </table>
 </div>
 
-{{< highlight html >}}
-<!-- On tables -->{{< table.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<table class="table-{{ .name }}">...</table>
-{{- end -}}
-{{< /table.inline >}}
+{ {< highlight html >} }
+<!-- On tables -->{ {< table.inline >} }
+{ {- range (index $.Site.Data "theme-colors") } }
+<table class="table-{ { .name } }">...</table>
+{ {- end -} }
+{ {< /table.inline >} }
 
-<!-- On rows -->{{< table.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<tr class="table-{{ .name }}">...</tr>
-{{- end -}}
-{{< /table.inline >}}
+<!-- On rows -->{ {< table.inline >} }
+{ {- range (index $.Site.Data "theme-colors") } }
+<tr class="table-{ { .name } }">...</tr>
+{ {- end -} }
+{ {< /table.inline >} }
 
 <!-- On cells (`td` or `th`) -->
-<tr>{{< table.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-  <td class="table-{{ .name }}">...</td>
-{{- end -}}
-{{< /table.inline >}}
+<tr>{ {< table.inline >} }
+{ {- range (index $.Site.Data "theme-colors") } }
+  <td class="table-{ { .name } }">...</td>
+{ {- end -} }
+{ {< /table.inline >} }
 </tr>
-{{< /highlight >}}
+{ {< /highlight >} }
 
-{{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
-{{< /callout >}}
+{ {< callout info >} }
+{ {< partial "callout-warning-color-assistive-technologies.md" >} }
+{ {< /callout >} }
 
 ## Accented tables
 
@@ -78,25 +78,25 @@ Use contextual classes to color tables, table rows or individual cells.
 
 Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
 
-{{< table class="table table-striped" >}}
+{ {< table class="table table-striped" >} }
 
 These classes can also be added to table variants:
 
-{{< table class="table table-dark table-striped" >}}
+{ {< table class="table table-dark table-striped" >} }
 
-{{< table class="table table-success table-striped" >}}
+{ {< table class="table table-success table-striped" >} }
 
 ### Hoverable rows
 
 Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 
-{{< table class="table table-hover" >}}
+{ {< table class="table table-hover" >} }
 
-{{< table class="table table-dark table-hover" >}}
+{ {< table class="table table-dark table-hover" >} }
 
 These hoverable rows can also be combined with the striped variant:
 
-{{< table class="table table-striped table-hover" >}}
+{ {< table class="table table-striped table-hover" >} }
 
 ### Active tables
 
@@ -220,7 +220,7 @@ For the accented tables ([striped rows](#striped-rows), [hoverable rows](#hovera
 
 Behind the scenes it looks like this:
 
-{{< scss-docs name="table-variant" file="scss/mixins/_table-variants.scss" >}}
+{ {< scss-docs name="table-variant" file="scss/mixins/_table-variants.scss" >} }
 
 ## Table borders
 
@@ -228,31 +228,31 @@ Behind the scenes it looks like this:
 
 Add `.table-bordered` for borders on all sides of the table and cells.
 
-{{< table class="table table-bordered" >}}
+{ {< table class="table table-bordered" >} }
 
-[Border color utilities]({{< docsref "/utilities/borders#border-color" >}}) can be added to change colors:
+[Border color utilities]({ {< docsref "/utilities/borders#border-color" >} }) can be added to change colors:
 
-{{< table class="table table-bordered border-primary" >}}
+{ {< table class="table table-bordered border-primary" >} }
 
 ### Tables without borders
 
 Add `.table-borderless` for a table without borders.
 
-{{< table class="table table-borderless" >}}
+{ {< table class="table table-borderless" >} }
 
-{{< table class="table table-dark table-borderless" >}}
+{ {< table class="table table-dark table-borderless" >} }
 
 ## Small tables
 
 Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` in half.
 
-{{< table class="table table-sm" >}}
+{ {< table class="table table-sm" >} }
 
-{{< table class="table table-dark table-sm" >}}
+{ {< table class="table table-dark table-sm" >} }
 
 ## Vertical alignment
 
-Table cells of `<thead>` are always vertical aligned to the bottom. Table cells in `<tbody>` inherit their alignment from `<table>` and are aligned to the the top by default. Use the [vertical align]({{< docsref "/utilities/vertical-align" >}}) classes to re-align where needed.
+Table cells of `<thead>` are always vertical aligned to the bottom. Table cells in `<tbody>` inherit their alignment from `<table>` and are aligned to the the top by default. Use the [vertical align]({ {< docsref "/utilities/vertical-align" >} }) classes to re-align where needed.
 
 <div class="bd-example">
   <div class="table-responsive">
@@ -559,7 +559,7 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 <div class="bd-example">
   <table class="table">
     <caption>List of users</caption>
-    {{< partial "table-content" >}}
+    { {< partial "table-content" >} }
   </table>
 </div>
 
@@ -577,7 +577,7 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 
 You can also put the `<caption>` on the top of the table with `.caption-top`.
 
-{{< example >}}
+{ {< example >} }
 <table class="table caption-top">
   <caption>List of users</caption>
   <thead>
@@ -609,17 +609,17 @@ You can also put the `<caption>` on the top of the table with `.caption-top`.
     </tr>
   </tbody>
 </table>
-{{< /example >}}
+{ {< /example >} }
 
 ## Responsive tables
 
 Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl|-xxl}`.
 
-{{< callout warning >}}
+{ {< callout warning >} }
 ##### Vertical clipping/truncation
 
 Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
-{{< /callout >}}
+{ {< /callout >} }
 
 ### Always responsive
 
@@ -698,11 +698,11 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 
 **These tables may appear broken until their responsive styles apply at specific viewport widths.**
 
-{{< tables.inline >}}
-{{ range $.Site.Data.breakpoints }}
-{{ if not (eq . "xs") }}
+{ {< tables.inline >} }
+{ { range $.Site.Data.breakpoints } }
+{ { if not (eq . "xs") } }
 <div class="bd-example">
-  <div class="table-responsive{{ .abbr }}">
+  <div class="table-responsive{ { .abbr } }">
     <table class="table">
       <thead>
         <tr>
@@ -755,33 +755,33 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
     </table>
   </div>
 </div>
-{{ end -}}
-{{- end -}}
-{{< /tables.inline >}}
+{ { end -} }
+{ {- end -} }
+{ {< /tables.inline >} }
 
-{{< highlight html >}}
-{{< tables.inline >}}
-{{- range $.Site.Data.breakpoints -}}
-{{- if not (eq . "xs") }}
-<div class="table-responsive{{ .abbr }}">
+{ {< highlight html >} }
+{ {< tables.inline >} }
+{ {- range $.Site.Data.breakpoints -} }
+{ {- if not (eq . "xs") } }
+<div class="table-responsive{ { .abbr } }">
   <table class="table">
     ...
   </table>
 </div>
-{{ end -}}
-{{- end -}}
-{{< /tables.inline >}}
-{{< /highlight >}}
+{ { end -} }
+{ {- end -} }
+{ {< /tables.inline >} }
+{ {< /highlight >} }
 
 ## Sass
 
 ### Variables
 
-{{< scss-docs name="table-variables" file="scss/_variables.scss" >}}
+{ {< scss-docs name="table-variables" file="scss/_variables.scss" >} }
 
 ### Loop
 
-{{< scss-docs name="table-loop" file="scss/_variables.scss" >}}
+{ {< scss-docs name="table-loop" file="scss/_variables.scss" >} }
 
 ### Customizing
 
