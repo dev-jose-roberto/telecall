@@ -24,7 +24,7 @@ function darkMode() {
     if (darkmode) {
         $("#timeline img").attr("src", "img/dark-mode/linha-do-tempo-dark.png")
         $("#dudu").attr("src", "img/dark-mode/dudu-editado-dark.png")
-        $("#mode").attr("src", "/img/modelos/dark-mode.svg")
+        $("#mode").attr("src", "img/modelos/dark-mode.svg")
         $("#bordas").attr("src", "img/dark-mode/bordas-dark.png")
         $("body").addClass("dark");
         $("#menus").addClass("dark");
@@ -32,7 +32,7 @@ function darkMode() {
     } else {
         $("#timeline img").attr("src", "img/inicio/linha-do-tempo.png")
         $("#dudu").attr("src", "img/inicio/dudu-editado.png")
-        $("#mode").attr("src", "/img/modelos/light-mode.svg")
+        $("#mode").attr("src", "img/modelos/light-mode.svg")
         $("#bordas").attr("src", "img/inicio/bordas.png")
         $("body").removeClass("dark");
         $("#menus").removeClass("dark");
