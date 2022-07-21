@@ -2,6 +2,6 @@
     path = lib/jQuery-Mask-Plugin
     url = https://github.com/igorescobar/jQuery-Mask-Plugin.git
 
-[submodule "jQmask"]
+[submodule "particles"]
 path = lib/particles.js
 url = https://github.com/VincentGarreau/particles.js
