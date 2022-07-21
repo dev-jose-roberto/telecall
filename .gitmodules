@@ -1,3 +1,3 @@
 [submodule "jQuery-mask"]
     path = origin
-    url = lib/jQuery-Mask-Plugin
+    url = lib/jQuery-Mask-Plugin.git
