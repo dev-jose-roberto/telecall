@@ -18,11 +18,17 @@ localStorage[1] = JSON.stringify({
     "cel": null
 })
 
-
-var logado = JSON.parse(localStorage[0]).atual
-
-
-
+// Verifica e condiciona existência do usuário logado
+try {
+    var logado = JSON.parse(localStorage[0]).atual
+} catch {
+    try {
+        logado = JSON.parse(localStorage[0]).atual
+    } catch {
+        localStorage[0] = JSON.stringify({ "atual": null })
+        var logado = JSON.parse(localStorage[0]).atual
+    }
+}
 
 $("#login").attr("href", logado ?
     'index.html' :
