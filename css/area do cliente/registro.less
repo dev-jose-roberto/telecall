@@ -1,0 +1,140 @@
+// cores
+@vermelho-padrao-telecall: #c72929;
+@azul-padrao-telecall: #004a7b;
+@azul-modavo: #1EA0F8;
+// margens
+@margem-minima: 10px;
+@margem-comum: 15px;
+@margem-media: 20px;
+@margem-alta: 30px;
+// padrões de logo
+@largura-logo: 220px;
+@altura-logo: 60px;
+// padrões de largura
+@largura-minima: 100px;
+@largura-media: 200px;
+@largura-alta: 300px;
+
+.registro {
+    position: relative;
+
+    .dados {
+        max-width: 600px;
+        cursor: text;
+        margin: auto;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-areas:
+            "campo_nome campo_nome campo_nome campo_nome"
+            "campo_email campo_email campo_email campo_email"
+            "campo_cpf campo_cpf campo_nasc campo_sexo"
+            "campo_nome_mae campo_nome_mae campo_tel campo_cel"
+            "campo_cep campo_nr campo_reg_login campo_reg_login"
+            "campo_logradouro campo_logradouro campo_reg_senha campo_reg_senha"
+            "campo_cidade campo_uf campo_confirma_senha campo_confirma_senha";
+        align-content: center;
+        justify-content: center;
+        justify-items: stretch;
+        align-items: stretch;
+
+        #campo_nome {
+            grid-area: campo_nome;
+        }
+
+        #campo_email {
+            grid-area: campo_email;
+        }
+
+        #campo_nome_mae {
+            grid-area: campo_nome_mae;
+        }
+
+        #campo_cpf {
+            grid-area: campo_cpf;
+        }
+
+        #campo_nasc {
+            grid-area: campo_nasc;
+
+            #nasc {
+                padding: 4px;
+                font-size: 11pt;
+                color: gray !important;
+                cursor: pointer;
+                position: relative;
+                text-align: center;
+                padding-left: 25px;
+                height: 100%;
+                outline: none;
+                margin: 0;
+                border-radius: 6px;
+                border: 1px solid darkgray;
+                transition: all .2s ease;
+                background-image: linear-gradient(271deg, #e7e6e6, white);
+                box-shadow: 3px 2px 4px #00000014;
+            }
+        }
+
+        #campo_sexo {
+            grid-area: campo_sexo;
+            #sexo {
+                height: 100%;
+                text-align: center;
+                padding-left: 35px !important;
+                outline: none;
+                font-size: 11pt;
+                border: 1px solid darkgray;
+                border-radius: 6px;
+                padding: 4px;
+                margin: 0;
+                color: gray;
+                background-image: linear-gradient(271deg, #e7e6e6, white);
+                box-shadow: 3px 2px 4px #00000014;
+                cursor: pointer;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+
+        #campo_tel {
+            grid-area: campo_tel;
+            #tel{
+                font-size: 9pt !important;
+            }
+        }
+
+        #campo_cel {
+            grid-area: campo_cel;
+            #cel{
+                font-size: 9pt !important;
+            }
+        }
+
+        #campo_logradouro {
+            grid-area: campo_logradouro;
+        }
+
+        #campo_cep {
+            grid-area: campo_cep;
+        }
+
+        #campo_nr {
+            grid-area: campo_nr;
+        }
+
+        #campo_reg_login {
+            grid-area: campo_reg_login;
+        }
+
+        #campo_reg_senha {
+            grid-area: campo_reg_senha;
+        }
+
+        #campo_confirma_senha {
+            grid-area: campo_confirma_senha;
+        }
+    }
+}

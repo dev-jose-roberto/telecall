@@ -1,0 +1,53 @@
+#solucoes #frente {
+  width: 100%;
+  max-width: 100% !important;
+  box-shadow: 0 10px 10px -5px #0000008c;
+}
+#solucoes #frente .carousel-inner .carousel-item img {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+#solucoes #frente .carousel-indicators {
+  margin: 0;
+}
+#solucoes #frente .carousel-indicators button {
+  cursor: pointer !important;
+  height: 10px !important;
+  width: 10px !important;
+  margin: 0 10px;
+  border-radius: 100% !important;
+}
+#solucoes #frente .carousel-indicators button:hover {
+  opacity: 1 !important;
+  transition: all 0.1s linear;
+}
+#solucoes #frente .carousel-indicators button.active {
+  background-color: #c72929 !important;
+  filter: drop-shadow(0 0 4px #c72929) saturate(1.3);
+}
+#solucoes #frente #titulo {
+  user-select: none;
+  font-size: 4rem;
+  position: absolute;
+  color: whitesmoke;
+  line-height: 86px;
+  width: 420px;
+  left: 0;
+  top: 120px;
+  text-align: center;
+  display: inline-block;
+  z-index: 1;
+}
+#solucoes #frente #titulo::before {
+  content: '';
+  position: absolute;
+  border-radius: 4px;
+  width: 560px;
+  height: 86px;
+  left: 0;
+  filter: drop-shadow(6px 6px 6px #0000009f);
+  background-color: #c72929;
+  filter: drop-shadow(0 0 10px #c72929);
+  transform: skewX(-15deg) translateX(-20%);
+  z-index: -1;
+}

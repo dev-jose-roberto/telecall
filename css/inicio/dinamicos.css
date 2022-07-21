@@ -1,0 +1,908 @@
+.mobile {
+  display: none !important;
+}
+@font-face {
+  font-family: Jura;
+  src: url(../../fonts/Jura-VariableFont_wght.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scroll-behavior: auto;
+}
+body {
+  background: url(../../img/fundo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: Jura !important;
+}
+body main {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+body *::selection {
+  background-color: #c72929;
+  color: black;
+}
+section.topico {
+  padding: calc(2*30px) calc(150px - 15px) 20px 48px;
+  width: calc(100% - 150px + 15px 48px);
+}
+footer {
+  padding: 0 calc(150px - 15px) 0 48px;
+}
+div.saiba-mais {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  bottom: 0;
+  font-size: 26pt;
+  color: white;
+  position: absolute;
+  padding: calc(2*30px) calc(3*30px + 20px);
+  text-shadow: 2px 2px 3px black;
+}
+div.saiba-mais span {
+  color: #c72929;
+}
+a.saiba-mais {
+  margin: auto;
+  width: fit-content;
+  position: relative;
+  text-decoration: none;
+  font-size: 17pt;
+}
+a.saiba-mais button {
+  padding: calc(10px/2) calc(30px);
+  transform: skewX(-15deg);
+  border: none;
+  transition: all 0.2s ease;
+  border-radius: 7px;
+}
+a.saiba-mais button span {
+  display: inline-block;
+  transform: skewX(15deg);
+  color: white;
+  transition: all 0.2s ease;
+}
+a.saiba-mais button:hover {
+  transform: skewX(-15deg) scale(1.1);
+  transition: all 0.2s ease;
+  filter: saturate(1.1);
+}
+a.saiba-mais button:hover span {
+  transition: all 0.2s ease;
+}
+a.saiba-mais.btn-carousel {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  transform: scale(0.9);
+  margin: 30px auto;
+  cursor: inherit;
+  filter: drop-shadow(3px 3px 2px #0000008f);
+}
+a.saiba-mais.btn-carousel button span {
+  color: black;
+}
+a.saiba-mais.btn-carousel button:hover {
+  background-color: #c72929;
+  filter: drop-shadow(4px 4px 10px #c72929) saturate(1.1);
+}
+a.saiba-mais.btn-carousel button:hover span {
+  color: white;
+}
+#novidades {
+  position: relative;
+}
+#novidades #bloco {
+  overflow: hidden;
+  position: absolute;
+  width: calc(100% - 48px - (150px - 15px));
+  height: 448px;
+  z-index: -1;
+  border-radius: 14px;
+  border: 2px solid #1EA0F8;
+  box-shadow: 5px 5px 2px #0000005f;
+}
+#novidades #bloco #fundo-novidades-1 {
+  position: absolute;
+  background: url(../../img/inicio/fundo-illustrations.png) center center;
+  background-size: cover;
+  z-index: -1;
+  width: 100%;
+  height: 448px;
+}
+#novidades #bloco #fundo-novidades-2 {
+  left: -50%;
+  backdrop-filter: blur(30px) contrast(0.4) brightness(1.3);
+  width: 100%;
+  height: 448px;
+  z-index: -1;
+  position: absolute;
+  transform: skewX(-7.5deg);
+  box-shadow: 15px 0 20px #0000005c;
+}
+#novidades #painel {
+  width: 45%;
+  height: 448px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 1;
+  border-radius: 14px 0 0 14px;
+  padding: 20px;
+  position: relative;
+}
+#novidades #painel #logo-modavo {
+  margin: calc(30px/2) calc(30px);
+  width: 140px;
+  height: 55px;
+}
+#novidades #painel #cpaas {
+  color: #1EA0F8;
+  margin: 0 30px;
+  font-size: 32pt;
+}
+#novidades #painel #nome_ingles {
+  color: #3a3a3a;
+  padding: 0;
+  margin: 0 30px;
+  font-style: italic;
+}
+#novidades #painel #nome_port {
+  padding: 0;
+  margin: 0 30px;
+  font-style: italic;
+}
+#novidades #painel p {
+  width: 100%;
+  margin: 20px 30px;
+  font-size: 16pt;
+  word-spacing: 3px;
+  color: #3a3a3a;
+}
+#novidades #painel a {
+  z-index: 1;
+  filter: drop-shadow(3px 2px 3px #1EA0F8);
+}
+#novidades #painel a button {
+  background-color: #1EA0F8;
+}
+#novidades #painel a:hover button {
+  filter: drop-shadow(4px 4px 10px #1EA0F8) saturate(1.1);
+}
+#novidades #painel a:hover span {
+  text-shadow: 0 0 5px;
+}
+#sobre {
+  grid-template-areas: 'equipe sobre' 'timeline timeline' 'vantagens vantagens' 'mapas alcance';
+  justify-content: space-around;
+  display: grid;
+}
+#sobre i {
+  color: #c72929;
+}
+#sobre h2,
+#sobre h3 {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+#sobre h2 i,
+#sobre h3 i {
+  margin-right: 15px;
+}
+#sobre #quem-somos {
+  display: flex;
+  width: 710px;
+}
+#sobre #quem-somos #equipe {
+  grid-area: equipe;
+  z-index: 2;
+  filter: drop-shadow(3px 3px 8px #0000008d);
+}
+#sobre #quem-somos #equipe > div {
+  width: calc(710px*0.54);
+  height: 82px;
+  line-height: 82px;
+  text-align: center;
+  position: relative;
+}
+#sobre #quem-somos #equipe > div b {
+  font-size: 26pt;
+  width: 100%;
+  color: white;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  text-shadow: 2px 2px 3px black;
+}
+#sobre #quem-somos #equipe #sobre-cabecalho {
+  background: url(../../img/inicio/equipe.jpeg) top center;
+  border-radius: 14px 14px 0 0;
+}
+#sobre #quem-somos #equipe #sobre-cabecalho .filtro {
+  border-radius: inherit;
+  backdrop-filter: blur(10px);
+}
+#sobre #quem-somos #equipe .filtro {
+  background-color: #ff000085;
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+#sobre #quem-somos #equipe article {
+  position: relative;
+}
+#sobre #quem-somos #equipe article img {
+  width: calc(710px*0.54);
+  filter: brightness(1.1);
+}
+#sobre #quem-somos #equipe #sobre-rodape {
+  background: url(../../img/inicio/equipe.jpeg) bottom center;
+  border-radius: 0 0 14px 14px;
+}
+#sobre #quem-somos #equipe #sobre-rodape .filtro {
+  backdrop-filter: blur(10px);
+  border-radius: inherit;
+}
+#sobre #quem-somos #sobre-nos {
+  grid-area: sobre;
+  box-shadow: 3px 3px 8px #0000008d;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  border-radius: 0 14px 14px 0;
+  background-image: linear-gradient(25deg, silver, whitesmoke);
+}
+#sobre #quem-somos #sobre-nos p {
+  font-size: 10pt;
+  text-align: justify;
+}
+#sobre #quem-somos #sobre-nos a.saiba-mais {
+  display: block;
+  transform: scale(0.8);
+  text-align: center;
+  filter: drop-shadow(3px 2px 3px #c72929);
+}
+#sobre #quem-somos #sobre-nos a.saiba-mais button {
+  background-color: #c72929;
+}
+#sobre #quem-somos #sobre-nos a.saiba-mais:hover button {
+  filter: drop-shadow(4px 4px 10px #c72929) saturate(1.1);
+}
+#sobre #quem-somos #sobre-nos a.saiba-mais:hover span {
+  text-shadow: 0 0 5px;
+}
+#sobre #quem-somos #sobre-nos::before {
+  content: '';
+  left: -14px;
+  background-image: linear-gradient(25deg, silver, whitesmoke);
+  background-color: whitesmoke;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  z-index: -2;
+}
+#sobre #quem-somos #sobre-nos::after {
+  content: '';
+  left: -14px;
+  background-color: silver;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  z-index: -2;
+  bottom: 0;
+}
+#sobre #premios {
+  margin-left: auto;
+  width: 400px;
+  border-radius: 14px;
+  background-image: linear-gradient(25deg, silver, whitesmoke);
+  box-shadow: 3px 3px 8px #0000008d;
+  padding: 0 20px;
+}
+#sobre #premios ul li {
+  list-style: none;
+}
+#sobre #premios ul li p {
+  text-align: justify;
+}
+#sobre #premios ul li p.premio {
+  font-size: 10pt;
+  line-height: 10pt;
+  margin: 2px;
+  font-weight: bolder;
+}
+#sobre #premios ul li p.premio-desc {
+  line-height: 10pt;
+  font-size: 10pt;
+}
+#sobre #premios ul li i {
+  font-size: 14pt;
+  position: absolute;
+  transform: translateX(-30px);
+}
+#sobre #timeline {
+  grid-area: timeline;
+}
+#sobre #timeline h1 {
+  margin-top: calc(2*30px);
+  position: relative;
+  font-size: 44pt;
+  text-align: center;
+  color: #2c2c2c;
+  transition: all 0.15s linear;
+  text-decoration: underline;
+}
+#sobre #timeline h1 i {
+  transition: all 0.15s linear;
+  color: inherit;
+  margin-right: 20px;
+  font-size: 36pt;
+}
+#sobre #timeline h1::after {
+  content: '+ 20 anos de experiência global em soluções de comunicação';
+  position: absolute;
+  font-size: 11pt;
+  color: inherit;
+  bottom: -15px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-left: 30px;
+}
+#sobre #timeline img {
+  margin: calc(2*30px) 0;
+  width: 100%;
+}
+#sobre #vantagens {
+  grid-area: vantagens;
+  height: 130vh;
+  position: relative;
+}
+#sobre #vantagens > span {
+  background: url(../../img/inicio/servers.jpg) center center no-repeat fixed;
+  background-size: cover;
+  filter: grayscale() contrast(0.5) brightness(1.5);
+  box-shadow: inset 0 0 50px black;
+  position: absolute;
+  width: 100vw;
+  height: 130vh;
+  left: -48px;
+  z-index: -1;
+}
+#sobre #vantagens header {
+  margin: calc(30px + 15px) 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sobre #vantagens header #bordas {
+  position: absolute;
+  z-index: -1;
+  filter: drop-shadow(0 0 10px #c72929);
+}
+#sobre #vantagens header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c72929;
+  text-align: center;
+  text-shadow: 0 0 7px #c72929;
+  font-size: 48pt;
+  margin: 0;
+}
+#sobre #vantagens header h1 img {
+  height: 48pt;
+  margin: 0 30px !important;
+}
+#sobre #vantagens .vantagem {
+  width: 240px;
+  height: 300px;
+  padding: 20px;
+  background-color: whitesmoke;
+  border: 2px solid #c72929;
+  box-shadow: 0 0 10px #c72929;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#sobre #vantagens .vantagem img {
+  grid-area: ico;
+}
+#sobre #vantagens .vantagem h3 {
+  grid-area: vant;
+  font-weight: bold;
+  color: #c72929;
+}
+#sobre #vantagens .vantagem p {
+  grid-area: txt;
+  text-align: center;
+  margin: 0;
+}
+#sobre #vantagens > div {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+#sobre #mapas {
+  grid-area: mapas;
+  display: inline-block;
+  margin: calc(2*30px) auto;
+  width: 100%;
+}
+#sobre #alcance {
+  overflow: hidden;
+  position: relative;
+  grid-area: alcance;
+  display: inline-block;
+  margin: auto;
+  height: fit-content;
+  width: 350px;
+  border-radius: 14px;
+  background-color: #c72929;
+  box-shadow: 10px -10px 20px -5px #0000006f;
+}
+#sobre #alcance h6 {
+  text-align: center;
+  margin: 10px;
+  color: white;
+  text-shadow: 0 0 5px;
+  font-weight: bolder;
+}
+#sobre #alcance .placa {
+  font-size: 24pt;
+  font-weight: bolder;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #c72929;
+  padding: 0;
+  margin: 10px 0;
+}
+#sobre #alcance .placa::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  margin: auto;
+  box-shadow: 0 5px 10px #0000009c;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, lightgray, whitesmoke);
+}
+#sobre #alcance #rj {
+  transform: rotate(-5deg);
+}
+#sobre #alcance #rj::before {
+  transform: scale(1.02) skewX(-5deg);
+}
+#sobre #alcance #sp {
+  transform: rotate(5deg);
+}
+#sobre #alcance #sp::before {
+  transform: scale(1.02) skewX(5deg);
+}
+#sobre #alcance #sp + p {
+  margin: 15px 30px;
+  color: white;
+  text-align: justify;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px #0000007f;
+}
+#sobre #alcance a {
+  display: block;
+  margin: 10px auto;
+  transform: scale(0.9);
+  filter: drop-shadow(4px 4px 8px #0000006c);
+}
+#sobre #alcance a button span {
+  color: #c72929;
+}
+#sobre #alcance a:hover {
+  filter: none;
+  filter: drop-shadow(4px 4px 10px white) saturate(1.1);
+}
+#servicos {
+  display: flex;
+  flex-direction: column;
+}
+#servicos header {
+  margin: calc(30px + 15px) 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#servicos header #bordas {
+  position: absolute;
+  z-index: -1;
+  transform: scale(0.6) scaleX(0.7);
+  filter: saturate(0) contrast(0.1) brightness(1.9) drop-shadow(0 0 4px white);
+}
+#servicos header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 5px white;
+  text-align: center;
+  font-size: 32pt;
+  margin: 0;
+}
+#servicos header h1 i {
+  margin: 0 30px;
+}
+#servicos > div {
+  position: relative;
+  display: grid;
+  grid-template-areas: 'internet tel tel tel' 'redes redes mob mob' 'eventos eventos outros outros';
+  padding: 10px 0;
+  gap: 30px;
+  margin: 30px 0;
+}
+#servicos > div .tipo-serv {
+  max-width: 100vw;
+  width: 100%;
+  min-height: 30vh;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  transition: all 0.2s ease;
+  justify-content: space-around;
+  border-radius: 8px;
+}
+#servicos > div .tipo-serv:hover,
+#servicos > div .tipo-serv:focus {
+  display: flex;
+  filter: brightness(1.8);
+  transition: all 0.2s ease;
+  box-shadow: 0 0 20px black;
+  transform: scale(1.05);
+}
+#servicos > div .tipo-serv:hover a,
+#servicos > div .tipo-serv:focus a {
+  background-color: #c72929;
+  color: white;
+}
+#servicos > div .tipo-serv a {
+  border: 2px solid #c72929;
+  padding: calc(10px/2) 10px;
+  margin: 10px 30px;
+  text-decoration: none;
+  width: fit-content;
+  font-size: 13pt;
+  flex-basis: auto;
+  text-align: center;
+  color: #c72929;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 20px black;
+}
+#servicos > div .tipo-serv a i {
+  margin-right: 10px;
+}
+#servicos > div .tipo-serv a:hover {
+  box-shadow: 0 0 20px #c72929;
+  transition: all 0.2s ease;
+}
+#servicos > div .tipo-serv > span {
+  border-radius: inherit;
+  background-size: cover;
+  position: absolute;
+  width: 100% !important;
+  height: 100%;
+  z-index: -1;
+  box-shadow: inset 0 0 50px black;
+  filter: brightness(0.3);
+}
+#servicos > div #serv-internet {
+  grid-area: internet;
+}
+#servicos > div #serv-internet > span {
+  background: url(../../img/inicio/internet.jpg) center left no-repeat;
+}
+#servicos > div #serv-tel {
+  grid-area: tel;
+}
+#servicos > div #serv-tel > span {
+  background: url(../../img/inicio/telefonia.jpeg) center center no-repeat;
+}
+#servicos > div #serv-redes {
+  grid-area: redes;
+}
+#servicos > div #serv-redes > span {
+  background: url(../../img/inicio/redes.jpg) center center no-repeat;
+}
+#servicos > div #serv-mob {
+  grid-area: mob;
+}
+#servicos > div #serv-mob > span {
+  background: url(../../img/inicio/mobile.jpg) center left no-repeat;
+}
+#servicos > div #serv-eventos {
+  grid-area: eventos;
+}
+#servicos > div #serv-eventos > span {
+  background: url(../../img/inicio/eventos.jpg) center center no-repeat;
+}
+#servicos > div #serv-outros {
+  grid-area: outros;
+}
+#servicos > div #serv-outros > span {
+  background: url(../../img/inicio/outras.jpg) center center no-repeat;
+}
+#ecommerce {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 30px 0;
+}
+#ecommerce img {
+  width: 50%;
+  filter: drop-shadow(12px 12px 5px #00000080);
+}
+#ecommerce > div {
+  margin: auto;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#ecommerce > div div {
+  margin: 30px 0;
+}
+#ecommerce > div div h2 {
+  font-weight: bolder;
+  text-align: center;
+}
+#ecommerce > div div h1 {
+  font-weight: bolder;
+  text-align: center;
+  color: #c72929;
+}
+#ecommerce > div div h1 i {
+  margin-right: 1em;
+  color: #c72929;
+}
+#ecommerce > div ul {
+  font-size: 15pt;
+  padding: 0;
+  margin: 0;
+}
+#ecommerce > div ul li {
+  list-style: none;
+  margin-left: 1em;
+}
+#ecommerce > div ul li i {
+  text-shadow: 0 0 14px #c72929;
+  margin-right: 1em;
+  color: #c72929;
+}
+#ecommerce > div a.saiba-mais {
+  margin: 30px auto;
+  display: block;
+  transform: scale(0.8);
+  filter: drop-shadow(3px 2px 3px #c72929);
+}
+#ecommerce > div a.saiba-mais button {
+  background-color: #c72929;
+}
+#ecommerce > div a.saiba-mais:hover {
+  filter: drop-shadow(4px 4px 10px #c72929) saturate(1.1);
+}
+#ecommerce > div a.saiba-mais:hover span {
+  text-shadow: 0 0 5px;
+}
+#clientes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+#clientes * {
+  transition: all 0.2s ease;
+}
+#clientes .titulo {
+  position: relative;
+  width: 80%;
+  text-align: center;
+  color: #c72929;
+  margin: 30px 0;
+}
+#clientes .titulo::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent, #c72929, transparent);
+  top: 0;
+}
+#clientes .titulo::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent, #c72929, transparent);
+  bottom: 0;
+}
+#clientes .oculto {
+  opacity: 0;
+  transform: translatey(50px) scale(0.8);
+}
+#clientes .visivel {
+  transform: translatey(0) scale(1);
+  opacity: 1;
+  border-color: #c72929;
+}
+#clientes .depoimento {
+  height: fit-content;
+  width: 300px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 14px;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 5px 5px 10px -5px black;
+}
+#clientes .depoimento h4 {
+  text-align: center;
+  font-weight: bolder;
+}
+#clientes .depoimento h6 {
+  text-align: center;
+}
+#clientes .depoimento img {
+  margin: 30px 0;
+  width: 100px;
+}
+#clientes .depoimento p {
+  font-size: 9pt;
+  cursor: text;
+  width: fit-content;
+}
+footer {
+  position: relative;
+  height: fit-content;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(0deg, silver, white);
+}
+footer a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+footer a:hover {
+  text-shadow: 2px 2px 2px #0000006c;
+  color: black;
+}
+footer a i {
+  margin-right: 10px;
+}
+footer h6 {
+  color: #c72929;
+  font-weight: bolder;
+}
+footer #dudu {
+  margin: 0;
+  right: 0;
+  mix-blend-mode: multiply;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  filter: saturate(1) contrast(1);
+}
+footer #social {
+  margin: 20px 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+}
+footer #social img {
+  height: 75%;
+  filter: brightness(0.3) contrast(0.7);
+}
+footer #social #redes-sociais a {
+  font-size: 20pt;
+}
+footer #social #redes-sociais a i {
+  color: white !important;
+}
+footer #contato {
+  margin: 10px;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer #contato #site {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer #contato #sitemap {
+  margin: 0 20px;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+footer #contato #sitemap div {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  line-height: 17pt;
+}
+footer #externos {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer #externos label {
+  color: white;
+  font-size: 16pt;
+  text-align: center;
+}
+footer #externos #enviar-email {
+  margin: 20px auto;
+  background-color: white;
+  width: fit-content;
+  text-shadow: none;
+  border: none;
+  text-align: center;
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 12pt;
+  font-weight: bolder;
+}
+footer #externos #enviar-email:hover {
+  color: #c72929;
+}
+footer > h6 {
+  z-index: 1;
+  text-align: center;
+  color: #3b3b3b;
+  font-weight: lighter;
+}

@@ -1,0 +1,122 @@
+// cores
+//cores
+@vermelho-padrao-telecall: #c72929;
+@azul-padrao-telecall: #004a7b;
+@azul-modavo: #1EA0F8;
+// margens
+@margem-minima: 10px;
+@margem-comum: 15px;
+@margem-media: 20px;
+@margem-alta: 30px;
+// padrões de logo
+@largura-logo: 220px;
+@altura-logo: 60px;
+// padrões de largura
+@largura-minima: 100px;
+@largura-media: 200px;
+@largura-alta: 300px;
+
+.sessao {
+    position: relative;
+
+    &>* {
+        margin: @margem-minima 0;
+    }
+
+    #conteudo {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: grid;
+        gap: @margem-media;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: all .2s ease;
+
+        .form-item {
+            min-width: 250px;
+
+            #mostrar-senha {
+                display: none;
+                height: 100%;
+                color: gray;
+                align-items: center;
+                position: absolute;
+                z-index: 3;
+                right: 40px;
+                cursor: pointer;
+                transition: all .2s ease;
+
+                &:hover {
+                    color: @vermelho-padrao-telecall;
+                }
+            }
+        }
+
+
+        .form-check.form-switch {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            color: @vermelho-padrao-telecall;
+
+            .form-check-input {
+                border: 1px solid @vermelho-padrao-telecall;
+                background-color: transparent;
+                padding: 8px @margem-minima;
+                width: 50px;
+                margin: 0;
+                cursor: pointer;
+
+                &:hover {
+                    filter: drop-shadow(0 0 5px @vermelho-padrao-telecall);
+                }
+
+                &:checked {
+                    background-color: @vermelho-padrao-telecall;
+                }
+            }
+
+            .form-check-label {
+                text-align: center;
+                width: 50px;
+                @line: 11pt;
+                line-height: @line  !important;
+                position: relative !important;
+                font-size: @line  !important;
+                font-weight: bolder;
+            }
+        }
+
+    }
+
+    #ajuda {
+        text-align: center;
+        cursor: pointer;
+        color: gray;
+        width: fit-content;
+        font-size: 10pt;
+        border-radius: 20px;
+        transition: .3s;
+
+        i {
+            margin-right: @margem-minima;
+        }
+
+        &:hover {
+            color: @vermelho-padrao-telecall;
+            transition: all .3s ease !important;
+        }
+    }
+
+    &::selection {
+        background-color: #8d8d8d63;
+    }
+
+    .oculto {
+        transform: translateX(-100px) scale(.5);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,491 @@
+// cores
+//cores
+@vermelho-padrao-telecall: #b80000;
+@azul-padrao-telecall: #004a7b;
+@azul-modavo: #1EA0F8;
+// margens
+@margem-minima: 10px;
+@margem-comum: 15px;
+@margem-media: 20px;
+@margem-alta: 30px;
+// padrões de logo
+@largura-logo: 220px;
+@altura-logo: 60px;
+// padrões de largura
+@largura-minima: 100px;
+@largura-media: 200px;
+@largura-alta: 300px;
+
+// mobile
+.mobile {
+    display: none;
+}
+
+// Define fonte
+@font-face {
+    font-family: Jura;
+    src: url(../../fonts/Jura-VariableFont_wght.ttf)
+}
+
+// Box-size universal
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+// Remove scrollbar
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: url('../../img/area do cliente/panel_alt.jpg') no-repeat center fixed;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Jura !important;
+
+    *::selection {
+        background-color: @vermelho-padrao-telecall;
+        color: black;
+    }
+}
+
+header {
+    #voltar {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 1;
+        position: relative;
+        cursor: pointer;
+        color: black;
+        font-size: 14pt;
+        outline: none;
+        text-decoration: none;
+        transition: all .1s ease;
+        padding: @margem-minima @margem-alta;
+        width: 100px;
+
+        i {
+            margin-right: @margem-minima;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            z-index: -1;
+            box-shadow: 5px 10px 5px -5px #0000008c;
+            background-color: whitesmoke;
+            width: 150%;
+            height: 80%;
+            transform: skewX(-30deg);
+            border-radius: 7px;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &focus {
+            text-shadow: 0 0 10px @vermelho-padrao-telecall;
+            color: @vermelho-padrao-telecall;
+
+            &::after {
+                background-color: #252525;
+            }
+        }
+    }
+
+}
+
+#usuario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+
+    &>.ilustracao {
+        max-width: 400px;
+        padding: @margem-alta;
+        transition: all .4s ease;
+    }
+
+    form {
+        flex-basis: content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: all .4s ease;
+
+        #logo {
+            max-width: 250px;
+            filter: drop-shadow(6px 6px 3px #00000048);
+        }
+
+        .ilustracao {
+            max-width: 220px;
+            margin: @margem-minima 0;
+            filter: drop-shadow(6px 6px 3px #00000048);
+        }
+
+        .titulo {
+            position: relative;
+            width: 80%;
+            text-align: center;
+            color: @azul-padrao-telecall;
+            margin: @margem-alta 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 2px;
+                width: 100%;
+                background-image: linear-gradient(90deg, transparent, @azul-padrao-telecall, transparent);
+                top: 0;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 2px;
+                width: 100%;
+                background-image: linear-gradient(90deg, transparent, @azul-padrao-telecall, transparent);
+                bottom: 0;
+            }
+
+        }
+
+        .form-item {
+            position: relative;
+            display: flex;
+            outline: none;
+            align-items: center;
+
+            &.valido {
+                .legenda {
+                    color: @azul-padrao-telecall  !important;
+                }
+
+                .campo {
+                    border-color: @azul-padrao-telecall  !important;
+                }
+
+                .icone {
+                    border-color: @azul-padrao-telecall  !important;
+                    color: @azul-padrao-telecall  !important;
+                }
+            }
+
+            &.invalido {
+                .legenda {
+                    color: @vermelho-padrao-telecall  !important;
+                }
+
+                .campo {
+
+                    border-color: @vermelho-padrao-telecall  !important;
+                }
+
+                .icone {
+                    border-color: @vermelho-padrao-telecall  !important;
+                    color: @vermelho-padrao-telecall  !important;
+                }
+            }
+
+            .legenda {
+                color: #868686;
+                z-index: 1;
+                position: absolute;
+                font-size: 11pt;
+                margin-left: 35px;
+                line-height: 35px;
+                padding-left: 2px;
+                transition: all .2s ease;
+                border-radius: 100px;
+                cursor: text;
+
+                &.reduzido {
+                    line-height: 3px !important;
+                    font-size: 7pt !important;
+                    transform: translateY(-17px);
+                    background-color: whitesmoke !important;
+                }
+
+                &:focus {
+                    top: -8px;
+                    position: absolute;
+                }
+            }
+
+            .icone {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                font-size: 11pt;
+                width: @margem-alta;
+                z-index: 1;
+                position: absolute;
+                background-image: linear-gradient(45deg, #dfdfdf, #fbfbfb);
+                border: 1px solid darkgray;
+                border-radius: 7px 0px 0px 7px;
+                color: #5e5e5e;
+                cursor: pointer;
+            }
+
+            .campo {
+                position: relative;
+                width: 100%;
+                height: 35px;
+                font-size: 11pt;
+                border-radius: 7px;
+                padding-left: 35px;
+                transition: all .1s ease;
+                box-shadow: 3px 2px 4px #00000014;
+                outline: none;
+                background-image: linear-gradient(271deg, #e7e6e6, white);
+                color: #464646 !important;
+                border: 1px solid darkgray;
+
+                &:disabled {
+                    border-color: silver;
+                    border-style: dotted;
+                    cursor: default;
+                }
+            }
+
+            .alerta {
+                position: absolute;
+                left: -160px;
+                text-align: center;
+                z-index: 3;
+                border-radius: 7px;
+                width: 140px;
+                padding: 0 4px;
+                opacity: 0.8;
+                background-color: @vermelho-padrao-telecall;
+                color: white;
+                box-shadow: 5px 5px 2px -3px #0000005f;
+                transition: all .2s ease;
+
+                &::before {
+
+                    content: '';
+                    position: absolute;
+                    z-index: -2;
+                    top: calc((100% - 10px)/2);
+                    right: -10px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    transition: all .2s ease;
+                    border-width: 5px 0 5px 10px;
+                    border-color: transparent transparent transparent @vermelho-padrao-telecall;
+                }
+            }
+
+            .apagar {
+                cursor: pointer;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 40px;
+                position: absolute;
+                z-index: 1;
+                font-size: 16px;
+                right: 0;
+                color: #fff;
+                border-radius: 0 6px 6px 0;
+                text-shadow: 2px 1px 3px #00000042;
+                transition: all .2s ease;
+                background-image: linear-gradient(270deg, #2D2D2D -41%, #c3282800 80%);
+
+                &:hover {
+                    color: @vermelho-padrao-telecall;
+
+                    &~.campo {
+                        border: 1px solid @vermelho-padrao-telecall;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.botoes {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    &.cadastro {
+        justify-content: space-evenly;
+
+        button {
+            margin: @margem-alta 0;
+        }
+    }
+}
+
+// Rodapé da empresa
+#descricao {
+    display: none;
+    font-size: 12px;
+    background-color: #252525;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(133, 133, 133, .81);
+    transition: all .1s linear;
+
+    &:hover {
+        text-shadow: 0 0 10px rgba(255, 255, 255, .342);
+        color: #fff;
+        transition: all .1s linear;
+    }
+}
+
+
+// ações
+#acoes {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 20px;
+    padding: 0;
+    z-index: 5;
+    margin: 5px;
+
+
+    // Itens
+    li {
+
+        a {
+            display: contents;
+            color: inherit;
+
+        }
+
+        // ações rápidas do usuário
+        .acao {
+            font-size: @margem-media;
+            width: @margem-media;
+            height: @margem-media;
+            color: #333;
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-radius: 20px;
+            margin: calc(@margem-media/2) calc(@margem-media / 2);
+            cursor: pointer;
+
+
+            // Animação
+            &:hover {
+                filter: drop-shadow(2px 2px 2px #0000008c);
+                transform: scale(1.15);
+                color: black;
+
+                &+span {
+                    opacity: 1;
+                    transform: translate(0, 0);
+                }
+            }
+
+
+
+
+        }
+    }
+
+
+    // switcher do dark mode
+    #mode {
+        filter: contrast(0.6);
+        transition: all .2s ease;
+
+        &:hover {
+            filter: drop-shadow(0 0 4px #0000007f);
+        }
+
+
+        &:active {
+            transform: translateY(5px);
+            opacity: 0;
+        }
+    }
+
+
+    // Fundo
+    &::before {
+        content: '';
+        height: calc((@margem-media*10 + 10*@margem-media/3)*2/5);
+        width: calc(@margem-media*2);
+        background-image: linear-gradient(0deg, silver, whitesmoke);
+        filter: drop-shadow(5px -4px 6px #0000004c);
+        position: absolute;
+        transform: translate(0, calc(3*@margem-media));
+        bottom: 60%;
+        left: 0;
+        z-index: -1;
+        border: 1px solid gray;
+        border-radius: 40px;
+    }
+}
+
+// tooltips
+span.obs {
+    @altura: 24px;
+    position: absolute;
+    margin: calc(@margem-media/2) calc(@margem-media*3/4);
+    width: 96px;
+    height: @altura;
+    box-shadow: 3px 3px 4px -1px #0000009c;
+    background: @vermelho-padrao-telecall;
+    color: white;
+    text-align: center;
+    font-size: 9pt;
+    line-height: 24px;
+    font-weight: bolder;
+    border-radius: 7px;
+    transform: translate(-@margem-minima, 0);
+    opacity: 0;
+    transition: all .3s ease;
+
+    &::before {
+        content: '';
+        transition: all .3s ease;
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-right: calc(@altura/3) solid @vermelho-padrao-telecall;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        left: calc(-@altura/3);
+        top: calc(@altura/3);
+    }
+
+    &.dark {
+        background: white;
+        color: black;
+
+        &::before {
+            border-right: calc(@altura/3) solid white;
+        }
+    }
+}

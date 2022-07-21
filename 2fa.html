@@ -1,0 +1,328 @@
+<!-- Padrão -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="shortcut icon" href="img/modelos/telecall-icone.svg" type="image/x-icon">
+    <title>MODAVO | CpaaS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Aqui começa !! -->
+
+    <!-- Externos -->
+    <link href="./bootstrap-5.1.3/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="bootstrap-5.1.3/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="lib/fontawesome-pro-5.13.0-web/css/all.css">
+
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/SmoothScroll.js"></script>
+
+    <!-- Internos -->
+    <!-- <script src="js/load.js"></script> -->
+    <link rel="stylesheet" href="css/modavo/2fa/2fa.css">
+    <link rel="stylesheet" href="css/modavo/mobile.css">
+    <script src="js/animacoes.js"></script>
+    <script src='js/load.js'></script>
+    <link rel="stylesheet" href="css/fades.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/modavo/default.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <script src='js/inicio/sessao.js'></script>
+    <script src='js/modavo/sessao.js'></script>
+
+</head>
+
+<body class="modavo">
+    <link rel="stylesheet" href="css/load.css">
+    <!-- Tela de loading -->
+    <script src='js/load.js'></script>
+    <div id="loading">
+        <img src="img/load.svg" alt="" id="icone-load">
+        <label id="carregando_mano">Carregando</label>
+    </div>
+    <script src='js/modavo/sessao.js'></script>
+    <script src='js/darkmode.js'></script>
+    <ul id="acoes">
+        <li><img class="acao" src="img/modelos/light-mode.svg" id="mode"><span class="obs">Mudar tema</span></li>
+        <li><i class="acao fa-solid fa-universal-access"></i><span class="obs">Acessibilidade</span></li>
+    </ul>
+    <header>
+        <div id="voltar">
+            <a href="cpaas.html"><i class="fas fa-arrow-alt-left"></i></a>
+            <a href="cpaas.html" class="desk">Voltar ao portal</a>
+        </div>
+        <a href="index.html"><img src="img/modelos/telecall-logo.svg" alt="logo" id="icone"></a>
+        <div id="sessao">
+            <a href="login.html" class="usuario desk" id="usu">José<i class="fa-solid fa-user"></i></a>
+            <a href="index.html" class="desconectar desk">desconectar<i class="fal fa-sign-out"></i></a>
+
+            <a href="login.html" class="usuario mobile"><i class="fa-solid fa-user"></i></a>
+            <a href="index.html" class="desconectar mobile"><i class="fal fa-sign-out"></i></a>
+            <i class="fa-solid fa-bars abre mobile alt"></i>
+        </div>
+    </header>
+    <nav class="vert">
+        <a href="cpaas.html"><img src="img/modavo/modavo.svg" alt="modavo" id="logo"></a>
+        <div id="nav-menu">
+            <i class="fal fa-times fecha mobile alt"></i>
+            <a class="nav-item alt" href="#sobre"><i class="fas fa-fingerprint"></i>Visão Geral</a>
+            <a class="nav-item alt" href="#etapas"><i class="fas fa-cogs"></i>Como funciona?</a>
+            <a class="nav-item alt" href="#beneficios"><i class="fal fa-chart-line"></i>Benefícios</a>
+            <a class="nav-item alt" href="#quem-usa"><i class="fas fa-users"></i>Quem usa?</a>
+            <a class="nav-item alt" href="#contato"><i class="fas fa-user-headset"></i>Contato</a>
+        </div>
+    </nav>
+    <div id="lateral">
+        <div id="modavo"><img src="img/modavo/modavo.svg" alt="modavo"><i class="fa-solid fa-xmark" onclick="abrir()"></i></div>
+        <aside>
+            <div id="side">
+                <div class="side-item">
+                    <img src="img/modavo/2fa.svg" alt="2fa">
+                    <div>
+                        <label>AUTENTICAÇÃO 2FA</label>
+                        <a href="2fa.html" class="visitar"><button><span><i class="fal fa-lock-alt"></i>VER MAIS</span></button></a>
+                    </div>
+                </div>
+                <div class="side-item">
+                    <img src="img/modavo/nr-mascara.svg" alt="nr mascara">
+                    <div>
+                        <label>NÚMERO MÁSCARA</label>
+                        <a href="nr-mascara.html" class="visitar"><button><span><i class="fas fa-mobile-alt"></i>VER MAIS</span></button></a>
+                    </div>
+                </div>
+                <div class="side-item">
+                    <img src="img/modavo/google-verified-calls.svg" alt="google vc">
+                    <div>
+                        <label>GOOGLE VERIFIED CALLS</label>
+                        <a href="google-vc.html" class="visitar"><button><span><i class="fal fa-check"></i>VER MAIS</span></button></a>
+                    </div>
+                </div>
+                <div class="side-item">
+                    <img src="img/modavo/sms-programavel.svg" alt="sms">
+                    <div>
+                        <label>SMS PROGRAMÁVEL</label>
+                        <a href="sms-programavel.html" class="visitar"><button><span><i class="fas fa-comment-alt-lines"></i>VER MAIS</span></button></a>
+                    </div>
+                </div>
+                <a href="cpaas.html"><i class="fas fa-external-link-alt"></i>IR PARA A PORTAL CPAAS</a>
+            </div>
+
+            <div id="indices" class="hidden">
+                <ul>
+                    <b><i class="fal fa-lock-alt"></i>Autenticação 2FA<i class="fas fa-caret-down indicador"></i></b>
+                    <ul>
+                        <li><a href="2fa.html#sobre">O que é?</a></li>
+                        <li><a href="2fa.html#etapas">Como funciona ?</a></li>
+                        <li><a href="2fa.html#beneficios">Quais os benefícios ?</a></li>
+                        <li><a href="2fa.html#quem-usa">Quem usa ?</a></li>
+                    </ul>
+                    <b><i class="fas fa-mobile-alt"></i>Número Máscara<i class="fas fa-caret-down indicador"></i></b>
+                    <ul>
+                        <li><a href="nr-mascara.html#sobre">O que é ?</a></li>
+                        <li><a href="nr-mascara.html#etapas">Como funciona ?</a></li>
+                        <li><a href="nr-mascara.html#recursos">Quais os benefícios ?</a></li>
+                        <li><a href="nr-mascara.html#quem-usa">Quem usa ?</a></li>
+                    </ul>
+                    <b><i class="fal fa-check"></i>Google Verified Calls<i class="fas fa-caret-down indicador"></i></b>
+                    <ul>
+                        <li><a href="google-vc.html#sobre">O que é ?</a></li>
+                        <li><a href="google-vc.html#problema">Como funciona ?</a></li>
+                        <li><a href="google-vc.html#beneficios">Quais os benefícios ?</a></li>
+                        <li><a href="google-vc.html#4">Quem usa ?</a></li>
+                    </ul>
+                    <b><i class="fas fa-comment-alt-lines"></i>SMS Programável<i class="fas fa-caret-down indicador"></i></b>
+                    <ul>
+                        <li><a href="sms-programavel.html#sobre">O que é ?</a></li>
+                        <li><a href="sms-programavel.html#etapas">Como funciona ?</a></li>
+                        <li><a href="sms-programavel.html#beneficios">Quais os benefícios ?</a></li>
+                        <li><a href="sms-programavel.html#quem-usa">Quem usa ?</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </aside>
+        <a href="#" class="visitar neon" id="mostrar_indices"><button><span><i class="fas fa-list" id="volta"></i>Mostrar índices</span></button></a>
+        <span onclick="abrir()"><i class="fal fa-angle-right" id="btn_lateral"></i></span>
+    </div>
+    <section id="sobre" class="vert v_inv">
+        <div id="two-fa">
+            <div id="nome">
+                <h2><i>Two-Factor Authentication</i></h2>
+                <h4>Autenticação de dois fatores</h4>
+            </div>
+            <div>
+                <p>O 2FA é um procedimento de segurança que garante que serão necessários 2 fatores únicos para liberação de uma ação.</p>
+                <p>O primeiro fator é a senha que o usuário e o segundo pode ser autenticado via token, via detecção de impressão digital, reconhecimento facial, código enviado via sms, entre outros.</p>
+                <h3><i class="fal fa-key"></i>Com o 2FA você pode:</h3>
+                <ul>
+                    <li><i class="fal fa-check"></i><b>Enviar</b> uma senha via SMS, voz ou e-mail para autenticação do usuário.</li>
+                    <li><i class="fal fa-check"></i><b>Adicionar</b> uma camada extra de segurança além da senha pessoal.</li>
+                    <li><i class="fal fa-check"></i><b>Ofereçer</b> maior segurança para usuários.</li>
+                </ul>
+            </div>
+        </div>
+        <img src="img/modavo/2fa.svg" alt="2fa">
+    </section>
+    <section id="etapas" class="vert oculto">
+        <div class="etapa">
+            <img src="img/modavo/2FA/etapa-1.svg" alt="1">
+            <p>Usuário <b>acessa seu site ou aplicativo</b> e digita a senha cadastrada para entrar em seu perfil ou completar uma transação.
+            </p>
+        </div>
+        <div>
+            <i class="fas fa-arrow-right desk"></i>
+            <i class="fas fa-arrow-down mobile"></i>
+        </div>
+        <div class="etapa">
+            <img src="img/modavo/2FA/etapa-2.svg" alt="2">
+            <p>A Telecall recebe a tentativa de login e solicita que o usuário <b>insira seu número de telefone</b> para autorizar o acesso.</p>
+        </div>
+        <div>
+            <i class="fas fa-arrow-right desk"></i>
+            <i class="fas fa-arrow-down mobile"></i>
+        </div>
+        <div class="etapa">
+            <img src="img/modavo/2FA/etapa-3.svg" alt="3">
+            <p>Após inserir seu número, a Telecall <b>envia para o usuário</b> por SMS, chamada ou e-mail um <b>código PIN</b> de uso único.</p>
+            <p><small>Esse código PIN é também conhecido como <b>OTP (One Time Password).</b></small></p>
+        </div>
+        <div>
+            <i class="fas fa-arrow-right desk"></i>
+            <i class="fas fa-arrow-down mobile"></i>
+        </div>
+        <div class="etapa">
+            <img src="img/modavo/2FA/etapa-4.svg" alt="4">
+            <p>O usuário <b>insere o código</b> no site ou aplicativo para concluir o processo de verificação.</p>
+        </div>
+    </section>
+    <section id="bloqueie" class="oculto">
+        <div>
+            <h4>Fortaleça a estratégia de segurança de seu negócio.</h4>
+            <h1>BLOQUEIE</h1>
+        </div>
+        <article class="vert">
+            <div class="info"><b>100%</b><label> dos bots automatizados</label></div>
+            <div class="info"><b>99%</b><label>dos ataques de phishing em massa</label></div>
+            <div class="info"><b>66%</b><label>dos ataques direcionados</label></div>
+        </article>
+    </section>
+    <section id="beneficios" class="vert oculto">
+        <h1>Benefícios</h1>
+        <article class="vert">
+            <div class="card">
+                <img src="img/modavo/2FA/card-1.png" alt="cadeado">
+                <p>Ofereça <b>segurança</b> aprimorada para seus clientes.</p>
+            </div>
+            <div class="card">
+                <img src="img/modavo/2FA/card-2.png" alt="hacker">
+                <p>Reduza casos de <b>fraude e invasões</b> e evite o acesso a dados por invasores.</p>
+            </div>
+            <div class="card">
+                <img src="img/modavo/2FA/card-3.png" alt="corrente">
+                <p>Envio de OTP por meio de <b>vários canais</b>, incluindo SMS, voz ou e-mail.</p>
+            </div>
+        </article>
+        <article class="vert">
+            <div class="card">
+                <img src="img/modavo/2FA/card-4.png" alt="alternativo">
+                <p><b>Flexibilidade</b> de canais garante que o usuário conseguirá completar a tarefa desejada mesmo quando tiver problema com um deles.</p>
+            </div>
+            <div class="card">
+                <img src="img/modavo/2FA/card-5.png" alt="fácil">
+                <p>API simples e de <b>rápida implementação</b>.</p>
+            </div>
+            <div class="card">
+                <img src="img/modavo/2FA/card-6.png" alt="intuitivo">
+                <p><b>Plataforma intuitiva</b> que permite visualizar relatórios de uso por dia, mês ou ano e pesquisar usando diversos critérios de filtro.</p>
+            </div>
+        </article>
+    </section>
+    <section id="usos" class="vert oculto">
+        <div class="uso">
+            <div class="emblema">
+                <h3>Finanças</h3>
+                <img src="img/modavo/usos/perc.png" alt="Finanças">
+            </div>
+            <div class="cont">
+                <p class="oculto"><i class="fal fa-check"></i>Acesso ao portal/app</p>
+                <p class="oculto"><i class="fal fa-check"></i>Autenticação para transções bancárias</p>
+                <p class="oculto"><i class="fal fa-check"></i>Pagamentos online (PicPay, Paypal)</p>
+                <p class="oculto"><i class="fal fa-check"></i>Carteiras Digitais (Google Pay, Apple Pay, Samsung Pay)</p>
+            </div>
+        </div>
+        <div class="uso">
+            <div class="emblema">
+                <h3>Saúde</h3>
+                <img src="img/modavo/usos/coracao.png" alt="Saúde">
+            </div>
+            <div class="cont">
+                <p class="oculto"><i class="fal fa-check"></i>Acesso ao portal/app.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Agendamentos.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Tokens de autorização.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Telemedicina.</p>
+            </div>
+        </div>
+        <div class="uso">
+            <div class="emblema">
+                <h3>Turismo</h3>
+                <img src="img/modavo/usos/aviao.png" alt="Turismo">
+            </div>
+            <div class="cont">
+                <p class="oculto"><i class="fal fa-check"></i>Acesso ao portal/app.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Gestão de Reservas.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Acesso ao histórico.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Salvar dados de pagamentos.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Recuperação de Senha.</p>
+            </div>
+        </div>
+        <div class="uso">
+            <div class="emblema">
+                <h3>Varejo</h3>
+                <img src="img/modavo/usos/carrinho.png" alt="Varejo">
+            </div>
+            <div class="cont">
+                <p class="oculto"><i class="fal fa-check"></i>Acesso ao portal/app.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Salvar dados de pagamentos.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Acesso ao histórico.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Recuperação de Senha.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Recibo eletrônico.</p>
+            </div>
+        </div>
+        <div class="uso">
+            <div class="emblema">
+                <h3>Governo</h3>
+                <img src="img/modavo/usos/governo.png" alt="Governo">
+            </div>
+            <div class="cont">
+                <p class="oculto"><i class="fal fa-check"></i>Acesso ao portal/app</p>
+                <p class="oculto"><i class="fal fa-check"></i>Gestão de informações</p>
+                <p class="oculto"><i class="fal fa-check"></i>Agendamentos.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Recuperação de Senha.</p>
+            </div>
+        </div>
+    </section>
+    <section id="quem-usa" class="vert oculto">
+        <h3>Quem utiliza 2FA?</h3>
+        <img src="img/modavo/2FA/empresas.svg" alt="Quem usa !!?" class="img-fill">
+    </section>
+    <footer id="contato" class="vert">
+        <a href="index.html"><img src="img/modelos/telecall-logo-dark.svg" alt="logo"></a>
+        <div class="vert" id="footer-meio">
+            <span><a href="mailto:comercial@telecall.com">comercial@telecall.com</a>
+            <a href="http://wa.me/2130301010">(21) 3030-1010</a></span>
+            <label id="copyright">Copyright © 2018 Telecall. Todos os direitos reservados.</label>
+        </div>
+        <div class="horz">
+            <label>Siga-nos</label>
+            <a href="https://pt-br.facebook.com/TelecallBr/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/telecallbr/"><i class="fab fa-instagram"></i></a>
+            <a href="https://br.linkedin.com/company/telecall"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    <script src="js/sidebar.js"></script>
+    <script src="js/darkmode.js"></script>
+</body>
+
+</html>

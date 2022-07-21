@@ -1,0 +1,588 @@
+// cores
+
+//cores
+@vermelho-padrao-telecall: #c72929;
+@azul-padrao-telecall: #004a7b;
+@azul-modavo: #1EA0F8;
+
+// margens
+@margem-minima: 10px;
+@margem-comum: 15px;
+@margem-media: 20px;
+@margem-alta: 30px;
+
+// padrões de logo
+@largura-logo: 220px;
+@altura-logo: 60px;
+
+// padrões de largura
+@largura-minima: 100px;
+@largura-media: 200px;
+@largura-alta: 300px;
+@fades-xy: 150px;
+
+
+.bloqueado {
+    display: none !important;
+}
+
+// configurações do hud ~ Interação do usuário
+#hud * {
+    user-select: none;
+}
+
+
+// Cabeçalho do hud
+#menus {
+    display: flex !important;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 88px;
+    align-content: center;
+    align-items: center;
+
+
+    // logo da empresa
+    #logo {
+        height: @altura-logo;
+        position: relative;
+        width: @largura-logo;
+        z-index: 2;
+        margin: 0 calc(@margem-alta) 0 calc(@margem-comum);
+        cursor: pointer;
+
+
+        // fundo do logo
+        &::before {
+            content: '';
+            background-image: linear-gradient(0deg, whitesmoke, white);
+            filter: drop-shadow(2px 3px 4px #0000007c);
+            height: calc(@altura-logo*1.9);
+            width: calc(@largura-logo*1.9);
+            position: fixed;
+            z-index: 0;
+            transform: skewX(-15deg) translate(calc(-@largura-logo*2/3), calc(-@altura-logo*2/3));
+            border-radius: 7px;
+        }
+    }
+
+
+    // navbar menu principal fixo
+    #menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        transform: translateX(25px);
+        background: none !important;
+        z-index: 2;
+
+
+        // painel de fundo
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: calc(@margem-alta*5/4);
+            filter: drop-shadow(3px 3px 3px #0000004c);
+            background-image: linear-gradient(0deg, whitesmoke, white);
+            transform: skewX(-15deg);
+            border-radius: 7px;
+        }
+
+
+        // opções do menu
+        .nav-link.dropdown-toggle {
+            color: #4a4a4a !important;
+            font-weight: bolder;
+            line-height: 100%;
+
+            &:hover {
+                color: @vermelho-padrao-telecall  !important;
+            }
+
+
+            // icone das opções do menu
+            i {
+                margin: 0 calc(@margem-minima);
+            }
+        }
+
+        @keyframes slide {
+
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+
+        // dropdown do menu
+        .dropdown-menu.dropdown-menu-dark {
+            @largura: calc(@largura-media - @margem-alta);
+            z-index: -1;
+            background-image: linear-gradient(0deg, lightgray, whitesmoke);
+            border-radius: 7px;
+            width: @largura;
+            margin: 0 3px;
+            padding: 5px 0;
+            animation: slide .5s;
+
+            // Dropdown-item
+            li {
+                display: block;
+                background-color: #eeeeee !important;
+                border-radius: 4px;
+                margin: calc(@margem-minima/2) calc(@margem-minima/2);
+                box-shadow: 2px 3px 2px -1px #0000003c;
+                border: 1px solid rgba(128, 128, 128, 0.637);
+
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    padding: 2px 6px !important;
+                    color: #444;
+                    font-size: 0.95rem;
+                    line-height: 1.5rem;
+                    font-weight: bolder;
+
+
+                    span.subtitle {
+                        color: #444 !important;
+                        display: inline-block;
+                        width: 100%;
+                        font-size: 0.72rem;
+                        line-height: 0.9rem;
+                        font-weight: lighter;
+                        word-wrap: break-word;
+                        white-space: normal;
+                    }
+
+                    &:hover {
+                        color: @vermelho-padrao-telecall;
+
+                        span.subtitle {
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            a.todos {
+                cursor: pointer;
+                display: inline-block;
+                text-decoration: none;
+                outline: none;
+                color: #424242;
+                padding: 0;
+                width: @largura;
+                font-size: 8pt;
+                line-height: 10pt;
+                text-align: center;
+
+                i {
+                    margin-right: @margem-minima;
+                }
+
+                &:hover {
+                    color: @vermelho-padrao-telecall;
+                }
+            }
+        }
+    }
+
+
+    // Botão de login
+    #area_do_cliente {
+        @altura: calc(@margem-alta*5/4);
+        @largura: 100px;
+        position: relative;
+        width: @largura;
+        height: @altura;
+        margin: calc(@margem-alta*13/9) 0;
+        cursor: pointer;
+        filter: drop-shadow(1px 2px 3px #0000008f);
+        z-index: 2;
+        position: relative;
+        transition: all .2s ease;
+        transform: translateX(calc(@largura/2));
+
+
+        span {
+            left: 0;
+            top: 0;
+            z-index: -1;
+            position: absolute;
+            width: calc(@largura*2);
+            height: inherit;
+            transform: skewX(-15deg);
+            border: 2px solid white;
+            border-radius: 5px;
+
+            &::before {
+                content: '';
+                border-radius: 3px;
+                position: absolute;
+                width: 96%;
+                height: 86%;
+                background-image: linear-gradient(0deg, whitesmoke, white);
+                top: 8%;
+                left: 2%;
+            }
+        }
+
+        #login {
+            transition: all .1s linear;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: inherit;
+            font-size: 16px;
+            text-align: center;
+            line-height: @altura;
+            margin: 0;
+            z-index: 0;
+            text-decoration: none;
+            cursor: pointer;
+            color: transparent;
+
+            &.logado {
+                i {
+                    color: @vermelho-padrao-telecall;
+                }
+
+                &.flex:hover {
+                    background-color: @vermelho-padrao-telecall;
+
+                    i {
+                        color: white;
+                    }
+                }
+            }
+
+            #logado {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+            }
+
+            i {
+                color: #3a3a3a;
+                margin: 0 @margem-minima;
+            }
+        }
+
+        &:hover {
+            transform: translateX(0);
+
+            #login {
+                transition: all .1s linear;
+                color: #3a3a3a;
+            }
+        }
+    }
+}
+
+
+// scroll menu lateral ~ FEITO NA UNHA
+#nav-scroll-vertical {
+    height: 100vh;
+    display: flex !important;
+    position: fixed !important;
+    flex-direction: column;
+    justify-content: center;
+    right: 0 !important;
+    text-align: right;
+    padding-right: 3*@margem-minima;
+    filter: drop-shadow(1px 2px 1px #0000007a);
+    z-index: 2;
+
+
+    // componente do menu
+    ul {
+        padding: 0;
+        margin: 0;
+
+
+        //Itens do menu
+        li {
+            @margem-padrao: 2px;
+            @diametro: 14px;
+            @linha: calc(@margem-alta*3/2 - @margem-minima/2 + @diametro);
+            margin: calc(@margem-alta*3/2) 0;
+            list-style: none;
+
+
+            // Linhas desativadas ~ cinzas
+            &::after {
+                content: '';
+                position: absolute;
+                margin: calc(@diametro + @margem-minima/2) calc(@margem-minima + @margem-padrao);
+                right: 0;
+                height: @linha;
+                width: @margem-padrao;
+                background: silver;
+                z-index: -1;
+            }
+
+
+            // Padrão de todos os itens
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 0.8rem;
+                position: relative;
+                display: inline-block;
+                line-height: 1rem;
+                transition: font-size .15s linear;
+
+
+                // Circunferências padrão
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: @diametro;
+                    height: @diametro;
+                    border-radius: @diametro;
+                    right: calc(-@margem-minima - @diametro);
+                    bottom: calc(-@margem-padrao/2);
+                    border: 2px solid silver;
+                    background: none;
+                    filter: drop-shadow(0 0 3px transparent);
+                }
+
+                &:hover {
+                    font-weight: bolder;
+                    text-shadow: 0 0 6px;
+                }
+            }
+
+
+            // Item ativo
+            a.old {
+                color: @vermelho-padrao-telecall;
+                font-weight: bolder;
+
+
+                // Circunferências dos passados
+                &::before {
+                    border: 2px solid @vermelho-padrao-telecall;
+                }
+            }
+
+
+            // Item ativo
+            a.set {
+                color: @vermelho-padrao-telecall;
+                font-weight: bolder;
+                font-size: 0.9rem;
+                text-shadow: 3px 1px 3px #0000005c;
+
+
+                // Circunferência do item ativo
+                &::before {
+                    content: '';
+                    position: absolute;
+                    border-radius: @diametro;
+                    right: calc(-@margem-minima - @diametro);
+                    bottom: calc(-@margem-padrao/2);
+                    border: 1px solid @vermelho-padrao-telecall;
+                    width: @diametro;
+                    height: @diametro;
+                    background: @vermelho-padrao-telecall;
+                    filter: drop-shadow(0 0 4px);
+                }
+            }
+
+
+            // Linhas de scroll ativado ~ vermelhas
+            span.vert-line {
+                position: absolute;
+                margin: calc(@diametro + @margem-minima/2) calc(@margem-minima + @margem-padrao);
+                right: 0;
+                width: @margem-padrao;
+                background: @vermelho-padrao-telecall;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+
+// último item do sidenav 
+#lst_item {
+    &::after {
+        display: none !important;
+    }
+
+    span.vert-line {
+        display: none;
+    }
+}
+
+
+// ações
+#acoes {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: left;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    padding: 0;
+    z-index: 3;
+    margin: 0;
+
+
+    // Itens
+    li {
+        text-decoration: none;
+
+        a {
+            display: contents;
+            color: inherit;
+            text-decoration: none;
+
+        }
+
+        // ações rápidas do usuário
+        .acao {
+            font-size: @margem-media;
+            width: @margem-media;
+            height: @margem-media;
+            color: #333;
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-radius: 20px;
+            margin: calc(@margem-media/2) calc(@margem-media / 2);
+            cursor: pointer;
+
+
+            // Animação
+            &:hover {
+                filter: drop-shadow(2px 2px 2px #0000008c);
+                transform: scale(1.15);
+                color: black;
+
+                &+span {
+                    opacity: 1;
+                    transform: translate(0, 0);
+                }
+            }
+
+
+
+
+        }
+    }
+
+
+    // switcher do dark mode
+    #mode {
+        filter: contrast(0.6);
+        transition: all .2s ease;
+
+        &:hover {
+            filter: drop-shadow(0 0 4px #0000007f);
+        }
+
+
+        &:active {
+            transform: translateY(5px);
+            opacity: 0;
+        }
+    }
+
+
+    // Fundo
+    &::before {
+        content: '';
+        height: calc(@margem-media*10 + 10*@margem-media/3);
+        width: calc(@margem-media*2);
+        background-image: linear-gradient(0deg, silver, whitesmoke);
+        filter: drop-shadow(5px -4px 6px #0000004c);
+        position: absolute;
+        transform: skewY(15deg) translate(0, calc(3*@margem-media));
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border: 1px solid gray;
+        border-radius: 0 9px 0 0;
+    }
+}
+
+
+// tooltips
+span.obs {
+    @altura: 24px;
+    position: absolute;
+    margin: calc(@margem-media/2) calc(@margem-media*3/4);
+    width: 96px;
+    height: @altura;
+    box-shadow: 3px 3px 4px -1px #0000009c;
+    background: @vermelho-padrao-telecall;
+    color: white;
+    text-align: center;
+    font-size: 9pt;
+    line-height: 24px;
+    font-weight: bolder;
+    border-radius: 7px;
+    transform: translate(-@margem-minima, 0);
+    opacity: 0;
+    transition: all .3s ease;
+
+    &::before {
+        content: '';
+        transition: all .3s ease;
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-right: calc(@altura/3) solid @vermelho-padrao-telecall;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        left: calc(-@altura/3);
+        top: calc(@altura/3);
+    }
+
+    &.dark {
+        background: white;
+        color: black;
+
+        &::before {
+            border-right: calc(@altura/3) solid white;
+        }
+    }
+}
+
+
+// vinheta superior
+#fade_sup {
+    position: fixed;
+    top: 0;
+    height: calc(@fades-xy*3/5);
+    background-image: linear-gradient(180deg, #000000a3, rgba(255, 255, 255, 0));
+    width: 100%;
+    z-index: 1 !important;
+}
+
+
+// vinheta lateral
+#fade_lateral {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(-90deg, #000000ef, rgba(255, 255, 255, 0));
+    height: 100vh;
+    width: calc(@fades-xy - @margem-comum);
+    z-index: 1 !important;
+}

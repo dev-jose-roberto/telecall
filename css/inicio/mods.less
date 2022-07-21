@@ -1,0 +1,86 @@
+// cores
+//cores
+@vermelho-padrao-telecall: #c72929;
+@azul-padrao-telecall: #004a7b;
+@azul-modavo: #1EA0F8;
+// margens
+@margem-minima: 10px;
+@margem-comum: 15px;
+@margem-media: 20px;
+@margem-alta: 30px;
+// padrões de logo
+@largura-logo: 220px;
+@altura-logo: 60px;
+// padrões de largura
+@largura-minima: 100px;
+@largura-media: 200px;
+@largura-alta: 300px;
+
+#solucoes {
+    #frente {
+        width: 100%;
+        max-width: 100% !important;
+        box-shadow: 0 10px 10px -5px #0000008c;
+        
+                .carousel-inner {
+                    .carousel-item img {
+                        width: 100vw !important;
+                        height: 100vh !important;
+                    }
+                }
+
+        .carousel-indicators {
+            margin: 0;
+            
+            button {
+                cursor: pointer !important;
+                @k: 10px;
+                height: @k !important;
+                width: @k !important;
+                margin: 0 @k;
+                border-radius: 100% !important;
+                
+
+                &:hover {
+                    opacity: 1 !important;
+                    transition: all .1s linear;
+                }
+            }
+
+            button.active {
+                background-color: @vermelho-padrao-telecall  !important;
+                filter: drop-shadow(0 0 4px @vermelho-padrao-telecall) saturate(1.3);
+            }
+        }
+
+        #titulo {
+            @largura: 560px;
+            user-select: none;
+            font-size: 4rem;
+            position: absolute;
+            color: whitesmoke;
+            line-height: 86px;
+            width: 420px;
+            left: 0;
+            top: 120px;
+            text-align: center;
+            display: inline-block;
+            z-index: 1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                border-radius: 4px;
+                width: @largura;
+                height: 86px;
+                left: 0;
+                filter: drop-shadow(6px 6px 6px #0000009f);
+                background-color: @vermelho-padrao-telecall;
+                filter: drop-shadow(0 0 10px @vermelho-padrao-telecall);
+                transform: skewX(-15deg) translateX(-20%);
+                z-index: -1;
+            }
+        }
+    }
+}
+

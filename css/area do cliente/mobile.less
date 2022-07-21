@@ -1,0 +1,92 @@
+// cores
+//cores
+@vermelho-padrao-telecall: #c72929;
+@azul-padrao-telecall: #004a7b;
+@azul-modavo: #1EA0F8;
+// margens
+@margem-minima: 10px;
+@margem-comum: 15px;
+@margem-media: 20px;
+@margem-alta: 30px;
+// padrões de logo
+@largura-logo: 220px;
+@altura-logo: 60px;
+// padrões de largura
+@largura-minima: 100px;
+@largura-media: 200px;
+@largura-alta: 300px;
+
+@media screen and (max-width: 1000px) {
+    .desk {
+        display: none !important;
+    }
+
+    .mobile {
+        display: inline-block !important;
+    }
+
+    .block {
+        display: block !important;
+    }
+
+    .horz {
+        flex-direction: row !important;
+        height: fit-content;
+        align-items: center;
+    }
+
+    .v_inv {
+        flex-direction: column-reverse !important;
+    }
+
+    .vert {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: fit-content;
+        align-items: center !important;
+    }
+
+    ::-webkit-scrollbar {
+        display: inline !important;
+        background-color: #1A1A1A;
+        width: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: @vermelho-padrao-telecall;
+    }
+
+
+    #usuario {
+        .registro {
+            padding: @margem-alta @margem-minima;
+            .dados {
+                gap: @margem-minima;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "campo_nome campo_nome"
+                    "campo_email campo_email"
+                    "campo_nasc campo_sexo"
+                    "campo_tel campo_cel"
+                    "campo_nome_mae campo_nome_mae"
+                    "campo_cep campo_nr"
+                    "campo_logradouro campo_logradouro"
+                    "campo_cidade campo_uf"
+                    "campo_reg_login campo_cpf"
+                    "campo_reg_senha campo_confirma_senha"
+            }
+
+            .botoes {
+                flex-direction: column;
+                align-items: stretch;
+                margin: @margem-minima 0;
+
+                button {
+                    width: 100% !important;
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+}

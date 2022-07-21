@@ -1,0 +1,99 @@
+.registro {
+  position: relative;
+}
+.registro .dados {
+  max-width: 600px;
+  cursor: text;
+  margin: auto;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-areas: "campo_nome campo_nome campo_nome campo_nome" "campo_email campo_email campo_email campo_email" "campo_cpf campo_cpf campo_nasc campo_sexo" "campo_nome_mae campo_nome_mae campo_tel campo_cel" "campo_cep campo_nr campo_reg_login campo_reg_login" "campo_logradouro campo_logradouro campo_reg_senha campo_reg_senha" "campo_cidade campo_uf campo_confirma_senha campo_confirma_senha";
+  align-content: center;
+  justify-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+}
+.registro .dados #campo_nome {
+  grid-area: campo_nome;
+}
+.registro .dados #campo_email {
+  grid-area: campo_email;
+}
+.registro .dados #campo_nome_mae {
+  grid-area: campo_nome_mae;
+}
+.registro .dados #campo_cpf {
+  grid-area: campo_cpf;
+}
+.registro .dados #campo_nasc {
+  grid-area: campo_nasc;
+}
+.registro .dados #campo_nasc #nasc {
+  padding: 4px;
+  font-size: 11pt;
+  color: gray !important;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding-left: 25px;
+  height: 100%;
+  outline: none;
+  margin: 0;
+  border-radius: 6px;
+  border: 1px solid darkgray;
+  transition: all 0.2s ease;
+  background-image: linear-gradient(271deg, #e7e6e6, white);
+  box-shadow: 3px 2px 4px #00000014;
+}
+.registro .dados #campo_sexo {
+  grid-area: campo_sexo;
+}
+.registro .dados #campo_sexo #sexo {
+  height: 100%;
+  text-align: center;
+  padding-left: 35px !important;
+  outline: none;
+  font-size: 11pt;
+  border: 1px solid darkgray;
+  border-radius: 6px;
+  padding: 4px;
+  margin: 0;
+  color: gray;
+  background-image: linear-gradient(271deg, #e7e6e6, white);
+  box-shadow: 3px 2px 4px #00000014;
+  cursor: pointer;
+}
+.registro .dados #campo_sexo #sexo:focus-visible {
+  outline: none;
+}
+.registro .dados #campo_tel {
+  grid-area: campo_tel;
+}
+.registro .dados #campo_tel #tel {
+  font-size: 9pt !important;
+}
+.registro .dados #campo_cel {
+  grid-area: campo_cel;
+}
+.registro .dados #campo_cel #cel {
+  font-size: 9pt !important;
+}
+.registro .dados #campo_logradouro {
+  grid-area: campo_logradouro;
+}
+.registro .dados #campo_cep {
+  grid-area: campo_cep;
+}
+.registro .dados #campo_nr {
+  grid-area: campo_nr;
+}
+.registro .dados #campo_reg_login {
+  grid-area: campo_reg_login;
+}
+.registro .dados #campo_reg_senha {
+  grid-area: campo_reg_senha;
+}
+.registro .dados #campo_confirma_senha {
+  grid-area: campo_confirma_senha;
+}

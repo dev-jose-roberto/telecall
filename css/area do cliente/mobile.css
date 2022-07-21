@@ -1,0 +1,52 @@
+@media screen and (max-width: 1000px) {
+  .desk {
+    display: none !important;
+  }
+  .mobile {
+    display: inline-block !important;
+  }
+  .block {
+    display: block !important;
+  }
+  .horz {
+    flex-direction: row !important;
+    height: fit-content;
+    align-items: center;
+  }
+  .v_inv {
+    flex-direction: column-reverse !important;
+  }
+  .vert {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: fit-content;
+    align-items: center !important;
+  }
+  ::-webkit-scrollbar {
+    display: inline !important;
+    background-color: #1A1A1A;
+    width: 2px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c72929;
+  }
+  #usuario .registro {
+    padding: 30px 10px;
+  }
+  #usuario .registro .dados {
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "campo_nome campo_nome" "campo_email campo_email" "campo_nasc campo_sexo" "campo_tel campo_cel" "campo_nome_mae campo_nome_mae" "campo_cep campo_nr" "campo_logradouro campo_logradouro" "campo_cidade campo_uf" "campo_reg_login campo_cpf" "campo_reg_senha campo_confirma_senha";
+  }
+  #usuario .registro .botoes {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 10px 0;
+  }
+  #usuario .registro .botoes button {
+    width: 100% !important;
+    margin: 5px 0;
+  }
+}

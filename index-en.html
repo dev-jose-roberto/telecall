@@ -1,0 +1,635 @@
+﻿<!--
+    Um projeto arquitetado, prototipado e codado por JOSÉ ROBERTO GONÇALVES NETO.
+     
+     Feito cerca de 90% à mão, partindo da minha própria criatividade e raciocínio !!!
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- PADRÃO -->
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Telecall - Complete telephony and internet solutions</title>
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="shortcut icon" href="img/modelos/telecall-icone.svg" type="image/x-icon">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- EXTERNOS -->
+    <link href="./bootstrap-5.1.3/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="bootstrap-5.1.3/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="lib/fontawesome-pro-5.13.0-web/css/all.css">
+
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/SmoothScroll.js"></script>
+    <!-- Internos -->
+    <script src='js/inicio/statico.js'></script>
+    <link rel="stylesheet" type="text/css" media='screen' href='css/inicio/dinamicos.css'>
+    <link rel="stylesheet" type="text/css" media='screen' href='css/inicio/mobile.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/inicio/mods.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/inicio/staticos.css'>
+    <link rel="stylesheet" href="css/load.css">
+    <link rel="stylesheet" href="css/fades.css">
+    <script src="js/animacoes.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+
+</head>
+
+<body>
+    <!-- Tela de loading -->
+    <!-- <script src='js/load.js'></script>
+    <div id="loading">
+        <img src="img/load.svg" alt="" id="icone-load">
+        <label id="carregando_mano">Carregando</label>
+    </div> -->
+    <!--~~~~~~~~~~~~~ Elementos fixos da tela -~~~~~~~~~~~~~-->
+    <div id="hud">
+        <!-- Cabeçalho -->
+        <header id="menus">
+            <div id="logo"><img src="img/modelos/telecall-logo.svg" alt="logo" id="logo" onclick="window.scrollTo(0,0)">
+            </div>
+            <!-- Barra de Menu -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="menu">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation" id="nav-responsiva">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" id="container">
+                        <ul class="navbar-nav">
+                            <!-- Internet -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-globe"> </i>Internet</a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="https://www.telecall.com/internet/internet-dedicada">Dedicated Internet<br><span class="subtitle">Maximum quality, availability and safety.</span></a></li>
+                                    <li><a class="dropdown-item" href="https://www.telecall.com/internet/banda-larga">Broadband<br><span class="subtitle">Optical fiber internet with high quality and speed.</span></a></li>
+                                    <li><a class="dropdown-item" href="https://www.telecall.com/internet/wi-fi">Wifi<br><span class="subtitle">High performance wireless internet.</span></a></li>
+                                    <a class="todos" href="#servicos"><i class="fa-solid fa-screwdriver-wrench"></i>All Services</a>
+                                </ul>
+                            </li>
+                            <!-- Telefonia -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-phone "> </i>Telephony</a>
+                                <ul class="dropdown-menu dropdown-menu-dark " aria-spanledby="navbarDarkDropdownMenuLink ">
+                                    <li><a class="dropdown-item " href="https://www.telecall.com/pabx-ip ">Virtual IP PBX <br><span class="subtitle">Smart communication that will reduce your expenses.</span></a></li>
+                                    <li><a class="dropdown-item " href="https://www.telecall.com/telefonia/e1 ">E1<br><span class="subtitle">Digital telephony for making up to 30 simultaneous calls.</span></a></li>
+                                    <li><a class="dropdown-item " href="https://www.telecall.com/telefonia/sip-trunk ">SIP TRUNK<br><span class="subtitle">Telephony through the SIP protocol for companies with IP PBX.</span></a></li>
+                                    <li><a class="dropdown-item " href="https://conteudo.telecall.com/lp0800-40xx ">Numbers 0800 & 40XX <br><span class="subtitle">Make life easier for your customers and increase your sales.</span></a></li>
+                                    <a class="todos " href="#servicos "><i class="fa-solid fa-screwdriver-wrench "></i>All Services</a>
+                                </ul>
+                            </li>
+                            <!-- Redes e Infraestrutura -->
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-server"> </i>Networks and Infrastructure
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-spanledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="https://www.telecall.com/rede-e-infraestrutura/callnet-ponto-a-ponto">Ponto-a-ponto <br><span class="subtitle">Adedicated access for connecting two points.</span></a></li>
+                                    <li><a class="dropdown-item" href="https://www.telecall.com/rede-e-infraestrutura/mpls">MPLS<br><span class="subtitle">Fnetwork formation with MPLS protocol.</span></a></li>
+                                    <li><a class="dropdown-item" href="https://www.telecall.com/rede-e-infraestrutura/fibra-apagada-e-dutos">Unlit Fiber and Ducts<br><span class="subtitle">Locclusion of unlit fiber and ducts between two points.</span></a></li>
+                                    <li><a class="dropdown-item" href="https://www.telecall.com/rede-e-infraestrutura/co-location">Co-location<br><span class="subtitle">Luse of rack space in its own datacenter.</span></a></li>
+                                    <a class="todos" href="#servicos"><i class="fa-solid fa-screwdriver-wrench"></i>All Services</a>
+                                </ul>
+                            </li>
+                            <!-- Mobilidade -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-mobile-screen"> </i>Mobility</a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-spanledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="https://loja.telecall.com/mobilidade/telefonia-movel">Business Cellphone<br><span class="subtitle">Planes and solutions for you.</span></a></li>
+                                    <li><a class="dropdown-item" href="https://www.telecall.com/mobilidade/mvna-e">MVNA/E<br><span class="subtitle">Syour company operating in the mobile market.</span></a></li>
+                                    <a class="todos" href="#servicos"><i class="fa-solid fa-screwdriver-wrench"></i>All Services</a>
+                                </ul>
+                            </li>
+                            <!-- Eventos -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="far fa-calendar-star"></i></i>events</a>
+                                <ul class="dropdown-menu dropdown-menu-dark " aria-spanledby="navbarDarkDropdownMenuLink ">
+                                    <li><a class="dropdown-item " href="# ">Services for Events<br><span class="subtitle">The best Telecom solutions for your event.</span></a></li>
+                                    <li><a class="dropdown-item " href="# ">Telecall Events<br><span class="subtitle">Our history and events calendar</span></a></li>
+                                    <a class="todos " href="#servicos "><i class="fa-solid fa-screwdriver-wrench "></i>All Services</a>
+                                </ul>
+                            </li>
+                            <!-- Outras soluções -->
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gears"></i>other solutions</a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-spanledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">ACTIVTRAK<br><span class="subtitle">Ideal for companies that work with home office</span></a></li>
+                                    <a class="todos" href="#servicos"><i class="fa-solid fa-screwdriver-wrench"></i>All Services</a>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Login -->
+            <div id="area_do_cliente">
+                <a href="login.html" id="login"><i class="fa-solid fa-user"></i>Login</a>
+                <span></span>
+            </div>
+        </header>
+        <!-- Menu vertical de scroll fixo ~ One page scroll dots ~ Vertical Navgation fixed dots -->
+        <div id="nav-scroll-vertical">
+            <ul>
+                <li><a class="vert-item set" href="#solucoes">Solutions</a><span class="vert-line"></span></li>
+                <li><a class="vert-item" href="#novidades">News</a><span class="vert-line"></span></li>
+                <li><a class="vert-item" href="#sobre">About</a><span class="vert-line"></span></li>
+                <li><a class="vert-item" href="#servicos">Services</a><span class="vert-line"></span></li>
+                <li><a class="vert-item" href="#ecommerce">E-Commerce</a><span class="vert-line"></span></li>
+                <li><a class="vert-item" href="#clientes">Clients</a><span class="vert-line"></span></li>
+                <li id="lst_item"><a class="vert-item" href="#contato-e-suporte">Support & Contact</a><span class="vert-line"></span></li>
+            </ul>
+        </div>
+        <!-- Sidebar modavo -->
+        <div id="lateral">
+            <div id="modavo"><img src="img/modavo/modavo.svg" alt="modavo"><i class="fa-solid fa-xmark" onclick="abrir()"></i></div>
+            <aside>
+                <div id="side">
+                    <div class="side-item">
+                        <img src="img/modavo/2fa.svg" alt="2fa">
+                        <div>
+                            <label>2FA AUTHENTICATION</label>
+                            <a href="2fa.html" class="visitar"><button><span><i class="fal fa-lock-alt"></i>SEE MORE</span></button></a>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img src="img/modavo/nr-mascara.svg" alt="nr mascara">
+                        <div>
+                            <label>MASK NUMBER</label>
+                            <a href="nr-mascara.html" class="visitar"><button><span><i class="fas fa-mobile-alt"></i>SEE MORE</span></button></a>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img src="img/modavo/google-verified-calls.svg" alt="google vc">
+                        <div>
+                            <label>GOOGLE VERIFIED CALLS</label>
+                            <a href="google-vc.html" class="visitar"><button><span><i class="fal fa-check"></i>SEE MORE</span></button></a>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img src="img/modavo/sms-programavel.svg" alt="sms">
+                        <div>
+                            <label>PROGRAMMABLE SMS</label>
+                            <a href="sms-programavel.html" class="visitar"><button><span><i class="fas fa-comment-alt-lines"></i>SEE MORE</span></button></a>
+                        </div>
+                    </div>
+                    <a href="cpaas.html"><i class="fas fa-external-link-alt"></i>ACCESS CPAAS</a>
+                </div>
+
+                <div id="indices" class="hidden">
+                    <ul>
+                        <b><i class="fal fa-lock-alt"></i>2FA authentication<i class="fas fa-caret-down indicador"></i></b>
+                        <ul>
+                            <li><a href="2fa.html#1">What is this ?</a></li>
+                            <li><a href="2fa.html#2">How it works ?</a></li>
+                            <li><a href="2fa.html#3">What are the benefits?</a></li>
+                            <li><a href="2fa.html#4">Who use ?</a></li>
+                        </ul>
+                        <b><i class="fas fa-mobile-alt"></i>Mask Number<i class="fas fa-caret-down indicador"></i></b>
+                        <ul>
+                            <li><a href="nr-mascara.html#1">What is this ?</a></li>
+                            <li><a href="nr-mascara.html#2">How it works ?</a></li>
+                            <li><a href="nr-mascara.html#3">What are the benefits?</a></li>
+                            <li><a href="nr-mascara.html#4">Who use ?</a></li>
+                        </ul>
+                        <b><i class="fal fa-check"></i>Google Verified Calls<i class="fas fa-caret-down indicador"></i></b>
+                        <ul>
+                            <li><a href="google-vc.html#1">What is this ?</a></li>
+                            <li><a href="google-vc.html#2">How it works ?</a></li>
+                            <li><a href="google-vc.html#3">What are the benefits?</a></li>
+                            <li><a href="google-vc.html#4">Who use ?</a></li>
+                        </ul>
+                        <b><i class="fas fa-comment-alt-lines"></i>Programmable SMS<i class="fas fa-caret-down indicador"></i></b>
+                        <ul>
+                            <li><a href="sms-programavel.html#1">What is this ?</a></li>
+                            <li><a href="sms-programavel.html#2">How it works ?</a></li>
+                            <li><a href="sms-programavel.html#3">What are the benefits?</a></li>
+                            <li><a href="sms-programavel.html#4">Who use ?</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </aside>
+            <a href="#" class="visitar neon" id="show_indexes"><button><span><i class="fas fa-list" id="volta"></i>Show indexes</span></button></a>
+            <span onclick="abrir()"><i class="fal fa-angle-right" id="btn_lateral"></i></span>
+        </div>
+        <!-- Botões de ação lateral -->
+        <ul id="acoes">
+            <li>
+                <a href="index.html"><img class="acao" src="img/modelos/Usa.svg" alt="idioma" id="idioma"><span class="obs">Language</span></a>
+            </li>
+            <li><i class="acao fa-solid fa-comment-dots"></i><span class="obs">FAQ</span></li>
+            <li><i class="acao fa-solid fa-briefcase"></i><span class="obs">institutional</span></li>
+            <li><img class="acao" src="img/modelos/light-mode.svg" id="mode"><span class="obs">Switch Theme</span></li>
+            <li><i class="acao fa-solid fa-universal-access"></i><span class="obs">Accessibility</span></li>
+        </ul>
+        <!-- Sombras laterais ~ Fades -->
+        <div id="fade_sup"></div>
+        <div id="fade_lateral"></div>
+    </div>
+    <!--~~~~~~~~~~~~~ Elementos dinâmicos da tela -~~~~~~~~~~~~~-->
+    <main>
+        <section id="solucoes">
+            <div id="frente" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#frente" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#frente" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#frente" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#frente" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#frente" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#frente" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#frente" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                </div>
+                <h1 id="titulo"></h1>
+                <div class="carousel-inner">
+                    <div class="imagemslide carousel-item active">
+                        <p class="saiba-mais">Stay on top of our new<span> features and technologies</span> offered.</p>
+                        <a href="#novidades" class="saiba-mais btn-carousel"><button type="button"><span>SEE MORE</span></button></a>
+                        <img src="img/inicio/solucoes/ethernet.jpg" class="d-block w-100">
+                    </div>
+                    <div class="imagemslide carousel-item">
+                        <p class="saiba-mais">Dedicated Internet of maximum<span> quality, availability and security.</span></p>
+                        <a href="https://www.telecall.com/internet" class="saiba-mais btn-carousel"><button type="button"><span>SEE MORE</span></button></a>
+                        <img src="img/inicio/solucoes/internet.png" class="d-block w-100">
+                    </div>
+                    <div class="imagemslide carousel-item">
+                        <p class="saiba-mais">Enjoy the benefits of <span>intelligent, innovative and integrated</span> telephony.</p>
+                        <a href="https://www.telecall.com/telefonia" class="saiba-mais btn-carousel"><button type="button"><span>SEE MORE</span></button></a>
+                        <img src="img/inicio/solucoes/telefonia.png" class="d-block w-100">
+                    </div>
+                    <div class="imagemslide carousel-item">
+                        <p class="saiba-mais">Network solutions with <span>speed, structure and quality.</span></p>
+                        <a href="https://www.telecall.com/rede-e-infraestrutura" class="saiba-mais btn-carousel"><button type="button"><span>SEE MORE</span></button></a>
+                        <img src="img/inicio/solucoes/reded-e-infraestrutura.png" class="d-block w-100">
+                    </div>
+                    <div class="imagemslide carousel-item">
+                        <p class="saiba-mais">Pay only for what you <span>need.</span> Discover our <span>business mobile.</span></p>
+                        <a href="#" class="saiba-mais btn-carousel"><button type="button"><span>SEE MORE</span></button></a>
+                        <img src="img/inicio/solucoes/mobilidade.png" class="d-block w-100">
+                    </div>
+                    <div class="imagemslide carousel-item">
+                        <p class="saiba-mais">We carry out and offer the best <span>services for your event.</span></p>
+                        <a href="#" class="saiba-mais btn-carousel"><button type="button"><span>SEE MORE</span></button></a>
+                        <img src="img/inicio/solucoes/eventos.png" class="d-block w-100">
+                    </div>
+                    <div class="imagemslide carousel-item">
+                        <a href="#" class="saiba-mais btn-carousel"><button type="button"><span>SEE MORE</span></button></a>
+                        <img src="img/inicio/solucoes/others.png" class="d-block w-100">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="topico" id="novidades">
+            <div id="bloco">
+                <span id="fundo-novidades-1"></span>
+                <span id="fundo-novidades-2"></span>
+            </div>
+            <div id="painel">
+                <!-- <img src="img/inicio/fundo-illustrations.png" alt="fundo"> -->
+                <img src="img/inicio/modavo\.svg" alt="logo-modavo" id="logo-modavo">
+                <div id="painel-titulo">
+                    <h1 id="cpaas">CPaaS: What is??</h1>
+                    <h5 id="nome_ingles">Communications Platform as a Service</h5>
+                </div>
+                <p>It is a communications software solution that acts as a foundation upon which developers can integrate a variety of applications.</p>
+                <a href="#" class="saiba-mais"><button type="button"><span>MORE NEWS</span></button></a>
+            </div>
+        </section>
+        <section class="topico" id="sobre">
+            <div id="quem-somos">
+                <div id="equipe">
+                    <div id="sobre-cabecalho"><b>MORE INFORMATION</b>
+                        <div class="filtro"></div>
+                    </div>
+                    <article>
+                        <img src="img/inicio/equipe.jpeg" alt="Nossa equipe" id="foto">
+                        <div class="filtro"></div>
+                    </article>
+                    <div id="sobre-rodape"><b>ABOUT US</b>
+                        <div class="filtro"></div>
+                    </div>
+                </div>
+                <div id="sobre-nos">
+                    <h2><i class="fa-solid fa-handshake"></i></i>Who we are?</h2>
+                    <p>Telecall is an operator regulated by ANATEL, STFC and SMP (High Quality and High Quality Licenses, Standard Quality Speed and Accessibility and High Quality Internet Solutions).</p>
+                    <p>Services that include a wide range of added values, offering customers more productive, dynamic and efficient operations.</p>
+                    <a href="#" class="saiba-mais"><button type="button"><span>READ ABOUT</span></button></a>
+                </div>
+            </div>
+            <div id="premios">
+                <h3><i class="fa-solid fa-award"></i>AWARDS</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>
+                        <p class="premio">Best Regional Operator of the Year in the CC Awards.</p>
+                        <p class="premio-desc">Global Awards 2019 in Berlin.</p>
+                    </li>
+                    <li><i class="fas fa-check"></i>
+                        <p class="premio">Featured in Infrastructure and Connectivity and Unified Communication Solutions at the Aberimest Award in 2018.</p>
+                        <p class="premio-desc">Telecommunications Minister Gilberto Kassab and Juarez Quadros, president of Anatel.</p>
+                    </li>
+                    <li><i class="fas fa-check"></i>
+                        <p class="premio">Highlight as Operator in Mobile Innovations and for Fixed-Mobile Convergence Solutions, Split Billing.</p>
+                        <p class="premio-desc">Aberimest Business Integration and Collaboration in 2019.</p>
+                    </li>
+                    <li><i class="fas fa-check"></i>
+                        <p class="premio">Two-time Hosted Voip Award Winner.</p>
+                        <p class="premio-desc">Internet Telephony Magazine in 2018 (Unified Communications and Collaboration Callphone.).</p>
+                    </li>
+                    <li><i class="fas fa-check"></i>
+                        <p class="premio">#2517 in the Inc.</p>
+                        <p class="premio-desc">5000 of the fastest growing private companies in the US in 2020.</p>
+                    </li>
+                </ul>
+            </div>
+            <style>
+                #timeline h1::after {
+                    content: '+ 20 years of global experience in communication solutions' !important;
+                }
+            </style>
+            <div id="timeline">
+                <h1><i class="fa-solid fa-clock-rotate-left"></i>Timeline</h1>
+                <img src="img/inicio/linha-do-tempo.png" alt="Nossa história">
+            </div>
+            <div id="vantagens">
+                <span></span>
+                <header>
+                    <img src="img/inicio/bordas.png" id="bordas">
+                    <h1>BENEFITS<img src="img/modelos/telecall-logo.svg" alt="telecall"></h1>
+                </header>
+                <div>
+                    <div class="vantagem" id="confianca">
+                        <img src="img/inicio/confianca.png" alt="confiança">
+                        <h3>BENEFITS</h3>
+                        <p>Companies that you already know and trust</p>
+                    </div>
+                    <div class="vantagem" id="agilidade">
+                        <img src="img/inicio/agilidade.png" alt="agilidade">
+                        <h3>AGILITY</h3>
+                        <p>Quick-to-implement apps.</p>
+                    </div>
+                    <div class="vantagem" id="garantia">
+                        <img src="img/inicio/garantia.png" alt="garantia">
+                        <h3>NETWORK WARRANTY</h3>
+                        <p>Own high-capacity network and full end-to-end control.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="vantagem" id="suporte">
+                        <img src="img/inicio/suporte.png" alt="suporte">
+                        <h3>SUPPORT</h3>
+                        <p>Local sales and support representatives.</p>
+                    </div>
+                    <div class="vantagem" id="preco">
+                        <img src="img/inicio/preco.png" alt="preço">
+                        <h3>PRICE</h3>
+                        <p>Best value for money for a complete set of features and services.</p>
+                    </div>
+                </div>
+            </div>
+            <img src="img/inicio/mapas.png" id="mapas">
+            <div id="alcance">
+                <h6>EVERYWHERE</h6>
+                <p id="rj" class="placa">+800 km of network in Rio de Janeiro</p>
+                <p id="sp" class="placa">+100km of network in São Paulo</p>
+                <p>Access solutions that enable companies to connect to the Internet with maximum quality, availability and security.</p>
+                <a href="#" class="saiba-mais"><button type="button"><span>MORE PLACES</span></button></a>
+            </div>
+        </section>
+        <section class="topico" id="servicos">
+            <header>
+                <img src="img/inicio/bordas.png" id="bordas">
+                <h1><i class="fal fa-tools"></i></i>SERVICES</h1>
+            </header>
+            <div>
+                <div class="tipo-serv" id="serv-internet">
+                    <span></span>
+                    <h6>INTERNET</h6>
+                    <a href="https://www.telecall.com/internet/internet-dedicada" class="serv"><i class="fal fa-ethernet"></i></i>Internet</a>
+                    <a href="https://www.telecall.com/internet/banda-larga" class="serv"><i class="fal fa-network-wired"></i>Broadband</a>
+                    <a href="https://www.telecall.com/internet/wi-fi" class="serv"><i class="fal fa-wifi"></i>Wi-fi</a>
+                </div>
+                <div class="tipo-serv" id="serv-tel">
+                    <span></span>
+                    <h6>TELEPHONY</h6>
+                    <a href="https://www.telecall.com/pabx-ip" class="serv"><i class="fal fa-router"></i>VIRTUAL IP PABX</a>
+                    <a href="https://www.telecall.com/telefonia/e1" class="serv"><i class="fal fa-phone-laptop"></i>E1</a>
+                    <a href="https://www.telecall.com/telefonia/sip-trunk" class="serv"><i class="fal fa-phone-volume"></i>SIP TRUNK</a>
+                    <a href="https://conteudo.telecall.com/lp0800-40xx" class="serv"><i class="fal fa-phone-office"></i>NUMBERS 0800 AND 40XX</a>
+                </div>
+                <div class="tipo-serv" id="serv-redes">
+                    <span></span>
+                    <h6>NETWORKS & INFRASTRUCTURE</h6>
+                    <a href="https://www.telecall.com/rede-e-infraestrutura/callnet-ponto-a-ponto" class="serv"><i class="fal fa-project-diagram"></i>POINT TO POINT</a>
+                    <a href="https://www.telecall.com/rede-e-infraestrutura/mpls" class="serv"><i class="fal fa-chart-network"></i>MPLS</a>
+                    <a href="https://www.telecall.com/rede-e-infraestrutura/fibra-apagada-e-dutos" class="serv"><i class="fal fa-tachometer-alt-fastest"></i>FIBER OPTIC OFF</a>
+                    <a href="https://www.telecall.com/rede-e-infraestrutura/co-location" class="serv"><i class="fal fa-server"></i>CO-LOCATION</a>
+                </div>
+                <div class="tipo-serv" id="serv-mob">
+                    <span></span>
+                    <h6>MOBILITY</h6>
+                    <a href="https://loja.telecall.com/mobilidade/telefonia-movel" class="serv"><i class="fal fa-mobile"></i>BUSINESS CELL PHONE</a>
+                    <a href="https://www.telecall.com/mobilidade/mvna-e" class="serv"><i class="fal fa-phone-volume"></i></i>MVNA-E</a>
+                </div>
+                <div class="tipo-serv" id="serv-eventos">
+                    <span></span>
+                    <h6>EVENTS</h6>
+                    <a href="https://www.telecall.com/servicos-para-eventos" class="serv"><i class="fal fa-signal-stream"></i>TEMPORARY VIRTUAL IP PABX</a>
+                    <a href="https://www.telecall.com/servicos-para-eventos" class="serv"><i class="fal fa-house-signal"></i>TEMPORARY DEDICATED LINK WITH WI-FI</a>
+                    <a href="https://www.telecall.com/servicos-para-eventos" class="serv"><i class="fad fa-router"></i></i>HOTSPOT</a>
+                </div>
+                <div class="tipo-serv" id="serv-outros">
+                    <span></span>
+                    <h6>OTHER</h6>
+                    <a href="https://www.telecall.com/activtrak" class="serv"><i class="fal fa-users-cog"></i>ACTIVTRAK</a>
+                </div>
+            </div>
+        </section>
+        <section class="topico" id="ecommerce">
+            <img src="img/inicio/e-commerce.svg" alt="ecom">
+            <div>
+                <div>
+                    <h2>MEET OUR</h2>
+                    <h1><i class="far fa-shopping-cart"></i>E-COMMERCE</h1>
+                </div>
+                <ul>
+                    <li><i class="fas fa-check"></i>TELEPHONE PLANS</li>
+                    <li><i class="fas fa-check"></i>INTEGRATED SYSTEMS</li>
+                    <li><i class="fas fa-check"></i>REMOTE SERVICES</li>
+                </ul>
+                <a href="https://loja.telecall.com/" class="saiba-mais"><button type="button"><span>CHECK OFFERS</span></button></a>
+            </div>
+        </section>
+        <section class="topico" id="clientes">
+            <div class="depoimento">
+                <h4>Leonardo Cohen – SLS World Championship
+                </h4>
+                <h6>Finals 2018 – Rio de Janeiro
+                </h6>
+                <img src="img/inicio/clientes/slstc.png" alt="sls">
+                <p>"Fantastic work by the Telecall team. Completely committed professionals. A perfect delivery."
+                </p>
+            </div>
+            <div class="depoimento">
+                <h4>Laila Dias
+                </h4>
+                <h6>Account Executive - Brasil
+                </h6>
+                <img src="img/inicio/clientes/logo-rock-in-rio.png" alt="rock in rio">
+                <p>“It is with our hearts overflowing with pride and gratitude that we conclude an edition of Rock in Rio. All the magic we experienced in these 7 days of festival would never have been possible without the participation of brands and professionals
+                    like you who believed us and helped make this dream a reality. The 2017 edition will go down in history and now our challenge is even greater. Stay here again, thank you very much and welcome 2019!!”
+                </p>
+            </div>
+            <div class="depoimento">
+                <h4>Pedro Pereira
+                </h4>
+                <h6>Project Management
+                </h6>
+                <img src="img/inicio/clientes/logo-maratona.png" alt="rio maratona">
+                <p>"The operation was a success, the transmission went as desired, thanks to you. We appreciate the attention, care and effort of the entire team with our product... Thank you very much and congratulations for the excellent work. For us it
+                    was a new Exceptional delivery and operation standard.".
+                </p>
+            </div>
+            <div class="depoimento">
+                <h4>GLOBAL</h4>
+                <h6>Marketing and Events</h6>
+                <img src="img/inicio/clientes/logo-global.png" alt="global">
+                <p>“Excellent quality and service. I also appreciate the assistance at all times.”
+                </p>
+            </div>
+            <div class="depoimento">
+                <h4>José Carvalho
+                </h4>
+                <h6>Partner</h6>
+                <img src="img/inicio/clientes/logo-camarote-woods.png" alt="camarote woods">
+                <p>“The option for Telecall to implement the internet system in Cabin Wood's Sapucaí was undoubtedly one of the greatest successes of this endeavor. Having a complete system, working perfectly in the midst of that tumultuous environment of
+                    Marques de Sapucaí, providing comfort to our customers who want to make that post live and have the peace of mind that the entire journalistic class was safe and being attended to send material within our space, was a big differentiator.”
+                </p>
+            </div>
+            <div class="depoimento">
+                <h4>Kathy Whalen
+                </h4>
+                <h6>Project Manager, Consumer Events | Creative & Event Solutions | Global Business Services
+                </h6>
+                <img src="img//inicio/clientes/logo-mcdonalds.png" alt="MC Donalds">
+                <p>“Mc Donald met Telecall during the Rio 2016 Olympic Games for an urgent request for a live media event four days later. Telecall was extremely professional... We simply couldn't have made it without the partnership of the Telecall team.
+                    We will only use them at events in Rio.”
+                </p>
+            </div>
+            <div class="depoimento">
+                <h4>Diego Mendes
+                </h4>
+                <h6>Operations Manager | Australian Olympic Committee
+                </h6>
+                <img src="img/inicio/clientes/logo-comite-australiano.png" alt="comitê australiano">
+                <p>“...Telecall really helped us with a 200MB Dedicated Internet, point to point, 0800, follow me, WIFI... to support all our Committee's needs. Telecall was 100%.”
+                </p>
+            </div>
+            <div class="depoimento">
+                <h4>Richard Strauss
+                </h4>
+                <h6>President, Strauss Media Strategies, Inc. - USA
+                </h6>
+                <img src="img/inicio/clientes/logo-strauss-media.png" alt="strauss media">
+                <p>“Telecall worked with Strauss Media Strauss to install standard POTS phone lines and Internet connections… Since we are a US based company, when you travel, you never know what you will find. This company was as good or better than any
+                    US based company and I highly recommend Telecall!”
+                </p>
+            </div>
+            <div class="depoimento">
+                <h4>Blanka Konečná
+                </h4>
+                <h6>Project manager
+                </h6>
+                <img src="img/inicio/clientes/logo-czech.png" alt="czech">
+                <p>"Staff and visitors from the house in the Czech Republic were happy, the services provided by Telecall were a success, we appreciate all the help."
+                </p>
+            </div>
+            <div class="depoimento">
+                <h4>Michal Matko
+                </h4>
+                <h6>AV MEDIA, a.s.
+                </h6>
+                <img src="img/inicio/clientes/logo-avmedia.png" alt="avmedia">
+                <p>“I would like to thank Telecall for all the help in the services provided. Everything worked well and the technicians were very helpful.”
+                </p>
+            </div>
+            <div class="depoimento">
+                <h4>Suelen Santos
+                </h4>
+                <h6>PROGOLF - Campo de Golfe Olímpico - Barra da Tijuca
+                </h6>
+                <img src="img/inicio/clientes/logo-progolf.png" alt="progolf">
+                <p>“We would like to thank Telecall for the wonderful job they have done. The team's work is sensational, with speed and attention... congratulations to the entire Telecall team and thank you very much.”
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer id="contato-e-suporte">
+        <img src="img/inicio/dudu-editado.png" alt="dudu" id="dudu">
+        <div id="social">
+            <img src="img/modelos/telecall-logo-dark.svg" alt="logo">
+        </div>
+        <div id="contato">
+            <div id="site">
+                <a href="https://www.telecall.com/institucional">institutional</a>
+                <a href="#clientes">Depositions</a>
+                <a href="https://jobs.kenoby.com/telecall">careers</a>
+                <a href="https://www.telecall.com/atendimento">Contact</a>
+                <a href="https://www.telecall.com/vendas">Sales</a>
+                <a href="https://www.telecall.com/faq-internet">FAQ</a>
+                <br>
+                <a href="https://www.telecall.com/media/docs/manual-dos-telefones.pdf">Telephone manual</a>
+                <a href="https://www.telecall.com/media/docs/TELECALL%20-%20Contrato%20Presta%C3%A7%C3%A3o%20STFC.pdf">STFC installment</a>
+                <a href="https://www.telecall.com/media/docs/TELECALL%20-%20Contrato%20de%20Ades%C3%A3o%20e%20Presta%C3%A7%C3%A3o%20do%20SCM%20BL.pdf">Adhesion and Provision of the SCM BL</a>
+                <a href="https://www.telecall.com/media/docs/TELECALL%20-%20Contrato%20de%20Ades%C3%A3o%20e%20Presta%C3%A7%C3%A3o%20do%20SCM%20IP.pdf">Adhesion and Provision of the IP SCM</a>
+                <a href="https://www.telecall.com/media/docs/TELECALL%20-%20Contrato%20de%20presta%C3%A7%C3%A3o%20do%20servi%C3%A7o%20m%C3%B3vel%20pessoal.pdf">SMP installment</a>
+                <a href="https://www.telecall.com/media/docs/Lista%20de%20Munic%C3%ADpios%20por%20Estado%20Atendidos%20por%20SMP%20pela%20Telecall.pdf">SMP coverage</a>
+                <br>
+
+            </div>
+            <div id="sitemap">
+                <div>
+                    <h6>INTERNET</h6>
+                    <a href="https://www.telecall.com/internet/internet-dedicada" class="serv"><i class="fal fa-ethernet"></i></i>Internet</a>
+                    <a href="https://www.telecall.com/internet/banda-larga" class="serv"><i class="fal fa-network-wired"></i>Broadband</a>
+                    <a href="https://www.telecall.com/internet/wi-fi" class="serv"><i class="fal fa-wifi"></i>Wi-fi</a>
+                </div>
+                <div>
+                    <h6>TELEPHONY</h6>
+                    <a href="https://www.telecall.com/pabx-ip" class="serv"><i class="fal fa-router"></i>VIRTUAL IP PABX</a>
+                    <a href="https://www.telecall.com/telefonia/e1" class="serv"><i class="fal fa-phone-laptop"></i>E1</a>
+                    <a href="https://www.telecall.com/telefonia/sip-trunk" class="serv"><i class="fal fa-phone-volume"></i>SIP TRUNK</a>
+                    <a href="https://conteudo.telecall.com/lp0800-40xx" class="serv"><i class="fal fa-phone-office"></i>NUMBERS 0800 AND 40XX</a>
+                </div>
+                <div>
+                    <h6>NETWORKS & INFRASTRUCTURE</h6>
+                    <a href="https://www.telecall.com/rede-e-infraestrutura/callnet-ponto-a-ponto" class="serv"><i class="fal fa-project-diagram"></i>POINT TO POINT</a>
+                    <a href="https://www.telecall.com/rede-e-infraestrutura/mpls" class="serv"><i class="fal fa-chart-network"></i>MPLS</a>
+                    <a href="https://www.telecall.com/rede-e-infraestrutura/fibra-apagada-e-dutos" class="serv"><i class="fal fa-tachometer-alt-fastest"></i>FIBER OPTIC OFF</a>
+                    <a href="https://www.telecall.com/rede-e-infraestrutura/co-location" class="serv"><i class="fal fa-server"></i>CO-LOCATION</a>
+                </div>
+                <div>
+                    <h6>MOBILITY</h6>
+                    <a href="https://loja.telecall.com/mobilidade/telefonia-movel" class="serv"><i class="fal fa-mobile"></i>BUSINESS CELL PHONE</a>
+                    <a href="https://www.telecall.com/mobilidade/mvna-e" class="serv"><i class="fal fa-phone-volume"></i></i>MVNA-E</a>
+                </div>
+                <div>
+                    <h6>EVENTS</h6>
+                    <a href="https://www.telecall.com/servicos-para-eventos" class="serv"><i class="fal fa-signal-stream"></i>TEMPORARY VIRTUAL IP PABX</a>
+                    <a href="https://www.telecall.com/servicos-para-eventos" class="serv"><i class="fal fa-house-signal"></i>TEMPORARY DEDICATED LINK WITH WI-FI</a>
+                    <a href="https://www.telecall.com/servicos-para-eventos" class="serv"><i class="fad fa-router"></i></i>HOTSPOT</a>
+                </div>
+                <div>
+                    <h6>OTHERS</h6>
+                    <a href="https://www.telecall.com/activtrak" class="serv"><i class="fal fa-users-cog"></i>ACTIVTRAK</a>
+                </div>
+            </div>
+            <div id="externos">
+                <label>CONTACT US</label>
+                <label>THROUGH <b>EMAIL</b></label>
+                <a href="mailto:comercial@telecall.com?subject=Solicita%C3%A7%C3%A3o%20de%20contato&body=Digite%20aqui%20sua%20solicita%C3%A7%C3%A3o%20%3A)" id="enviar-email"><i class="fa-solid fa-envelopes-bulk"></i>SEND EMAIL</a>
+            </div>
+        </div>
+        <h6>Copyright © 2018 Telecall. All rights reserved.</h6>
+    </footer>
+
+    <script src='js/sidebar.js'></script>
+    <script src='js/inicio/dinamico.js'></script>
+</body>
+
+</html>

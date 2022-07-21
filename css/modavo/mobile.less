@@ -1,0 +1,227 @@
+//cores
+@vermelho-padrao-telecall: #c72929;
+@azul-padrao-telecall: #004a7b;
+@azul-modavo: #1EA0F8;
+// margens
+@margem-minima: 10px;
+@margem-comum: 15px;
+@margem-media: 20px;
+@margem-alta: 30px;
+// padrões de logo
+@largura-logo: 220px;
+@altura-logo: 60px;
+// padrões de largura
+@largura-minima: 30px;
+@largura-media: 200px;
+@largura-alta: 300px;
+@fades-xy: 150px;
+@topicos: calc(100% - 48px - (@fades-xy - @margem-comum));
+
+@media screen and (max-width: 900px) {
+
+    body {
+        background-image: none !important;
+    }
+
+    .desk {
+        display: none !important;
+    }
+
+    .mobile {
+        display: inline-block !important;
+
+    }
+    
+    .block{
+        display: block !important;
+    }
+
+    .horz {
+        flex-direction: row !important;
+        height: fit-content;
+        align-items: center;
+    }
+
+    .v_inv {
+        flex-direction: column-reverse !important;
+    }
+
+    .vert {
+        width: 100%;
+        flex-direction: column;
+        height: fit-content;
+        align-items: center !important;
+        margin: 0 0 @margem-media 0 !important;
+
+        &#corporativo {
+            height: max-content !important;
+            background: url(../../img/modavo/cpaas/corporativo.jpeg) center bottom fixed;
+            background-size: cover;
+            padding: @margem-alta 0;
+            box-shadow: inset 0 10px 20px #0000008f, inset 0 -15px 15px #0000009f;
+
+            span {
+                z-index: 0 !important;
+                height: 100% !important;
+                width: calc(@margem-alta*2 + 220px) !important;
+            }
+
+            p {
+                text-shadow: 2px 2px 3px black;
+                font-size: 18pt !important;
+                text-align: justify;
+                z-index: 2;
+            }
+        }
+
+        &#sobre {
+            height: fit-content !important;
+            padding: 0 @margem-alta;
+
+            img {
+                max-width: 300px;
+            }
+
+            p {
+                max-width: 400px;
+            }
+        }
+
+        .card,
+        .box {
+            margin: @margem-media;
+            width: 250px !important;
+        }
+
+        .img-fill {
+            width: 100% !important;
+            padding: @margem-alta;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: @margem-minima;
+        }
+    }
+
+    body.dark{
+        background-color: #2b2b2b !important;
+    }
+
+    header {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+
+        .abre {
+            line-height: 30px;
+            width: @margem-alta;
+            border-radius: 100%;
+            z-index: 2;
+            text-align: center;
+            color: @azul-modavo;
+            transition: all .1s ease;
+            margin: 0;
+            cursor: pointer;
+
+            &:active,
+            &:focus,
+            &:hover {
+                transition: all .1s ease;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    nav {
+        width: 100%;
+
+        #logo {
+            width: 200px;
+            margin-top: @margem-alta;
+        }
+
+        #nav-menu {
+            @largura: 100%;
+            overflow: visible;
+            display: flex;
+            right: -@margem-minima;
+            top: -@margem-minima;
+            position: fixed;
+            z-index: 5;
+            justify-content: start;
+            flex-direction: column;
+            width: @largura;
+            align-items: center;
+            height: 100%;
+            background-color: #1EA0F89c;
+            backdrop-filter: blur(10px);
+            transform: translateX(@largura);
+            transition: all .2s ease;
+
+            .fecha {
+                height: 24pt;
+                width: 24pt;
+                z-index: 2;
+                position: absolute;
+                cursor: pointer;
+                right: @margem-minima;
+                top: calc(@margem-alta/4);
+                color: white;
+                font-size: 24pt;
+
+                &+a.nav-item {
+                    margin-top: calc(@margem-alta*2);
+                }
+            }
+
+            .nav-item {
+                color: white;
+                width: 100%;
+                padding: @margem-media;
+                border-radius: 0;
+
+                &:hover,
+                &:focus {
+                    background-color: white;
+                    color: @azul-modavo;
+                    transform: scale(1);
+                }
+            }
+
+            &.menu {
+                transform: translateX(0);
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    #sms {
+        h3 {
+            max-width: 500px;
+            margin: 0 @margem-alta;
+        }
+    }
+
+    #problema {
+        article {
+            div {
+                ul {
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+
+    #compatibilidade {
+        article {
+            align-items: center !important;
+        }
+    }
+
+}

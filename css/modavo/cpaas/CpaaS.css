@@ -1,0 +1,282 @@
+nav {
+  justify-content: space-between;
+  height: 44px;
+}
+nav #logo {
+  margin: 10px 30px;
+  position: relative;
+  height: 90px;
+}
+nav #logo img {
+  filter: drop-shadow(3px 3px 1px #0000003c);
+}
+nav #nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  height: inherit;
+  overflow: hidden;
+  width: 700px;
+}
+nav #nav-menu .nav-item {
+  color: #3d3d3d;
+  line-height: inherit;
+  text-align: center;
+  padding: 3px 10px;
+  font-size: 14pt;
+  border-radius: 4px;
+  transition: all 0.1s linear;
+}
+nav #nav-menu .nav-item i {
+  margin-right: 10px;
+}
+nav #nav-menu .nav-item:hover {
+  transform: scale(1.1);
+  color: #1EA0F8;
+  transition: all 0.1s linear;
+}
+nav #nav-menu::before {
+  content: '';
+  top: 0;
+  right: -15px;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  transform: skewX(20deg);
+  border-radius: 4px;
+  background: url(../../../img/modavo/nav.png) center center;
+  background-size: cover;
+  filter: drop-shadow(4px 4px 3px #0000004c);
+}
+#sobre {
+  justify-content: space-evenly;
+  align-items: center;
+  margin: calc(4*30px) 0 30px 0;
+  height: 320px;
+}
+#sobre img {
+  height: 60%;
+  margin: 30px;
+}
+#sobre #cpaas {
+  height: inherit;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+}
+#sobre #cpaas #nome {
+  margin: 0 0 10px 0;
+}
+#sobre #cpaas #nome h2 {
+  color: #1EA0F8;
+  margin: 0;
+}
+#sobre #cpaas #nome h4 {
+  color: gray;
+  margin: 0;
+}
+#sobre #cpaas p {
+  display: inline-block;
+  text-align: justify;
+}
+#dados {
+  justify-content: space-evenly;
+  margin: 30px 0;
+}
+#dados * {
+  transition: all 0.2s ease;
+}
+#dados .card {
+  background-color: whitesmoke;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 10px;
+  height: 300px;
+  width: 200px;
+  border-radius: 7px;
+  filter: grayscale();
+}
+#dados .card img {
+  height: 30%;
+  margin: 30px 0;
+}
+#dados .card p {
+  text-align: center;
+  font-size: 9pt;
+  margin: auto 0;
+}
+#dados .card:hover {
+  box-shadow: 4px 4px 10px -3px #0000005f;
+  border-color: #1EA0F8;
+  filter: none;
+}
+#mudancas {
+  flex-direction: column;
+  justify-content: center;
+}
+#mudancas article {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 0;
+}
+#mudancas #qualidades {
+  height: 240px;
+}
+#mudancas #qualidades img {
+  height: inherit;
+}
+#mudancas #qualidades ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#mudancas #qualidades ul li {
+  margin: 10px 0;
+  font-size: 16pt;
+}
+#mudancas #qualidades ul li i {
+  margin-right: 20px;
+  color: #1EA0F8;
+  font-size: 1.3em;
+}
+#mudancas #corporativo {
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  height: 300px;
+}
+#mudancas #corporativo div {
+  height: 300px;
+  width: 100%;
+  background: url(../../../img/modavo/cpaas/corporativo.jpeg) center center fixed;
+  background-size: cover;
+  height: inherit;
+  position: absolute;
+  z-index: -2;
+  box-shadow: inset 0 10px 20px #0000008f, inset 0 -10px 20px #0000008f;
+}
+#mudancas #corporativo span {
+  height: 35%;
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  background-color: #0000008f;
+  backdrop-filter: blur(10px);
+}
+#mudancas #corporativo p {
+  color: white;
+  font-size: 16pt;
+  max-width: 220px;
+  margin: 0;
+}
+#mudancas #corporativo b {
+  color: #1EA0F8;
+}
+#mudancas #corporativo #revolucionando {
+  font-size: 17pt;
+}
+#mudancas #corporativo #revolucionando b {
+  font-size: 20pt;
+  display: block;
+}
+#solucoes {
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+#solucoes h1 {
+  text-align: center;
+  margin: calc(30px*2) 0;
+  position: relative;
+  color: #1EA0F8;
+}
+#solucoes h1::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent 25%, #1EA0F8 50%, transparent 75%);
+  top: 0;
+}
+#solucoes h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent 25%, #1EA0F8 50%, transparent 75%);
+  bottom: 0;
+}
+#solucoes #boxes {
+  display: flex;
+  justify-content: space-evenly;
+}
+#solucoes #boxes .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+#solucoes #boxes .box i {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  transition: all 0.2s ease;
+  font-size: calc(100px*0.5);
+  text-align: center;
+  line-height: 100px;
+  color: #1EA0F8;
+  box-shadow: 0 0 0 2px #1EA0F8;
+}
+#solucoes #boxes .box i:hover {
+  background-color: #1EA0F8;
+  color: white;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+#solucoes #boxes .box label {
+  color: black;
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+#quem-usa {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#quem-usa h3 {
+  text-align: center;
+  position: relative;
+  margin-top: calc(30px*3);
+  color: #1EA0F8;
+}
+#quem-usa h3::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent, #1EA0F8 50%, transparent);
+  top: 0;
+}
+#quem-usa h3::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent, #1EA0F8 50%, transparent);
+  bottom: 0;
+}
+#quem-usa img {
+  width: 40%;
+  margin: 30px 0;
+}

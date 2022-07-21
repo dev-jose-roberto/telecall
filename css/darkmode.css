@@ -1,0 +1,398 @@
+.dark *::selection {
+  color: white;
+  background-color: #004a7b;
+}
+.dark a.saiba-mais.btn-carousel button span {
+  color: black;
+}
+.dark a.saiba-mais.btn-carousel button:hover {
+  background-color: #004a7b;
+  filter: drop-shadow(4px 4px 10px #004a7b) saturate(1.1);
+}
+.dark a.saiba-mais.btn-carousel button:hover span {
+  color: white;
+}
+.dark.inicial {
+  background: url(../img/dark-mode/fundo-dark.png) center center !important;
+  background-size: cover !important;
+}
+.dark.inicial div.saiba-mais span {
+  color: #004a7b !important;
+}
+.dark.inicial #nav-scroll-vertical ul a.old {
+  color: #004a7b;
+}
+.dark.inicial #nav-scroll-vertical ul a.old::before {
+  border: 2px solid #004a7b;
+}
+.dark.inicial #nav-scroll-vertical ul a.set {
+  color: #004a7b;
+}
+.dark.inicial #nav-scroll-vertical ul a.set::before {
+  content: '';
+  border: 1px solid #004a7b;
+  background: #004a7b;
+}
+.dark.inicial #nav-scroll-vertical ul span.vert-line {
+  background: #004a7b;
+}
+.dark.inicial #solucoes #frente #titulo {
+  color: #004a7b;
+}
+.dark.inicial #solucoes #frente #titulo::before {
+  background-color: #161616 !important;
+  filter: drop-shadow(0 0 10px black) !important;
+  border: 1px solid #004a7b;
+}
+.dark.inicial #solucoes #frente .carousel-indicators {
+  margin: 0;
+}
+.dark.inicial #solucoes #frente .carousel-indicators button {
+  cursor: pointer !important;
+  height: 10px !important;
+  width: 10px !important;
+  margin: 0 10px;
+  border-radius: 100% !important;
+}
+.dark.inicial #solucoes #frente .carousel-indicators button:hover {
+  opacity: 1 !important;
+  transition: all 0.1s linear;
+}
+.dark.inicial #solucoes #frente .carousel-indicators button.active {
+  background-color: #004a7b !important;
+  filter: drop-shadow(0 0 4px #004a7b) saturate(1.3);
+}
+.dark.inicial #telecall #banner-fundo {
+  filter: hue-rotate(200deg);
+}
+.dark.inicial #telecall h2 {
+  color: #004a7b;
+}
+.dark.inicial #telecall h2::before {
+  background-image: linear-gradient(90deg, transparent, #004a7b 50%, transparent);
+}
+.dark.inicial #telecall h2::after {
+  background-image: linear-gradient(270deg, transparent, #004a7b 50%, transparent);
+}
+.dark.inicial #telecall .inicial img {
+  border: 2px solid #c72929;
+  filter: hue-rotate(200deg);
+}
+.dark.inicial #telecall .inicial h3::before {
+  background-color: #004a7b;
+}
+.dark.inicial #telecall .inicial p {
+  color: whitesmoke;
+}
+.dark.inicial #novidades #fundo-novidades-1 {
+  filter: grayscale();
+}
+.dark.inicial #sobre i {
+  color: #004a7b !important;
+}
+.dark.inicial #sobre h2 {
+  color: white;
+}
+.dark.inicial #sobre #equipe .filtro {
+  background-color: #004a7b !important;
+  filter: contrast(1.3) brightness(1.5);
+}
+.dark.inicial #sobre #premios {
+  background-image: linear-gradient(25deg, #1a1a1a, #3d3d3d) !important;
+}
+.dark.inicial #sobre #premios .premio {
+  color: whitesmoke !important;
+}
+.dark.inicial #sobre #premios .premio-desc {
+  color: gray !important;
+}
+.dark.inicial #sobre #premios h3 {
+  color: white !important;
+}
+.dark.inicial #sobre #sobre-nos {
+  background-image: linear-gradient(25deg, #1a1a1a, #3d3d3d) !important;
+}
+.dark.inicial #sobre #sobre-nos p {
+  color: white;
+}
+.dark.inicial #sobre #sobre-nos::before {
+  background-image: linear-gradient(25deg, #1a1a1a, #3d3d3d) !important;
+}
+.dark.inicial #sobre #sobre-nos::after {
+  background-image: linear-gradient(25deg, #1a1a1a, #3d3d3d) !important;
+}
+.dark.inicial #sobre #sobre-nos a.saiba-mais {
+  filter: drop-shadow(3px 2px 3px #004a7b) !important;
+}
+.dark.inicial #sobre #sobre-nos a.saiba-mais button {
+  background-color: #004a7b !important;
+}
+.dark.inicial #sobre #sobre-nos a.saiba-mais:hover button {
+  filter: drop-shadow(4px 4px 10px #004a7b) saturate(1.1) !important;
+}
+.dark.inicial #sobre #sobre-nos a.saiba-mais:hover span {
+  text-shadow: 0 0 5px;
+}
+.dark.inicial #sobre #timeline h1 {
+  color: white !important;
+}
+.dark.inicial #sobre #timeline h1 i {
+  color: white !important;
+}
+.dark.inicial #sobre #vantagens > span {
+  filter: grayscale() brightness(0.5);
+}
+.dark.inicial #sobre #vantagens header h1 {
+  color: white !important;
+  text-shadow: 0 0 7px white !important;
+}
+.dark.inicial #sobre #vantagens header #bordas {
+  filter: drop-shadow(0 0 10px white) grayscale() brightness(10);
+}
+.dark.inicial #sobre #vantagens .vantagem {
+  background-color: #3c3c3c;
+  border: 2px solid #004a7b;
+  box-shadow: 0 0 10px #004a7b;
+}
+.dark.inicial #sobre #vantagens .vantagem h3 {
+  color: white;
+}
+.dark.inicial #sobre #vantagens .vantagem img {
+  filter: grayscale() contrast(0) brightness(10);
+}
+.dark.inicial #sobre #vantagens .vantagem p {
+  color: #8c8c8c;
+}
+.dark.inicial #sobre #mapas {
+  filter: grayscale();
+}
+.dark.inicial #sobre #alcance {
+  background-color: #004a7b;
+}
+.dark.inicial #sobre #alcance .placa {
+  color: #004a7b;
+}
+.dark.inicial #sobre #alcance a button span {
+  color: #004a7b;
+}
+.dark.inicial #servicos {
+  display: flex;
+  flex-direction: column;
+}
+.dark.inicial #servicos > div .tipo-serv:hover a,
+.dark.inicial #servicos > div .tipo-serv:focus a {
+  background-color: transparent;
+  color: white;
+}
+.dark.inicial #servicos > div .tipo-serv a {
+  border: 2px solid white;
+  color: white;
+}
+.dark.inicial #servicos > div .tipo-serv a:hover {
+  box-shadow: 0 0 20px white;
+}
+.dark.inicial #ecommerce img {
+  filter: grayscale();
+}
+.dark.inicial #ecommerce > div div {
+  color: white;
+}
+.dark.inicial #ecommerce > div div h1 {
+  color: #004a7b;
+}
+.dark.inicial #ecommerce > div div h1 i {
+  color: #004a7b;
+}
+.dark.inicial #ecommerce > div ul li {
+  color: white;
+}
+.dark.inicial #ecommerce > div ul li i {
+  text-shadow: 0 0 14px #004a7b;
+  color: #004a7b;
+}
+.dark.inicial #ecommerce > div a.saiba-mais {
+  filter: drop-shadow(3px 2px 3px #004a7b);
+}
+.dark.inicial #ecommerce > div a.saiba-mais button {
+  background-color: #004a7b;
+}
+.dark.inicial #ecommerce > div a.saiba-mais:hover {
+  filter: drop-shadow(4px 4px 10px #004a7b) saturate(1.1);
+}
+.dark.inicial #clientes .titulo {
+  color: #004a7b;
+}
+.dark.inicial #clientes .titulo::before {
+  background-image: linear-gradient(90deg, transparent, #004a7b, transparent);
+}
+.dark.inicial #clientes .titulo::after {
+  background-image: linear-gradient(90deg, transparent, #004a7b, transparent);
+}
+.dark.inicial #clientes .visivel {
+  border-color: #004a7b;
+}
+.dark.inicial #clientes .depoimento {
+  background-color: #333333;
+  color: white;
+}
+.dark.inicial footer {
+  background-image: none;
+  background-color: #1f1f1f;
+  color: white !important;
+}
+.dark.inicial footer > img {
+  mix-blend-mode: normal !important;
+  filter: saturate(1.2) brightness(0.5) contrast(1) !important;
+}
+.dark.inicial footer #contato #site a {
+  color: gray !important;
+}
+.dark.inicial footer #contato #site a:hover {
+  color: white !important;
+}
+.dark.inicial footer #contato #sitemap div h6 {
+  color: #004a7b;
+}
+.dark.inicial footer #contato #sitemap div a {
+  color: gray !important;
+}
+.dark.inicial footer #contato #sitemap div a:hover {
+  color: white !important;
+}
+.dark.inicial footer #externos #enviar-email:hover {
+  color: #004a7b;
+}
+.dark.auth {
+  background: url(../img/dark-mode/panel_alt-dark.jpg) center center fixed !important;
+  background-size: cover !important;
+}
+.dark.auth header #voltar:hover,
+.dark.auth header #voltarfocus {
+  text-shadow: 0 0 10px white;
+  color: white;
+}
+.dark.auth header #voltar:hover::after,
+.dark.auth header #voltarfocus::after {
+  background-color: #252525;
+}
+.dark.auth .ilustracao {
+  filter: hue-rotate(200deg) brightness(0.7) contrast(1.4) saturate(1.4);
+  transition: all 0.1s ease;
+}
+.dark.auth #usuario #form-login #logo {
+  transition: all 0.2s ease;
+  filter: grayscale() contrast(0) brightness(10);
+}
+.dark.auth #usuario #form-login .form-check.form-switch {
+  filter: hue-rotate(200deg);
+}
+.dark.auth .form-item .campo {
+  background-color: transparent !important;
+}
+.dark.auth .form-btn {
+  z-index: 1;
+  position: relative;
+  border: none;
+  outline: none;
+  padding: calc(10px/2) 20px;
+  border-radius: 7px;
+  font-size: 14pt;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+.dark.auth .form-btn.login {
+  color: white;
+  background-color: #004a7b;
+}
+.dark.auth .form-btn.login:hover {
+  color: #004a7b;
+}
+.dark.auth .form-btn.login::before,
+.dark.auth .form-btn.login::after {
+  background: white;
+}
+.dark.auth .form-btn.cadastro {
+  color: #004a7b;
+  background-color: whitesmoke;
+  border: 1px solid #004a7b;
+}
+.dark.auth .form-btn.cadastro:hover {
+  color: white;
+}
+.dark.auth .form-btn.cadastro::before,
+.dark.auth .form-btn.cadastro::after {
+  background: #004a7b;
+}
+.dark.auth .form-btn.limpar {
+  color: #004a7b;
+  background-color: whitesmoke;
+  border: 1px solid #004a7b;
+}
+.dark.auth .form-btn.limpar:hover {
+  color: #c72929;
+  border: 1px solid #c72929;
+}
+.dark.auth .form-btn.limpar::before,
+.dark.auth .form-btn.limpar::after {
+  background-color: #252525;
+}
+.dark.modavo {
+  background: url(../img/dark-mode/fundo-dark.svg) center center;
+  background-size: cover;
+  color: white !important;
+}
+.dark.modavo #logo {
+  filter: grayscale() contrast(0) brightness(4);
+}
+.dark.modavo #nav-menu a {
+  color: white;
+}
+.dark.modavo #nav-menu::before {
+  filter: invert() hue-rotate(180deg);
+}
+.dark.modavo #sobre #cpaasModavo {
+  filter: grayscale() contrast(0) brightness(3);
+}
+.dark.modavo #sms {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 30px 0;
+}
+.dark.modavo #sms h3 {
+  color: gray;
+}
+.dark.modavo #sms h3 b {
+  color: #1EA0F8;
+}
+.dark.modavo #sms article {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.dark.modavo #sms article .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  max-width: 200px;
+  text-shadow: 2px 2px 3px #0000003f;
+}
+.dark.modavo #sms article .info b {
+  color: #1EA0F8;
+  font-size: 56pt;
+}
+.dark.modavo #sms article .info label {
+  font-size: 0, 8em;
+  color: gray;
+}
+.dark.modavo #solucoes #boxes a label {
+  color: white !important;
+}
+.dark.modavo .uso img {
+  filter: grayscale() brightness(30);
+}
+.dark.modavo .card {
+  background-color: #0a0a0a !important;
+}

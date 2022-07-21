@@ -1,0 +1,664 @@
+//cores
+@vermelho-padrao-telecall: #c72929;
+@azul-padrao-telecall: #004a7b;
+@azul-modavo: #1EA0F8;
+// margens
+@margem-minima: 10px;
+@margem-comum: 15px;
+@margem-media: 20px;
+@margem-alta: 30px;
+// padrões de logo
+@largura-logo: 220px;
+@altura-logo: 60px;
+// padrões de largura
+@largura-minima: 30px;
+@largura-media: 200px;
+@largura-alta: 300px;
+@fades-xy: 150px;
+@topicos: calc(100% - 48px - (@fades-xy - @margem-comum));
+
+.dark {
+    *::selection {
+        color: white;
+        background-color: @azul-padrao-telecall;
+    }
+
+    // Padrão de botão de informações
+    a.saiba-mais {
+        // Padrão específico do carousel
+        &.btn-carousel {
+            button {
+                span {
+                    color: black;
+                }
+
+                &:hover {
+                    background-color: @azul-padrao-telecall;
+                    filter: drop-shadow(4px 4px 10px @azul-padrao-telecall) saturate(1.1);
+
+                    span {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.inicial {
+
+        // Padrão do texto do carousel
+        div.saiba-mais {
+            span {
+                color: @azul-padrao-telecall  !important;
+            }
+        }
+
+        background: url(../img/dark-mode/fundo-dark.png) center center !important;
+        background-size: cover !important;
+
+        // scroll menu lateral ~ FEITO NA UNHA
+        #nav-scroll-vertical {
+
+            // componente do menu
+            ul {
+
+                // Item ativo
+                a.old {
+                    color: @azul-padrao-telecall;
+
+
+                    // Circunferências dos passados
+                    &::before {
+                        border: 2px solid @azul-padrao-telecall;
+                    }
+                }
+
+
+                // Item ativo
+                a.set {
+                    color: @azul-padrao-telecall;
+
+
+                    // Circunferência do item ativo
+                    &::before {
+                        content: '';
+                        border: 1px solid @azul-padrao-telecall;
+                        background: @azul-padrao-telecall;
+                    }
+                }
+
+
+                // Linhas de scroll ativado ~ vermelhas
+                span.vert-line {
+                    background: @azul-padrao-telecall;
+                }
+            }
+        }
+
+
+        #solucoes {
+            #frente {
+                #titulo {
+                    color: @azul-padrao-telecall;
+
+                    &::before {
+                        background-color: #161616 !important;
+                        filter: drop-shadow(0 0 10px black) !important;
+                        border: 1px solid @azul-padrao-telecall;
+                    }
+                }
+                .carousel-indicators {
+                    margin: 0;
+                    
+                    button {
+                        cursor: pointer !important;
+                        @k: 10px;
+                        height: @k !important;
+                        width: @k !important;
+                        margin: 0 @k;
+                        border-radius: 100% !important;
+                        
+        
+                        &:hover {
+                            opacity: 1 !important;
+                            transition: all .1s linear;
+                        }
+                    }
+        
+                    button.active {
+                        background-color: @azul-padrao-telecall  !important;
+                        filter: drop-shadow(0 0 4px @azul-padrao-telecall) saturate(1.3);
+                    }
+                }
+            }
+        }
+
+        #telecall {
+            #banner-fundo {
+                filter: hue-rotate(200deg);
+            }
+
+            h2 {
+                color: @azul-padrao-telecall;
+
+                &::before {
+                    background-image: linear-gradient(90deg, transparent, @azul-padrao-telecall 50%, transparent);
+                }
+
+                &::after {
+                    background-image: linear-gradient(270deg, transparent, @azul-padrao-telecall 50%, transparent);
+                }
+            }
+
+            .inicial {
+                img {
+                    border: 2px solid @vermelho-padrao-telecall;
+                    filter: hue-rotate(200deg);
+                }
+
+                h3 {
+                    &::before {
+                        background-color: @azul-padrao-telecall;
+                    }
+
+                }
+
+                p {
+                    color: whitesmoke;
+                }
+            }
+        }
+
+
+        #novidades {
+
+            // Imagem de fundo
+            #fundo-novidades-1 {
+                filter: grayscale();
+            }
+        }
+
+        #sobre {
+            i {
+                color: @azul-padrao-telecall  !important;
+            }
+
+            h2 {
+                color: white;
+            }
+
+            #equipe {
+                .filtro {
+                    background-color: @azul-padrao-telecall  !important;
+                    filter: contrast(1.3) brightness(1.5);
+                }
+            }
+
+            #premios {
+                background-image: linear-gradient(25deg, #1a1a1a, #3d3d3d) !important;
+
+                .premio {
+                    color: whitesmoke !important;
+                }
+
+                .premio-desc {
+                    color: gray !important;
+                }
+
+                h3 {
+                    color: white !important;
+                }
+            }
+
+            #sobre-nos {
+                background-image: linear-gradient(25deg, #1a1a1a, #3d3d3d) !important;
+
+                p {
+                    color: white;
+                }
+
+                &::before {
+                    background-image: linear-gradient(25deg, #1a1a1a, #3d3d3d) !important;
+                }
+
+                &::after {
+                    background-image: linear-gradient(25deg, #1a1a1a, #3d3d3d) !important;
+                }
+
+                a.saiba-mais {
+                    filter: drop-shadow(3px 2px 3px @azul-padrao-telecall) !important;
+
+                    button {
+                        background-color: @azul-padrao-telecall  !important;
+                    }
+
+                    &:hover {
+                        button {
+                            filter: drop-shadow(4px 4px 10px @azul-padrao-telecall) saturate(1.1) !important;
+                        }
+
+                        span {
+                            text-shadow: 0 0 5px;
+                        }
+                    }
+                }
+            }
+
+            #timeline {
+                h1 {
+                    color: white !important;
+
+                    i {
+                        color: white !important;
+                    }
+                }
+            }
+
+            // Vantagens telecall
+            #vantagens {
+
+                //fundo
+                &>span {
+                    filter: grayscale() brightness(.5);
+                }
+
+                // conjunto do titulo
+                header {
+                    h1 {
+                        color: white !important;
+                        text-shadow: 0 0 7px white !important;
+
+                    }
+
+                    #bordas {
+                        filter: drop-shadow(0 0 10px white) grayscale() brightness(10);
+                    }
+                }
+
+                // modelo do bloco de vantagem
+                .vantagem {
+                    background-color: #3c3c3c;
+                    border: 2px solid @azul-padrao-telecall;
+                    box-shadow: 0 0 10px @azul-padrao-telecall;
+
+                    h3 {
+                        color: white;
+                    }
+
+                    img {
+                        filter: grayscale() contrast(0) brightness(10);
+                    }
+
+                    p {
+                        color: #8c8c8c;
+                    }
+
+                }
+            }
+
+            #mapas {
+                filter: grayscale();
+            }
+
+            // card dos mapas
+            #alcance {
+                background-color: @azul-padrao-telecall;
+
+                .placa {
+                    color: @azul-padrao-telecall;
+                }
+
+                a {
+                    button {
+                        span {
+                            color: @azul-padrao-telecall;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        // Serviços
+        #servicos {
+            display: flex;
+            flex-direction: column;
+
+            &>div {
+
+                // cards
+                .tipo-serv {
+
+                    &:hover,
+                    &:focus {
+                        a {
+                            background-color: transparent;
+                            color: white;
+                        }
+                    }
+
+                    a {
+                        border: 2px solid white;
+                        color: white;
+
+                        &:hover {
+                            box-shadow: 0 0 20px white;
+                        }
+                    }
+                }
+            }
+        }
+
+        // section do e-commerce
+        #ecommerce {
+            img {
+                filter: grayscale();
+            }
+
+            &>div {
+                div {
+                    color: white;
+
+                    h1 {
+                        color: @azul-padrao-telecall;
+
+                        i {
+                            color: @azul-padrao-telecall;
+                        }
+                    }
+                }
+
+                ul {
+                    li {
+                        color: white;
+
+                        i {
+                            text-shadow: 0 0 14px @azul-padrao-telecall;
+                            color: @azul-padrao-telecall;
+                        }
+                    }
+                }
+
+                a.saiba-mais {
+                    filter: drop-shadow(3px 2px 3px @azul-padrao-telecall);
+
+                    button {
+                        background-color: @azul-padrao-telecall;
+                    }
+
+                    &:hover {
+                        filter: drop-shadow(4px 4px 10px @azul-padrao-telecall) saturate(1.1);
+                    }
+                }
+            }
+        }
+
+        #clientes {
+            .titulo {
+                color: @azul-padrao-telecall;
+
+                &::before {
+                    background-image: linear-gradient(90deg, transparent, @azul-padrao-telecall, transparent);
+                }
+
+                &::after {
+                    background-image: linear-gradient(90deg, transparent, @azul-padrao-telecall, transparent);
+                }
+            }
+
+
+            .visivel {
+                border-color: @azul-padrao-telecall;
+            }
+
+            .depoimento {
+                background-color: rgb(51, 51, 51);
+
+                color: white;
+
+            }
+        }
+
+
+
+        footer {
+            background-image: none;
+            background-color: #1f1f1f;
+            color: white !important;
+
+            &>img {
+                mix-blend-mode: normal !important;
+                filter: saturate(1.2) brightness(0.5) contrast(1) !important;
+            }
+
+            #contato {
+                #site {
+                    a {
+                        color: gray !important;
+
+                        &:hover {
+                            color: white !important;
+                        }
+                    }
+                }
+
+                #sitemap {
+                    div {
+                        h6 {
+                            color: @azul-padrao-telecall;
+                        }
+
+                        a {
+                            color: gray !important;
+
+                            &:hover {
+                                color: white !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #externos {
+                #enviar-email {
+                    &:hover {
+                        color: @azul-padrao-telecall;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &.auth {
+        background: url(../img/dark-mode/panel_alt-dark.jpg) center center fixed !important;
+        background-size: cover !important;
+
+        header {
+            #voltar {
+
+                &:hover,
+                &focus {
+                    text-shadow: 0 0 10px white;
+                    color: white;
+
+                    &::after {
+                        background-color: #252525;
+                    }
+                }
+            }
+        }
+
+
+        .ilustracao {
+            filter: hue-rotate(200deg) brightness(.7) contrast(1.4) saturate(1.4);
+            transition: all .1s ease;
+        }
+
+        #usuario {
+            #form-login {
+                #logo {
+                    transition: all .2s ease;
+                    filter: grayscale() contrast(0) brightness(10);
+                }
+                .form-check.form-switch {
+                    filter: hue-rotate(200deg);
+        
+                }
+            }
+        }
+        
+
+        .form-item {
+            .campo {
+                background-color: transparent !important;
+            }
+        }
+
+        .form-btn {
+            z-index: 1;
+            position: relative;
+            border: none;
+            outline: none;
+            padding: calc(@margem-minima/2) @margem-media;
+            border-radius: 7px;
+            font-size: 14pt;
+            overflow: hidden;
+            transition: all .6s ease;
+
+            &.login {
+                color: white;
+                background-color: @azul-padrao-telecall;
+
+                &:hover {
+                    color: @azul-padrao-telecall;
+                }
+
+                &::before,
+                &::after {
+                    background: white;
+                }
+            }
+
+            &.cadastro {
+                color: @azul-padrao-telecall;
+                background-color: whitesmoke;
+                border: 1px solid @azul-padrao-telecall;
+
+                &:hover {
+                    color: white;
+                }
+
+                &::before,
+                &::after {
+                    background: @azul-padrao-telecall;
+                }
+            }
+
+
+            &.limpar {
+                color: @azul-padrao-telecall;
+                background-color: whitesmoke;
+                border: 1px solid @azul-padrao-telecall;
+
+                &:hover {
+                    color: @vermelho-padrao-telecall;
+                    border: 1px solid @vermelho-padrao-telecall;
+                }
+
+                &::before,
+                &::after {
+                    background-color: #252525;
+                }
+            }
+        }
+    }
+
+    &.modavo {
+        background: url(../img/dark-mode/fundo-dark.svg) center center;
+        background-size: cover;
+        color: white !important;
+
+        #logo {
+            filter: grayscale() contrast(0) brightness(4);
+        }
+
+        #nav-menu {
+            a {
+                color: white;
+            }
+
+            &::before {
+                filter: invert() hue-rotate(180deg);
+            }
+        }
+
+        #sobre {
+            #cpaasModavo {
+                filter: grayscale() contrast(0) brightness(3);
+            }
+        }
+
+        #sms {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: @margem-alta 0;
+        
+            h3 {
+                color: gray;
+        
+                b {
+                    color: @azul-modavo;
+                }
+            }
+        
+            article {
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+        
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    text-align: center;
+                    max-width: 200px;
+                    text-shadow: 2px 2px 3px #0000003f;
+        
+                    b {
+                        color: @azul-modavo;
+                        font-size: 56pt;
+                    }
+        
+                    label {
+                        font-size: 0, 8em;
+                        color: gray;
+                    }
+                }
+            }
+        }
+
+        #solucoes {
+            #boxes {
+                a {
+                    label {
+                        color: white !important;
+                    }
+                }
+            }
+        }
+
+        .uso {
+            img {
+                filter: grayscale() brightness(30);
+            }
+        }
+
+        .card {
+            background-color: #0a0a0a !important;
+        }
+    }
+}

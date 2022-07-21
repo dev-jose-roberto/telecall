@@ -1,0 +1,298 @@
+<!-- Padrão -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="shortcut icon" href="img/modelos/telecall-icone.svg" type="image/x-icon">
+    <title>MODAVO | CpaaS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Aqui começa !! -->
+
+    <!-- Externos -->
+    <link href="./bootstrap-5.1.3/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="bootstrap-5.1.3/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="lib/fontawesome-pro-5.13.0-web/css/all.css">
+
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/SmoothScroll.js"></script>
+
+    <!-- Internos -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/modavo/cpaas/CpaaS.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/modavo/mobile.css'>
+    <script src="js/animacoes.js"></script>
+    <link rel="stylesheet" href="css/fades.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/modavo/default.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/load.css">
+    <script src='js/inicio/sessao.js'></script>
+    <script src='js/modavo/sessao.js'></script>
+
+
+</head>
+
+<body class="modavo">
+    <!-- Tela de loading -->
+
+    <script src='js/load.js'></script>
+    <div id="loading">
+        <img src="img/load.svg" alt="" id="icone-load">
+        <label id="carregando_mano">Carregando</label>
+    </div>
+    <script src='js/modavo/sessao.js'></script>
+    <script src='js/darkmode.js'></script>
+
+    <ul id="acoes">
+        <li><img class="acao" src="img/modelos/light-mode.svg" id="mode"><span class="obs">Mudar tema</span></li>
+        <li><i class="acao fa-solid fa-universal-access"></i><span class="obs">Acessibilidade</span></li>
+    </ul>
+    <header>
+        <div id="voltar">
+            <a href="index.html"><i class="fas fa-arrow-alt-left"></i></a>
+            <a href="index.html" class="desk">Voltar ao início</a>
+        </div>
+        <a href="index.html"><img src="img/modelos/telecall-logo.svg" alt="logo" id="icone"></a>
+        <div id="sessao">
+            <a href="login.html" class="usuario desk" id="usu">José<i class="fa-solid fa-user"></i></a>
+            <a href="index.html" class="desconectar desk">desconectar<i class="fal fa-sign-out"></i></a>
+
+            <a href="login.html" class="usuario mobile"><i class="fa-solid fa-user"></i></a>
+            <a href="index.html" class="desconectar mobile"><i class="fal fa-sign-out"></i></a>
+            <i class="fa-solid fa-bars abre mobile alt"></i>
+        </div>
+    </header>
+    <nav class="vert">
+        <a href="cpaas.html"><img src="img/modavo/modavo.svg" alt="modavo" id="logo"></a>
+        <div id="nav-menu">
+            <i class="fal fa-times fecha mobile alt"></i>
+            <a class="nav-item alt" href="#sobre"><i class="fal fa-chart-network"></i>CpaaS</a>
+            <a class="nav-item alt" href="#solucoes"><i class="fal fa-phone-laptop"></i>Soluções</a>
+            <a class="nav-item alt" href="#quem-usa"><i class="fas fa-users"></i></i>Quem usa?</a>
+            <a class="nav-item alt" href="#contato"><i class="fas fa-user-headset"></i>Contato</a>
+        </div>
+    </nav>
+    <div id="lateral">
+        <div id="modavo"><img src="img/modavo/modavo.svg" alt="modavo"><i class="fa-solid fa-xmark" onclick="abrir()"></i></div>
+        <aside>
+            <div id="side">
+                <div class="side-item">
+                    <img src="img/modavo/2fa.svg" alt="2fa">
+                    <div>
+                        <label>AUTENTICAÇÃO 2FA</label>
+                        <a href="2fa.html" class="visitar"><button><span><i class="fal fa-lock-alt"></i>VER MAIS</span></button></a>
+                    </div>
+                </div>
+                <div class="side-item">
+                    <img src="img/modavo/nr-mascara.svg" alt="nr mascara">
+                    <div>
+                        <label>NÚMERO MÁSCARA</label>
+                        <a href="nr-mascara.html" class="visitar"><button><span><i class="fas fa-mobile-alt"></i>VER MAIS</span></button></a>
+                    </div>
+                </div>
+                <div class="side-item">
+                    <img src="img/modavo/google-verified-calls.svg" alt="google vc">
+                    <div>
+                        <label>GOOGLE VERIFIED CALLS</label>
+                        <a href="google-vc.html" class="visitar"><button><span><i class="fal fa-check"></i>VER MAIS</span></button></a>
+                    </div>
+                </div>
+                <div class="side-item">
+                    <img src="img/modavo/sms-programavel.svg" alt="sms">
+                    <div>
+                        <label>SMS PROGRAMÁVEL</label>
+                        <a href="sms-programavel.html" class="visitar"><button><span><i class="fas fa-comment-alt-lines"></i>VER MAIS</span></button></a>
+                    </div>
+                </div>
+                <a href="cpaas.html"><i class="fas fa-external-link-alt"></i>IR PARA A PORTAL CPAAS</a>
+            </div>
+
+            <div id="indices" class="hidden">
+                <ul>
+                    <b><i class="fal fa-lock-alt"></i>Autenticação 2FA<i class="fas fa-caret-down indicador"></i></b>
+                    <ul>
+                        <li><a href="2fa.html#sobre">O que é?</a></li>
+                        <li><a href="2fa.html#etapas">Como funciona ?</a></li>
+                        <li><a href="2fa.html#beneficios">Quais os benefícios ?</a></li>
+                        <li><a href="2fa.html#quem-usa">Quem usa ?</a></li>
+                    </ul>
+                    <b><i class="fas fa-mobile-alt"></i>Número Máscara<i class="fas fa-caret-down indicador"></i></b>
+                    <ul>
+                        <li><a href="nr-mascara.html#sobre">O que é ?</a></li>
+                        <li><a href="nr-mascara.html#etapas">Como funciona ?</a></li>
+                        <li><a href="nr-mascara.html#recursos">Quais os benefícios ?</a></li>
+                        <li><a href="nr-mascara.html#quem-usa">Quem usa ?</a></li>
+                    </ul>
+                    <b><i class="fal fa-check"></i>Google Verified Calls<i class="fas fa-caret-down indicador"></i></b>
+                    <ul>
+                        <li><a href="google-vc.html#sobre">O que é ?</a></li>
+                        <li><a href="google-vc.html#problema">Como funciona ?</a></li>
+                        <li><a href="google-vc.html#beneficios">Quais os benefícios ?</a></li>
+                        <li><a href="google-vc.html#4">Quem usa ?</a></li>
+                    </ul>
+                    <b><i class="fas fa-comment-alt-lines"></i>SMS Programável<i class="fas fa-caret-down indicador"></i></b>
+                    <ul>
+                        <li><a href="sms-programavel.html#sobre">O que é ?</a></li>
+                        <li><a href="sms-programavel.html#etapas">Como funciona ?</a></li>
+                        <li><a href="sms-programavel.html#beneficios">Quais os benefícios ?</a></li>
+                        <li><a href="sms-programavel.html#quem-usa">Quem usa ?</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </aside>
+        <a href="#" class="visitar neon" id="mostrar_indices"><button><span><i class="fas fa-list" id="volta"></i>Mostrar índices</span></button></a>
+        <span onclick="abrir()"><i class="fal fa-angle-right" id="btn_lateral"></i></span>
+    </div>
+    <section id="sobre" class="vert v_inv">
+        <div id="cpaas">
+            <div id="nome">
+                <h2><i>Communications Platform as a Service</i></h2>
+                <h4>Plataforma de Serviço</h4>
+            </div>
+            <div>
+                <p>É uma solução de software de comunicação que atua como uma base sobre a qual desenvolvedores podem integrar uma variedade de aplicativos.</p>
+                <p>Métodos de comunicação típicos, como voz, chamadas de vídeo ou mensagens de texto SMS, podem ser incorporados em outros sistemas por meio de APIs que se conectam à plataforma CPaaS.</p>
+                <p>Essas APIs permitem que as empresas expandam suas ofertas sem a necessidade de hardware ou software adicional.
+                </p>
+            </div>
+        </div>
+        <img src="img/modavo/logo-cloud.svg" alt="cpaas" id="cpaasModavo">
+    </section>
+    <section id="dados" class="vert oculto">
+        <div class="card">
+            <img src="img/modavo/cpaas/card-1.png" alt="crescimento">
+            <p>Expectativa de crescimento estimado de <b>$ 8,2 bilhões em 2021.</b></p>
+        </div>
+        <div class="card">
+            <img src="img/modavo/cpaas/card-2.png" alt="profissionais">
+            <p><b>85%</b> dos profissionais se conectam de maneira diferente com colegas e clientes do que faziam há apenas 5 anos.
+            </p>
+        </div>
+        <div class="card">
+            <img src="img/modavo/cpaas/card-3.png" alt="40% ao ano">
+            <p>As receitas de CPaaS estão crescendo mais de <b>40% ao ano.</b></p>
+        </div>
+        <div class="card">
+            <img src="img/modavo/cpaas/card-4.png" alt="cpass vs ucaas">
+            <p>CPaaS já <b>ultrapassou</b> o mercado de <b>UCaaS</b> (Unified Communication as a Service).</p>
+        </div>
+        <div class="card">
+            <img src="img/modavo/cpaas/card-5.png" alt="multiplos canais">
+            <p>Marcas que estão em <b>múltiplos</b> canais melhoram a experiência do usuário e <b>aumentam seus resultados.</b></p>
+        </div>
+    </section>
+    <section id="mudancas">
+        <article id="qualidades" class="oculto">
+            <ul>
+                <li><i class="fa-solid fa-check"></i>ESCALABILIDADE</li>
+                <li><i class="fa-solid fa-check"></i>FLEXIBILIDADE</li>
+                <li><i class="fa-solid fa-check"></i>AUTENTICAÇÃO</li>
+                <li><i class="fa-solid fa-check"></i>SEGURANÇA</li>
+            </ul>
+            <img src="img/modavo/cpaas/cpaas-render.png" alt="cpaas-tematico" class="desk">
+        </article>
+        <article id="corporativo" class="vert">
+            <p id="revolucionando">Assim o CpaaS tem <b>REVOLUCIONADO</b></p>
+            <p id="empresas"><b>O modo como</b> as empresas habilitadas em nuvem </p>
+            <p id="implementam"><b>Implementam</b> suas comunicações de voz, SMS e vídeo.</p>
+            <span></span>
+            <div class="desk"></div>
+        </article>
+    </section>
+    <section id="usos" class="vert oculto">
+        <div class="uso">
+            <h3>Logística</h3>
+            <div class="emblema">
+                <img src="img/modavo/usos/caixa.png" alt="logistica">
+            </div>
+            <div class="cont">
+                <p class="oculto"><i class="fal fa-check"></i>Acesso seguro com 2FA.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Uso de números mascarados para proteção de funcionário e cliente.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Mantenha o cliente informado sobre entrega e serviços.
+                </p>
+                <p class="oculto"><i class="fal fa-check"></i>Verified calling para confirmação de entregas.</p>
+            </div>
+        </div>
+        <div class="uso">
+            <h3>Varejo</h3>
+            <div class="emblema">
+                <img src="img/modavo/usos/carrinho.png" alt="varejo">
+            </div>
+            <div class="cont">
+                <p class="oculto"><i class="fal fa-check"></i>Compra segura com 2FA.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Avisos sobre compras e entregas.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Upsell com novas ofertas e vantagens via SMS ou Verified Calling.</p>
+            </div>
+        </div>
+        <div class="uso">
+            <h3>Call Center</h3>
+            <div class="emblema">
+                <img src="img/modavo/usos/atendente.png" alt="call center">
+            </div>
+            <div class="cont">
+                <p class="oculto"><i class="fal fa-check"></i>Melhore taxas de abertura utilizando alertas SMS para confirmações.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Economia de números com o uso de um único número máscara por todos os agentes.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Verified Calling para confirmação de agendamentos.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Verified calling para confirmação de entregas.</p>
+            </div>
+        </div>
+        <div class="uso">
+            <h3>Saúde</h3>
+            <div class="emblema">
+                <img src="img/modavo/usos/coracao.png" alt="saúde">
+            </div>
+            <div class="cont">
+                <p class="oculto"><i class="fal fa-check"></i>Acesso seguro com 2FA.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Melhore o agendamento e reduza faltas com lembretes por SMS.</p>
+                <p class="oculto"><i class="fal fa-check"></i>Tokens de autorização para procedimentos com 2FA.</p>
+            </div>
+        </div>
+    </section>
+    <section id="solucoes" class="oculto">
+        <h1>CONHEÇA NOSSAS SOLUÇÕES</h1>
+        <div id="boxes" class="vert">
+            <a href="2fa.html" class="box">
+                <i class="fas fa-lock-alt"></i>
+                <label>2FA</label>
+            </a>
+            <a href="nr-mascara.html" class="box">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <label>Número Mascara</label>
+            </a>
+            <a href="google-vc.html" class="box">
+                <i class="fa-solid fa-check"></i>
+                <label>Google Verified Calls</label>
+            </a>
+            <a href="sms-programavel.html" class="box">
+                <i class="fal fa-comment"></i>
+                <label>SMS Programável</label>
+            </a>
+        </div>
+    </section>
+    <section id="quem-usa" class="vert oculto">
+        <h3>Veja quem usa o CpaaS</h3>
+        <img src="img/modavo/cpaas/empresas.svg" alt="Quem usa !!?" class="img-fill">
+    </section>
+    <footer id="contato" class="vert">
+        <a href="index.html"><img src="img/modelos/telecall-logo-dark.svg" alt="logo"></a>
+        <div class="vert" id="footer-meio">
+            <span><a href="mailto:comercial@telecall.com">comercial@telecall.com</a>
+            <a href="http://wa.me/2130301010">(21) 3030-1010</a></span>
+            <label id="copyright">Copyright © 2018 Telecall. Todos os direitos reservados.</label>
+        </div>
+        <div class="horz">
+            <label>Siga-nos</label>
+            <a href="https://pt-br.facebook.com/TelecallBr/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/telecallbr/"><i class="fab fa-instagram"></i></a>
+            <a href="https://br.linkedin.com/company/telecall"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    <script src="js/sidebar.js"></script>
+
+    <script src='js/darkmode.js'></script>
+</body>
+
+</html>

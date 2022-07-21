@@ -1,0 +1,291 @@
+nav {
+  justify-content: space-between;
+  height: 44px;
+}
+nav #logo {
+  margin: 10px 30px;
+  position: relative;
+  height: 90px;
+}
+nav #logo img {
+  filter: drop-shadow(3px 3px 1px #0000003c);
+}
+nav #nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  height: inherit;
+  width: 1000px;
+  overflow: hidden;
+}
+nav #nav-menu .nav-item {
+  color: #3d3d3d;
+  line-height: inherit;
+  text-align: center;
+  padding: 3px 10px;
+  font-size: 12pt;
+  border-radius: 4px;
+  transition: all 0.1s linear;
+}
+nav #nav-menu .nav-item i {
+  margin-right: 10px;
+}
+nav #nav-menu .nav-item:hover {
+  transform: scale(1.1);
+  color: #1EA0F8;
+  transition: all 0.1s linear;
+}
+nav #nav-menu::before {
+  content: '';
+  top: 0;
+  right: -15px;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  transform: skewX(20deg);
+  border-radius: 4px;
+  background: url(../../../img/modavo/nav.png) center center;
+  background-size: cover;
+  filter: drop-shadow(4px 4px 3px #0000004c);
+}
+.android {
+  color: #01CE5C;
+}
+#sobre {
+  justify-content: space-evenly;
+  align-items: center;
+  margin: calc(4*30px) 0 30px 0;
+  height: 320px;
+}
+#sobre img {
+  height: 100%;
+}
+#sobre #google {
+  height: inherit;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+}
+#sobre #google #nome {
+  margin: 0 0 10px 0;
+}
+#sobre #google #nome h2 {
+  color: #1EA0F8;
+  margin: 0;
+}
+#sobre #google #nome h4 {
+  color: gray;
+  margin: 0;
+}
+#sobre #google h3 {
+  color: #1EA0F8;
+}
+#sobre #google p {
+  display: inline-block;
+  text-align: justify;
+  font-size: 15pt;
+}
+#sobre #google p img {
+  height: 15pt;
+  margin-right: 10px;
+}
+#problema {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#problema .problema {
+  color: red;
+}
+#problema #grafico {
+  margin: 30px;
+}
+#problema h1 {
+  text-align: center;
+  position: relative;
+  margin-top: calc(30px*3);
+  color: #1EA0F8;
+}
+#problema h1::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent 35%, red 50%, transparent 65%);
+  top: 0;
+}
+#problema h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent 35%, red 50%, transparent 65%);
+  bottom: 0;
+}
+#problema article {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px 0;
+}
+#problema article div {
+  width: 30%;
+  min-width: 400px;
+}
+#problema article div ul {
+  list-style: none;
+}
+#problema article div ul li {
+  margin: 30px 0;
+  font-size: 14pt;
+  line-height: 14pt;
+  vertical-align: middle;
+  position: relative;
+}
+#problema article div ul li i {
+  position: absolute;
+  left: calc(-30px - 20px);
+  font-size: 18pt;
+  line-height: 18pt;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+#etapas {
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 10px;
+}
+#etapas .etapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+}
+#etapas .etapa img {
+  width: fit-content;
+  margin: 10px;
+  filter: drop-shadow(2px 2px 1px #0000005c);
+}
+#etapas .etapa small {
+  color: gray;
+}
+#etapas i {
+  font-size: 28pt;
+  color: #1EA0F8;
+}
+#beneficios {
+  margin: 30px 0;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+#beneficios * {
+  transition: all 0.2s ease;
+}
+#beneficios h1 {
+  text-align: center;
+  position: relative;
+  color: #1EA0F8;
+}
+#beneficios h1::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent 35%, #1EA0F8 50%, transparent 65%);
+  top: 0;
+}
+#beneficios h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent 35%, #1EA0F8 50%, transparent 65%);
+  bottom: 0;
+}
+#beneficios article {
+  display: flex;
+  justify-content: space-evenly;
+}
+#beneficios article .card {
+  background-color: whitesmoke;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 30px;
+  height: max-content;
+  width: 300px;
+  border-radius: 7px;
+  filter: grayscale();
+}
+#beneficios article .card img {
+  height: 80px;
+  margin: 30px 0;
+}
+#beneficios article .card p {
+  text-align: center;
+  font-size: 10pt;
+  margin: auto 0;
+}
+#beneficios article .card:hover {
+  box-shadow: 4px 4px 10px -3px #0000005f;
+  border-color: #1EA0F8;
+  filter: none;
+}
+#beneficios article .card:hover b {
+  color: #1EA0F8;
+}
+#compatibilidade {
+  position: relative;
+  flex-direction: column;
+  height: max-content;
+  min-height: 420px;
+  justify-content: space-evenly;
+  align-items: stretch;
+  box-shadow: inset 0 -20px 20px -20px #01CE5C, inset 0 20px 40px black;
+  color: white;
+}
+#compatibilidade h2 {
+  text-align: center;
+}
+#compatibilidade h2 i {
+  margin-right: 10px;
+}
+#compatibilidade article {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+#compatibilidade article .compatibilidade-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 300px;
+  height: 100%;
+}
+#compatibilidade article .compatibilidade-item img {
+  max-height: 100px;
+  margin: 30px 0;
+}
+#compatibilidade article .compatibilidade-item p {
+  font-size: 1.2em;
+  text-shadow: 2px 2px 2px black;
+}
+#compatibilidade #fundo-compatibilidade {
+  position: absolute;
+  background: url(../../../img/modavo/google-vc/fundo-compatibilidade.jpg) center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: brightness(0.3) grayscale();
+}

@@ -1,0 +1,299 @@
+#lateral {
+  background-image: url(../../img/modavo/sidebar.jpg);
+  background-size: cover;
+  height: 100%;
+  top: 0;
+  width: 300px;
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: #1EA0F8;
+  background-color: white;
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s ease;
+  transform: translateX(-300px);
+  box-shadow: 5px 0 10px #0000007c;
+}
+#lateral.off {
+  display: none !important;
+}
+#lateral #modavo {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+#lateral #modavo img {
+  display: block;
+  width: calc(300px*4/5);
+  margin: auto;
+}
+#lateral #modavo i {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  cursor: pointer;
+  top: 5px;
+  right: 15px;
+  font-size: 15pt;
+  transition: all 0.2s ease;
+}
+#lateral #modavo i::after {
+  content: '';
+  top: -5px;
+  border-radius: 4px;
+  right: -30px;
+  position: absolute;
+  z-index: -2;
+  background-color: #1EA0F8;
+  height: 30px;
+  width: 60px;
+  transform: skewX(20deg);
+}
+#lateral #modavo i:hover {
+  filter: drop-shadow(0 0 5px #1EA0F8);
+  transition: all 0.2s ease;
+}
+#lateral aside {
+  width: 300px;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  height: 90%;
+}
+#lateral aside #side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  transition: all 0.8s ease;
+}
+#lateral aside #side .side-item {
+  display: flex;
+  transition: all 0.3s linear;
+}
+#lateral aside #side .side-item img {
+  width: 80px;
+}
+#lateral aside #side .side-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+#lateral aside #side .side-item div label {
+  display: block;
+  font-size: 12pt;
+  max-width: 150px;
+  text-align: center;
+  font-weight: bolder;
+}
+#lateral aside #side .side-item div a.visitar button:hover {
+  transform: scale(1.1);
+}
+#lateral aside #side > a {
+  text-decoration: none;
+  color: black;
+}
+#lateral aside #side > a i {
+  margin-right: 10px;
+}
+#lateral aside .hidden {
+  transition: all 1s ease;
+  opacity: 0;
+  transform: translateX(-300px) scale(0.9);
+}
+#lateral aside #indices {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+#lateral aside #indices ul {
+  margin: 5px 0;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+#lateral aside #indices ul b {
+  display: flex;
+  align-items: center;
+  font-size: 12pt;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0 10px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+#lateral aside #indices ul b::after {
+  content: '';
+  transition: all 0.3s ease;
+  position: absolute;
+  height: 1px;
+  width: 0px;
+  bottom: 0;
+  background-image: linear-gradient(90deg, #1EA0F8, transparent);
+}
+#lateral aside #indices ul b:hover {
+  transition: all 0.3s ease;
+}
+#lateral aside #indices ul b:hover::after {
+  content: '';
+  width: calc(100% - 10px - 30px);
+}
+#lateral aside #indices ul i {
+  width: 20px;
+  margin-right: 10px;
+}
+#lateral aside #indices ul i.indicador {
+  margin-left: auto;
+}
+#lateral aside #indices ul a {
+  text-decoration: none;
+}
+#lateral aside #indices ul > ul {
+  overflow: hidden;
+  max-height: 0;
+}
+#lateral aside #indices ul > ul b i.indicador {
+  transform: rotate(90deg) !important;
+}
+#lateral aside #indices ul > ul li {
+  margin-left: calc(2*30px);
+  transition: all 0.2s ease;
+}
+#lateral aside #indices ul > ul li a {
+  color: gray;
+  display: list-item;
+}
+#lateral aside #indices ul > ul li a:hover {
+  color: #1EA0F8;
+}
+#lateral aside #indices ul > ul.expandido {
+  transition: all 0.2s ease;
+  max-height: 100%;
+}
+#lateral aside #indices ul > ul.expandido b i.indicador {
+  transform: rotate(90deg);
+}
+#lateral aside #indices ul > ul.expandido li {
+  transition: all 0.2s ease;
+}
+#lateral aside #indices h3 {
+  text-decoration: underline;
+  font-weight: lighter;
+  color: silver;
+}
+#lateral a.visitar {
+  cursor: default;
+}
+#lateral a.visitar button {
+  cursor: pointer;
+  background-color: #1EA0F8;
+  border: none;
+  border-radius: 4px;
+  padding: calc(10px/2) 10px;
+  transition: all 0.2s ease;
+}
+#lateral a.visitar button span {
+  font-weight: bolder;
+  color: white;
+}
+#lateral a.visitar button span i {
+  margin-right: 10px;
+}
+#lateral a.visitar button:hover {
+  transition: all 0.2s ease;
+}
+#lateral a.neon {
+  width: 100%;
+  padding: 10px;
+}
+#lateral a.neon button {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #1EA0F8;
+  transition: all 0.2s ease;
+}
+#lateral a.neon button span {
+  font-size: 14pt;
+  font-weight: lighter;
+  color: #1EA0F8;
+}
+#lateral a.neon button:hover {
+  box-shadow: 0 0 20px #1EA0F8;
+}
+#lateral a.neon.ativado button {
+  background-color: #1EA0F8;
+}
+#lateral a.neon.ativado span {
+  color: white;
+}
+#lateral > span {
+  content: '';
+  width: 30px;
+  height: 50px;
+  position: absolute;
+  right: calc(-30px);
+  margin: auto 0;
+  top: calc(50% - 2*30px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#lateral > span i {
+  width: 30px;
+  font-size: 24pt;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.2s ease;
+}
+#lateral > span i.rodar {
+  transform: rotate(180deg);
+}
+#lateral > span::after {
+  content: '';
+  height: 50px;
+  width: 30px;
+  border-radius: 0 5px 5px 0;
+  background-color: #1EA0F8;
+  position: absolute;
+  left: 0;
+  margin: auto 0;
+  top: 0;
+  z-index: -1;
+  transition: filter 0.2s ease;
+}
+#lateral:hover > span::after {
+  filter: drop-shadow(0 0 5px #1EA0F8);
+  transition: filter 0.2s ease;
+}
+#lateral.aberto {
+  z-index: 4;
+  transform: translateX(0);
+  transition: transform 1.4s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+@media screen and (max-width: 800px) {
+  #lateral {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+  #lateral #modavo i {
+    display: inline-block;
+  }
+  #lateral:hover > span::after {
+    filter: none;
+  }
+  #lateral aside {
+    width: 100%;
+  }
+}

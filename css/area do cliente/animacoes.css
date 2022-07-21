@@ -1,0 +1,96 @@
+canvas {
+  display: block;
+  position: absolute;
+  z-index: -999;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -3;
+}
+.oculto.sessao,
+.oculto.registro,
+.oculto.alerta {
+  transition: all 0.2s linear;
+  transform: scale(0);
+  opacity: 0;
+  position: absolute;
+}
+.form-btn {
+  z-index: 1;
+  position: relative;
+  border: none;
+  outline: none;
+  padding: calc(10px/2) 20px;
+  border-radius: 7px;
+  font-size: 14pt;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+.form-btn.login {
+  color: white;
+  background-color: #c72929;
+}
+.form-btn.login::before,
+.form-btn.login::after {
+  background: #004a7b;
+}
+.form-btn.cadastro {
+  color: #c72929;
+  background-color: whitesmoke;
+  border: 1px solid #c72929;
+}
+.form-btn.cadastro::before,
+.form-btn.cadastro::after {
+  background: #c72929;
+}
+.form-btn.limpar {
+  color: #004a7b;
+  background-color: whitesmoke;
+  border: 1px solid #004a7b;
+}
+.form-btn.limpar:hover {
+  color: #c72929;
+  border: 1px solid #c72929;
+}
+.form-btn.limpar::before,
+.form-btn.limpar::after {
+  background-color: #252525;
+}
+.form-btn i.l {
+  margin-right: 10px;
+}
+.form-btn i.r {
+  margin-left: 10px;
+}
+.form-btn::before,
+.form-btn::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 200%;
+  height: 200%;
+  left: -50%;
+  top: -400%;
+  transform: rotate(15deg);
+  transition: all 0.6s ease;
+}
+.form-btn::after {
+  top: 300%;
+}
+.form-btn:hover {
+  color: white;
+}
+.form-btn:hover::before,
+.form-btn:hover::after {
+  top: -100%;
+  transform: rotate(0);
+}
+.form-btn:hover::after {
+  top: 0;
+}

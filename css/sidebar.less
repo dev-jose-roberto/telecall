@@ -1,0 +1,423 @@
+//cores
+@vermelho-padrao-telecall: #c72929;
+@azul-padrao-telecall: #004a7b;
+@azul-modavo: #1EA0F8;
+// margens
+@margem-minima: 10px;
+@margem-comum: 15px;
+@margem-media: 20px;
+@margem-alta: 30px;
+// padrões de logo
+@largura-logo: 220px;
+@altura-logo: 60px;
+// padrões de largura
+@largura-minima: 30px;
+@largura-media: 200px;
+@largura-alta: 300px;
+
+// Sidebar modavo
+#lateral {
+
+    &.off {
+        display: none !important;
+    }
+
+    @largura: 300px;
+    background-image: url(../../img/modavo/sidebar.jpg);
+    background-size: cover;
+    height: 100%;
+    top: 0;
+    width: @largura;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: @azul-modavo;
+    background-color: white;
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    filter .2s ease;
+    // aberto = off
+    transform: translateX(-@largura);
+    box-shadow: 5px 0 10px #0000007c;
+
+    // Logo+botão de fechar
+    #modavo {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+
+        img {
+            display: block;
+            width: calc(@largura*4/5);
+            margin: auto;
+        }
+
+        // Botão de fechar - mobile --------------------------------------------#
+        i {
+            @largura: 60px;
+            @altura: 30px;
+            display: none;
+            position: absolute;
+            z-index: 2;
+            color: white;
+            cursor: pointer;
+            top: 5px;
+            right: 15px;
+            font-size: 15pt;
+            transition: all .2s ease;
+
+            &::after {
+                content: '';
+                top: -5px;
+                border-radius: 4px;
+                right: -30px;
+                position: absolute;
+                z-index: -2;
+                background-color: @azul-modavo;
+                height: @altura;
+                width: @largura;
+                transform: skewX(20deg);
+            }
+
+            &:hover {
+                filter: drop-shadow(0 0 5px @azul-modavo);
+                transition: all .2s ease;
+            }
+        }
+    }
+
+    //modulo central do sidebar
+    aside {
+        width: @largura;
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        height: 90%;
+
+        // Lista
+        #side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+            transition: all .8s ease;
+
+            // itens
+            .side-item {
+                display: flex;
+                transition: all .3s linear;
+
+                img {
+                    width: 80px;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: @margem-minima;
+
+                    label {
+                        display: block;
+                        font-size: 12pt;
+                        max-width: 150px;
+                        text-align: center;
+                        font-weight: bolder;
+                    }
+
+                    a.visitar {
+                        button {
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &>a {
+                text-decoration: none;
+                color: black;
+
+                i {
+                    margin-right: @margem-minima;
+                }
+            }
+        }
+
+        // ativado quando mostrar indices for acionado
+        .hidden {
+            transition: all 1s ease;
+            opacity: 0;
+            transform: translateX(-@largura) scale(0.9);
+        }
+
+        // menus
+        #indices {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+            width: 100%;
+            padding: @margem-minima;
+            position: absolute;
+            transition: all .3s ease;
+
+            ul {
+                margin: 5px 0;
+                list-style: none;
+                padding: 0;
+                width: 100%;
+                transition: all .2s ease;
+
+                b {
+                    display: flex;
+                    align-items: center;
+                    font-size: 12pt;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    padding: 0 @margem-minima;
+                    transition: all .2s ease;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        transition: all .3s ease;
+                        position: absolute;
+                        height: 1px;
+                        width: 0px;
+                        bottom: 0;
+                        background-image: linear-gradient(90deg, @azul-modavo, transparent);
+                    }
+
+                    &:hover {
+                        transition: all .3s ease;
+
+                        &::after {
+                            content: '';
+                            width: calc(100% - @margem-minima - @margem-alta );
+                        }
+                    }
+                }
+
+                i {
+                    width: @margem-media;
+                    margin-right: @margem-minima;
+
+                    &.indicador {
+                        margin-left: auto;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                // submenus
+                &>ul {
+                    overflow: hidden;
+
+                    b {
+                        i.indicador {
+                            transform: rotate(90deg) !important;
+                        }
+                    }
+
+                    max-height: 0;
+
+                    li {
+                        margin-left: calc(2*@margem-alta);
+                        transition: all .2s ease;
+
+                        a {
+                            color: gray;
+                            display: list-item;
+
+                            &:hover {
+                                color: @azul-modavo;
+                            }
+                        }
+                    }
+
+                    &.expandido {
+                        b {
+                            i.indicador {
+                                transform: rotate(90deg);
+                            }
+                        }
+
+                        transition: all .2s ease;
+
+                        max-height: 100%;
+
+                        li {
+                            transition: all .2s ease;
+                        }
+                    }
+                }
+            }
+
+            h3 {
+                text-decoration: underline;
+                font-weight: lighter;
+                color: silver;
+            }
+        }
+    }
+
+    a {
+        &.visitar {
+            cursor: default;
+
+            button {
+                cursor: pointer;
+                background-color: @azul-modavo;
+                border: none;
+                border-radius: 4px;
+                padding: calc(@margem-minima/2) @margem-minima;
+                transition: all .2s ease;
+
+                span {
+                    font-weight: bolder;
+                    color: white;
+
+                    i {
+                        margin-right: @margem-minima;
+                    }
+                }
+
+                &:hover {
+                    transition: all .2s ease;
+                }
+            }
+        }
+
+        &.neon {
+            width: 100%;
+            padding: @margem-minima;
+
+            button {
+                width: 100%;
+                background-color: transparent;
+                border: 2px solid @azul-modavo;
+                transition: all .2s ease;
+
+                span {
+                    font-size: 14pt;
+                    font-weight: lighter;
+                    color: @azul-modavo;
+                }
+
+                &:hover {
+                    box-shadow: 0 0 @margem-media @azul-modavo;
+                }
+            }
+
+            &.ativado {
+                button {
+                    background-color: @azul-modavo;
+                }
+
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    // botão abre|fecha
+    &>span {
+        @largura: 30px;
+        content: '';
+        width: @largura;
+        height: 50px;
+        position: absolute;
+        right: calc(-@largura);
+        margin: auto 0;
+        top: calc(50% - 2*@largura);
+        cursor: pointer;
+        transition: all .2s ease;
+
+        // icone
+        i {
+            width: @largura;
+            font-size: 24pt;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            transition: all .2s ease;
+
+            &.rodar {
+                transform: rotate(180deg);
+            }
+        }
+
+        // fundo do abre|fecha
+        &::after {
+            @largura: 30px;
+            content: '';
+            height: 50px;
+            width: @largura;
+            border-radius: 0 5px 5px 0;
+            background-color: @azul-modavo;
+            position: absolute;
+            left: 0;
+            margin: auto 0;
+            top: 0;
+            z-index: -1;
+            transition: filter .2s ease;
+        }
+    }
+
+    &:hover {
+        &>span {
+            &::after {
+                filter: drop-shadow(0 0 5px @azul-modavo);
+                transition: filter .2s ease;
+            }
+        }
+    }
+
+    // aberto = on
+    &.aberto {
+        z-index: 4;
+        transform: translateX(0);
+        transition: transform 1.4s cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    @largura: 100%;
+
+    #lateral {
+        width: @largura;
+        // aberto = off
+        transform: translateX(-@largura);
+
+
+        #modavo {
+            i {
+                display: inline-block;
+            }
+        }
+
+
+        &:hover {
+            &>span {
+                &::after {
+                    filter: none;
+                }
+            }
+        }
+
+        aside{
+            width: @largura;
+        }
+
+    }
+}

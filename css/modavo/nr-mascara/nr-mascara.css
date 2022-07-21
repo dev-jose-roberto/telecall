@@ -1,0 +1,267 @@
+nav {
+  justify-content: space-between;
+  height: 44px;
+}
+nav #logo {
+  margin: 10px 30px;
+  position: relative;
+  height: 90px;
+}
+nav #logo img {
+  filter: drop-shadow(3px 3px 1px #0000003c);
+}
+nav #nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  height: inherit;
+  width: 1000px;
+  overflow: hidden;
+}
+nav #nav-menu .nav-item {
+  color: #3d3d3d;
+  line-height: inherit;
+  text-align: center;
+  padding: 3px 10px;
+  font-size: 12pt;
+  border-radius: 4px;
+  transition: all 0.1s linear;
+}
+nav #nav-menu .nav-item i {
+  margin-right: 10px;
+}
+nav #nav-menu .nav-item:hover {
+  transform: scale(1.1);
+  color: #1EA0F8;
+  transition: all 0.1s linear;
+}
+nav #nav-menu::before {
+  content: '';
+  top: 0;
+  right: -15px;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  transform: skewX(20deg);
+  border-radius: 4px;
+  background: url(../../../img/modavo/nav.png) center center;
+  background-size: cover;
+  filter: drop-shadow(4px 4px 3px #0000004c);
+}
+#sobre {
+  justify-content: space-evenly;
+  align-items: center;
+  margin: calc(4*30px) 0 30px 0;
+  height: 350px;
+}
+#sobre img {
+  height: 100%;
+}
+#sobre #nr-masc {
+  height: inherit;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+}
+#sobre #nr-masc #nome {
+  margin: 0 0 10px 0;
+}
+#sobre #nr-masc #nome h2 {
+  color: #1EA0F8;
+  margin: 0;
+}
+#sobre #nr-masc #nome h4 {
+  color: gray;
+  margin: 0;
+}
+#sobre #nr-masc h3 {
+  color: #1EA0F8;
+}
+#sobre #nr-masc i {
+  margin-right: 10px;
+  color: #1EA0F8;
+}
+#sobre #nr-masc ul {
+  list-style: none;
+  font-size: 10pt;
+}
+#sobre #nr-masc p {
+  display: inline-block;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+#etapas {
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 10px;
+}
+#etapas .etapa {
+  display: flex;
+  flex-direction: column;
+  max-width: 235px;
+  align-items: center;
+}
+#etapas .etapa img {
+  width: fit-content;
+  margin: 10px;
+  filter: drop-shadow(2px 2px 1px #0000005c);
+}
+#etapas .etapa small {
+  color: gray;
+}
+#etapas i {
+  font-size: 28pt;
+  color: #1EA0F8;
+}
+#recursos {
+  margin: 30px 0;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+#recursos * {
+  transition: all 0.2s ease;
+}
+#recursos h1 {
+  text-align: center;
+  position: relative;
+  margin-top: calc(30px*3);
+  color: #1EA0F8;
+}
+#recursos h1::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent 35%, #1EA0F8 50%, transparent 65%);
+  top: 0;
+}
+#recursos h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent 35%, #1EA0F8 50%, transparent 65%);
+  bottom: 0;
+}
+#recursos article {
+  display: flex;
+  justify-content: space-evenly;
+}
+#recursos article .card {
+  background-color: whitesmoke;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 30px;
+  height: max-content;
+  width: 260px;
+  border-radius: 7px;
+  filter: grayscale();
+}
+#recursos article .card img {
+  height: 25%;
+  margin: 30px 0;
+}
+#recursos article .card p {
+  text-align: center;
+  font-size: 9pt;
+  margin: auto 0;
+}
+#recursos article .card:hover {
+  box-shadow: 4px 4px 10px -3px #0000005f;
+  border-color: #1EA0F8;
+  filter: none;
+}
+#recursos article .card:hover b {
+  color: #1EA0F8;
+}
+#publico {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#publico div {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#publico div img {
+  max-width: 300px;
+}
+#publico div article {
+  margin: 0 30px;
+  width: 100%;
+}
+#publico div article p {
+  font-size: 16pt;
+  text-align: justify;
+}
+#publico div article p b {
+  color: #1EA0F8;
+}
+#publico h1 {
+  text-align: center;
+  position: relative;
+  margin: 30px 0;
+  color: #1EA0F8;
+}
+#publico h1::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent, #1EA0F8 50%, transparent);
+  top: 0;
+}
+#publico h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent, #1EA0F8 50%, transparent);
+  bottom: 0;
+}
+#quem-usa {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#quem-usa h3 {
+  text-align: center;
+  position: relative;
+  margin-top: calc(30px*3);
+  color: #1EA0F8;
+}
+#quem-usa h3::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent, #1EA0F8 50%, transparent);
+  top: 0;
+}
+#quem-usa h3::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent, #1EA0F8 50%, transparent);
+  bottom: 0;
+}
+#quem-usa img {
+  width: 30%;
+  margin: 30px 0;
+}

@@ -1,0 +1,399 @@
+nav {
+  justify-content: space-between;
+  height: 44px;
+}
+nav #logo {
+  margin: 10px 30px;
+  position: relative;
+  height: 90px;
+}
+nav #logo img {
+  filter: drop-shadow(3px 3px 1px #0000003c);
+}
+nav #nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  height: inherit;
+  width: 1000px;
+  overflow: hidden;
+}
+nav #nav-menu .nav-item {
+  color: #3d3d3d;
+  line-height: inherit;
+  text-align: center;
+  padding: 3px 10px;
+  font-size: 12pt;
+  border-radius: 4px;
+  transition: all 0.1s linear;
+}
+nav #nav-menu .nav-item i {
+  margin-right: 10px;
+}
+nav #nav-menu .nav-item:hover {
+  transform: scale(1.1);
+  color: #1EA0F8;
+  transition: all 0.1s linear;
+}
+nav #nav-menu::before {
+  content: '';
+  top: 0;
+  right: -15px;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  transform: skewX(20deg);
+  border-radius: 4px;
+  background: url(../../../img/modavo/nav.png) center center;
+  background-size: cover;
+  filter: drop-shadow(4px 4px 3px #0000004c);
+}
+#sobre {
+  justify-content: space-evenly;
+  align-items: center;
+  margin: calc(4*30px) 0 30px 0;
+  height: 320px;
+}
+#sobre img {
+  height: 100%;
+}
+#sobre #sms-programavel {
+  height: inherit;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+}
+#sobre #sms-programavel #nome {
+  margin: 0 0 10px 0;
+}
+#sobre #sms-programavel #nome h2 {
+  color: #1EA0F8;
+  margin: 0;
+}
+#sobre #sms-programavel #nome h4 {
+  color: gray;
+  margin: 0;
+}
+#sobre #sms-programavel h3 {
+  color: #1EA0F8;
+}
+#sobre #sms-programavel i {
+  margin-right: 10px;
+  color: #1EA0F8;
+}
+#sobre #sms-programavel ul {
+  list-style: none;
+  font-size: 10pt;
+}
+#sobre #sms-programavel p {
+  display: inline-block;
+  text-align: justify;
+}
+#sms {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 30px 0;
+}
+#sms h3 {
+  color: gray;
+}
+#sms h3 b {
+  color: #1EA0F8;
+}
+#sms article {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+#sms article .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  max-width: 200px;
+  text-shadow: 2px 2px 3px #0000003f;
+}
+#sms article .info b {
+  color: #1EA0F8;
+  font-size: 56pt;
+}
+#sms article .info label {
+  font-size: 0, 8em;
+  color: #3d3d3d;
+}
+#beneficios {
+  margin: 30px 0;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+#beneficios * {
+  transition: all 0.2s ease;
+}
+#beneficios h1 {
+  text-align: center;
+  position: relative;
+  margin-top: calc(30px*3);
+  color: #1EA0F8;
+}
+#beneficios h1::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent 35%, #1EA0F8 50%, transparent 65%);
+  top: 0;
+}
+#beneficios h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent 35%, #1EA0F8 50%, transparent 65%);
+  bottom: 0;
+}
+#beneficios article {
+  display: flex;
+  justify-content: space-evenly;
+}
+#beneficios article .card {
+  background-color: whitesmoke;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 30px;
+  height: max-content;
+  width: 200px;
+  border-radius: 7px;
+  filter: grayscale();
+}
+#beneficios article .card img {
+  height: 30%;
+  margin: 30px 0;
+}
+#beneficios article .card p {
+  text-align: center;
+  font-size: 11pt;
+  margin: auto 0;
+}
+#beneficios article .card:hover {
+  box-shadow: 4px 4px 10px -3px #0000005f;
+  border-color: #1EA0F8;
+  filter: none;
+}
+#jornada {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+}
+#jornada div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#jornada div h1 {
+  text-align: center;
+  position: relative;
+  color: #1EA0F8;
+}
+#jornada div h1::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent, #1EA0F8 50%, transparent);
+  top: 0;
+}
+#jornada div h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent, #1EA0F8 50%, transparent);
+  bottom: 0;
+}
+#jornada div label {
+  color: gray;
+  text-align: center;
+  margin: 0 30px;
+}
+#jornada img {
+  border: 2px solid #1EA0F8;
+  padding: 30px;
+  border-radius: 14px;
+  background-color: whitesmoke;
+  width: 80%;
+  max-width: 800px;
+}
+#quem-usa {
+  flex-direction: column;
+  justify-content: space-around;
+}
+#quem-usa h3 {
+  text-align: center;
+  position: relative;
+  display: block;
+  margin: calc(30px*3) auto 30px auto;
+  width: 300px;
+  color: #1EA0F8;
+}
+#quem-usa h3::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent, #1EA0F8 50%, transparent);
+  top: 0;
+}
+#quem-usa h3::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent, #1EA0F8 50%, transparent);
+  bottom: 0;
+}
+#quem-usa h6 {
+  text-align: center;
+  color: gray;
+}
+#quem-usa article {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px 0;
+}
+#quem-usa article div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#quem-usa article div label {
+  font-size: 14pt;
+}
+#mensagens {
+  height: max-content;
+  padding: 0 30px !important;
+  margin: 30px 0 !important;
+}
+#mensagens h1 {
+  text-align: center;
+  position: relative;
+  color: #1EA0F8;
+}
+#mensagens h1::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(90deg, transparent, #1EA0F8 50%, transparent);
+  top: 0;
+}
+#mensagens h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(270deg, transparent, #1EA0F8 50%, transparent);
+  bottom: 0;
+}
+#mensagens .mensagem {
+  width: 100%;
+  display: block;
+  position: sticky;
+  top: 0;
+}
+#mensagens .mensagem label {
+  font-size: 14pt;
+  width: 50%;
+  text-align: center;
+  display: block;
+  color: gray;
+}
+#mensagens .mensagem label.esq {
+  margin-right: auto;
+}
+#mensagens .mensagem label.dir {
+  margin-left: auto;
+}
+#mensagens .mensagem p {
+  position: relative;
+  color: white;
+  font-weight: bolder;
+  width: 50%;
+  height: max-content;
+  font-size: 9pt;
+  padding: 10px;
+  margin: 0;
+  background-color: #1EA0F8;
+  filter: drop-shadow(2px 2px 2px #0000003f);
+}
+#mensagens .mensagem p::before {
+  content: '';
+  position: absolute;
+}
+#mensagens .mensagem p.esq {
+  margin-right: auto;
+  border-radius: 0 14px 14px 14px;
+}
+#mensagens .mensagem p.esq::before {
+  z-index: -2;
+  top: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 20px 0;
+  border-color: transparent #1EA0F8 transparent transparent;
+}
+#mensagens .mensagem p.dir {
+  border-radius: 14px 0 14px 14px;
+  margin-left: auto;
+}
+#mensagens .mensagem p.dir::before {
+  z-index: -2;
+  top: 0;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 10px 0 0;
+  border-color: #1ea1f8 transparent transparent transparent;
+}
+#mensagens .mensagem#um {
+  padding-top: 30px;
+  z-index: -1;
+}
+#mensagens .mensagem#dois {
+  padding-top: 140px;
+  z-index: -2;
+}
+#mensagens .mensagem#tres {
+  padding-top: 260px;
+  z-index: -3;
+}
+#mensagens .mensagem#quatro {
+  padding-top: 340px;
+  z-index: -4;
+}
+#mensagens .mensagem#cinco {
+  padding-top: 420px;
+  z-index: -5;
+}
