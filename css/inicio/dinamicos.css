@@ -382,17 +382,6 @@ a.saiba-mais.btn-carousel button:hover span {
   height: 130vh;
   position: relative;
 }
-#sobre #vantagens > span {
-  background: url(../../img/inicio/servers.jpg) center center no-repeat fixed;
-  background-size: cover;
-  filter: grayscale() contrast(0.5) brightness(1.5);
-  box-shadow: inset 0 0 50px black;
-  position: absolute;
-  width: 100vw;
-  height: 130vh;
-  left: -48px;
-  z-index: -1;
-}
 #sobre #vantagens header {
   margin: calc(30px + 15px) 0;
   position: relative;

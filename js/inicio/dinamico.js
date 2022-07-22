@@ -5,28 +5,27 @@ var titulos = [],
 
 
 // Qual idioma?
-let idioma = $("#idioma").data("valor")
-
-let idiomas = {
-    "pt-br": [
-        "Novidades",
-        "Internet",
-        "Telefonia",
-        "Redes e Infraestrutura",
-        "Mobilidade",
-        "Eventos",
-        "Outras Soluções"
-    ],
-    "en-us": [
-        "News",
-        "Internet",
-        "Telephony",
-        "Networks & Infrastructure",
-        "Mobility",
-        "Events",
-        "Other Solutions"
-    ]
-}
+let idioma = $("#idioma").data("valor"),
+    idiomas = {
+        "pt-br": [
+            "Novidades",
+            "Internet",
+            "Telefonia",
+            "Redes e Infraestrutura",
+            "Mobilidade",
+            "Eventos",
+            "Outras Soluções"
+        ],
+        "en-us": [
+            "News",
+            "Internet",
+            "Telephony",
+            "Networks & Infrastructure",
+            "Mobility",
+            "Events",
+            "Other Solutions"
+        ]
+    }
 
 titulos = idiomas[idioma]
 
