@@ -1,23 +1,24 @@
 //---------------------- CAROUSEL --------------------//
 // Array para rodízio
-let titulos, i = 0,
-    n
+var titulos = [],
+    i = 0
 
-// idioma pela url, já que não usei php
-//  senão colocaria ali um "?locale=" ali no get e tava tudo certo
 
-if (window.location.href.includes("index.html")) {
-    titulos = ["Novidades",
+// Qual idioma?
+let idioma = $("#idioma").data("valor")
+
+let idiomas = {
+    "pt-br": [
+        "Novidades",
         "Internet",
         "Telefonia",
         "Redes e Infraestrutura",
         "Mobilidade",
         "Eventos",
         "Outras Soluções"
-    ]
-    n = true
-} else {
-    titulos = ["News",
+    ],
+    "en-us": [
+        "News",
         "Internet",
         "Telephony",
         "Networks & Infrastructure",
@@ -25,8 +26,9 @@ if (window.location.href.includes("index.html")) {
         "Events",
         "Other Solutions"
     ]
-    n = false
 }
+
+titulos = idiomas[idioma]
 
 // Carregamento completo
 $(document).ready(function() {
@@ -39,7 +41,7 @@ $(document).ready(function() {
         i = $(".carousel-indicators .active").attr("data-bs-slide-to");
         // Correção de exibição
         if (i == 3) {
-            if (n) {
+            if (idioma == "pt-br") {
                 $("#titulo").css({
                     "font-size": "2.6rem",
                 });

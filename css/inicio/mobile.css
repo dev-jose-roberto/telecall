@@ -403,6 +403,7 @@
   }
   #menus #menu .navbar-nav {
     flex-direction: column !important;
+    align-items: flex-end;
   }
   #menus #area_do_cliente {
     width: max-content !important;
